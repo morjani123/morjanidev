@@ -1,0 +1,49 @@
+/* Light mode only — preserve the dark reference design unchanged */
+body.light{
+--bg:#f5f8fc;--surface:#fff;--surface2:#edf4fa;--text:#14253c;--muted:#53677e;--line:rgba(33,87,126,.18);--blue:#087fbb;--purple:#5263c8;--cyan:#008d9b;--shadow:0 16px 45px rgba(21,63,95,.09);
+background:radial-gradient(ellipse at 80% 11%,rgba(42,186,211,.14),transparent 45%),linear-gradient(160deg,#f8fbff,#eaf3fa 70%,#f5f9ff)!important;color:var(--text)!important
+}
+body.light .site-header{background:rgba(255,255,255,.95)!important;border-bottom:1px solid #d7e6f0!important;box-shadow:0 3px 15px rgba(25,70,105,.05)}
+body.light .brand-mark{color:#142b46!important}
+body.light .brand-name{color:#172d45!important}
+body.light .brand-name small{color:#62748a!important}
+body.light .nav-links a{color:#304a64!important}
+body.light .nav-links a:hover{color:#007e9c!important}
+body.light .nav-links a.active{background:#e0f8fb!important;color:#007b8d!important;border-color:#a8e9ee!important}
+body.light .theme-toggle,body.light .menu-toggle{background:#eaf4fb!important;color:#0d4669!important;border-color:#c8dce9!important}
+body.light .hero-v3 .eyebrow{background:#e1f6fc!important;color:#1d526f!important;border-color:#c5e9f4!important}
+body.light .hero-v3 h1,body.light .hero-v3 .hero-role{color:#112c45!important}
+body.light .hero-v3 .gradient-text{background:linear-gradient(100deg,#0486be,#04b7c4)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
+body.light .hero-v3 .hero-desc{color:#455c73!important}
+body.light .hero-v3 .hero-desc strong{color:#008e9e!important}
+body.light .hero-v3 .btn-primary{background:linear-gradient(110deg,#06c9ce,#08a8d4)!important;color:#05283b!important;box-shadow:0 10px 24px rgba(4,155,191,.14)!important}
+body.light .hero-v3 .btn-outline{background:#fff!important;color:#17425d!important;border-color:#16b4d2!important}
+body.light .hero-v3 .portrait-stage{background:linear-gradient(140deg,#e8f3fc,#cbdff1)!important;box-shadow:-20px 15px 0 rgba(0,178,202,.15),0 15px 45px rgba(38,91,129,.13)!important}
+body.light .hero-v3 .hero-float{background:linear-gradient(105deg,#fff,#e9f5fc)!important;color:#163a56!important;border:1px solid #c9e3ef!important;box-shadow:0 8px 25px rgba(32,90,124,.1)!important}
+body.light .hero-v3 .hero-float span{color:#009db4!important}
+body.light .hero-v3 .hero-service.web{background:linear-gradient(135deg,#f5fcff,#e7f6fd)!important;border-color:#08a8d5!important;box-shadow:0 14px 30px rgba(19,119,160,.08)!important}
+body.light .hero-v3 .hero-service.stock{background:linear-gradient(135deg,#fffdf6,#fff4d9)!important;border-color:#dba321!important;box-shadow:0 14px 30px rgba(157,118,32,.07)!important}
+body.light .hero-v3 .hero-service strong{color:#17344f!important}
+body.light .hero-v3 .hero-service small{color:#52667b!important}
+body.light .hero-v3 .hero-service.web .service-symbol{background:#d6f3fa!important;color:#008fad!important}
+body.light .hero-v3 .hero-service.stock .service-symbol{background:#ffefb9!important;color:#a97700!important}
+body.light .hero-v3 .service-chips em{background:#fff!important;color:#35536d!important;border-color:#d2e2eb!important}
+body.light .hero-v3 .service-link{background:#e9f9fc!important;color:#007f9b!important;border-color:#0caec6!important}
+body.light .hero-v3 .stock .service-link{background:#fff7dd!important;color:#9c7000!important;border-color:#d7a31e!important}
+body.light .hero-v3 .hero-stats{background:linear-gradient(90deg,#fff,#eaf4fb)!important;border-color:#c8dce9!important;box-shadow:0 8px 25px rgba(29,81,119,.06)!important}
+body.light .hero-v3 .hero-stats strong{color:#193750!important}
+body.light .hero-v3 .hero-stats>div>span:last-child{color:#5b7186!important}
+body.light .hero-v3 .hero-stats>div{border-color:#cddde9!important}
+body.light .hero-v3 .hero-stats .stat-icon{color:#079bb4!important}
+body.light .hero-v3 .hero-stats>div:last-child .stat-icon{color:#d39b0b!important}
+/* Inner sections, cards and project filters */
+body.light .section-muted{background:#edf4fb!important}
+body.light .expertise-card,body.light .stock-intro-copy,body.light .stock-flow>div,body.light .stock-skills article,body.light .systems-offer,body.light .systems-grid>div,body.light .stock-cta,body.light .project-card,body.light .timeline-card,body.light .education-card,body.light .contact-card,body.light .about-card{background:#fff!important;color:#172d46!important;border-color:#d7e4ee!important;box-shadow:0 7px 22px rgba(25,67,100,.045)!important}
+body.light .stock-intro p,body.light .stock-skills p,body.light .stock-cta p,body.light .systems-offer>p,body.light .systems-grid span{color:#536a7e!important}
+body.light .section-heading h2,body.light .section-heading p,body.light .stock-intro h3,body.light .systems-offer h3{color:var(--text)!important}
+body.light .chips span{background:#eaf4fc!important;color:#37566e!important;border-color:#cfe3f0!important}
+body.light .filter{background:#fff!important;color:#2d536d!important;border-color:#d3e4ef!important}
+body.light .filter.active{background:#087fbb!important;color:#fff!important}
+body.light .specialty-note{background:#e8f4fb!important;color:#486278!important}
+body.light .footer{border-color:#d7e5ef!important;color:#526b80!important}
+body.light .footer a{color:#166e9a!important}
