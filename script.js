@@ -145,7 +145,15 @@ while ((textNode = walker.nextNode())) {
   if (textNode.parentElement?.closest('script,style,textarea,select,option')) continue;
   const original = textNode.nodeValue;
   const trimmed = original.trim();
-  if (translations.has(trimmed)) translatedNodes.push({node:textNode, original, translated:original.replace(trimmed, translations.get(trimmed))});
+  if (!trimmed) continue;
+  let translated = original;
+  if (translations.has(trimmed)) {
+    translated = original.replace(trimmed, translations.get(trimmed));
+  } else {
+    const entries = [...translations.entries()].filter(([fr]) => fr.length > 6).sort((a,b) => b[0].length-a[0].length);
+    for (const [fr,en] of entries) translated = translated.split(fr).join(en);
+  }
+  if (translated !== original) translatedNodes.push({node:textNode, original, translated});
 }
 const placeholders = [['#contactName','Nom et prénom','Full name'],['#contactEmail','vous@entreprise.com','you@company.com'],['#contactMessage','Décrivez brièvement votre projet','Briefly describe your project']];
 function applyLanguage(language) {
