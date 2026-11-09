@@ -30,3 +30,27 @@ body.light .gsp-tab.active{color:#08798c;border-color:#08798c}
 @media(max-width:820px){.gsp-showcase{grid-template-columns:1fr}.cv-summary{grid-template-columns:1fr}.section-portfolio-enhance,.section-cv{padding:58px 0}}
 @media(max-width:480px){.gsp-stage{height:230px}.gsp-gallery{padding:10px}.gsp-controls{gap:6px}.gsp-tab{font-size:12px;padding:7px 10px}.whatsapp-float{right:12px;bottom:12px;padding:12px}.whatsapp-float span{display:none}}
 @media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}}
+
+/* Mobile viewport containment: prevent sideways document scrolling without clipping readable cards. */
+html,body{max-width:100%;overflow-x:clip}
+@supports not (overflow:clip){html,body{overflow-x:hidden}}
+body{min-width:0}
+main,header,footer,section,.wrap{max-width:100%;min-width:0}
+img,video,svg,iframe{max-width:100%}
+@media(max-width:850px){
+  .hero-v3,.hero-v3 .hero-copy,.hero-v3 .hero-art,.hero-v3 .hero-service-grid,.hero-v3 .hero-service,.hero-v3 .hero-stats{min-width:0;max-width:100%}
+  .hero-v3 .hero-copy,.hero-v3 .hero-service,.hero-v3 .service-body{overflow-wrap:anywhere}
+  .hero-v3 .hero-role{white-space:normal}
+  .hero-v3 .hero-art{overflow:clip}
+  .hero-v3 .hero-float{max-width:45%;min-width:0}
+  .gsp-showcase,.gsp-gallery,.gsp-aside,.cv-summary,.cv-summary article{min-width:0;max-width:100%}
+  .gsp-controls{max-width:100%}
+  .gsp-stage img{max-width:100%}
+  .cv-actions .btn{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+}
+@media(max-width:550px){
+  .hero-v3 .hero-art{isolation:isolate}
+  .hero-v3 .portrait-stage{max-width:calc(100% - 90px)}
+  .hero-v3 .hero-float{max-width:42%}
+  .gsp-aside h3,.cv-summary h3{overflow-wrap:anywhere}
+}
