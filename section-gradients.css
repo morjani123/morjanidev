@@ -38,3 +38,17 @@ body.light #gestion-stock{background:radial-gradient(ellipse at 82% 20%,rgba(221
 body.light #projets{background:linear-gradient(120deg,#e1f2fb,#e8f6fc 55%,#dbedf7)!important}
 body.light #parcours:before{background:linear-gradient(120deg,#e8f0fb,#e1ecf9 55%,#eaf2fc)!important}
 body.light #contact{background:linear-gradient(120deg,#e1f4f8,#edf9fb 55%,#dff1f8)!important}
+
+/* V3 — visibly lighter alternating sections, still professional */
+#apropos.about-digital{background:linear-gradient(115deg,#14526b 0%,#185e73 53%,#12465f 100%)!important}
+#developpement:before{background:linear-gradient(115deg,#0d2c47 0%,#123753 55%,#0d2c47 100%)!important}
+#gestion-stock{background:linear-gradient(115deg,#1e5c69 0%,#286b75 54%,#1c5665 100%)!important}
+#projets{background:linear-gradient(115deg,#0c304d 0%,#133b57 55%,#0c304d 100%)!important}
+#parcours:before{background:linear-gradient(115deg,#24516e 0%,#2b607a 55%,#214d69 100%)!important}
+#contact{background:linear-gradient(115deg,#0b2b45 0%,#12425a 55%,#0b2b45 100%)!important}
+body.light #apropos.about-digital{background:linear-gradient(115deg,#c5e8f3,#d5f1f6 55%,#c9e7f1)!important}
+body.light #developpement:before{background:linear-gradient(115deg,#f6fbff,#e7f2fc 55%,#f5faff)!important}
+body.light #gestion-stock{background:linear-gradient(115deg,#e8f2e9,#d8eee9 55%,#e6f2e9)!important}
+body.light #projets{background:linear-gradient(115deg,#d8eaf9,#c9e3f4 55%,#d9ebf8)!important}
+body.light #parcours:before{background:linear-gradient(115deg,#e8e7fa,#dcdff5 55%,#e8eafa)!important}
+body.light #contact{background:linear-gradient(115deg,#cbeaf0,#d9f3f5 55%,#caeaf1)!important}
