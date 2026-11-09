@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://morjani123.github.io/morjanidev/</loc><changefreq>monthly</changefreq></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://morjani123.github.io/morjanidev/</loc></url>
+<url><loc>https://morjani123.github.io/morjanidev/developpement.html</loc></url>
+<url><loc>https://morjani123.github.io/morjanidev/gestion-stock.html</loc></url>
+</urlset>
