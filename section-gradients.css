@@ -1,0 +1,25 @@
+/* Alternating premium section palette — Accueil deliberately untouched */
+:root{--section-edge:rgba(63,156,192,.18)}
+#apropos,#developpement,#gestion-stock,#projets,#parcours,#contact{isolation:isolate;position:relative}
+#apropos:after,#developpement:after,#gestion-stock:after,#projets:after,#parcours:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:64px;pointer-events:none;z-index:0;background:linear-gradient(to bottom,transparent,rgba(4,17,33,.09))}
+#apropos>* ,#developpement>* ,#gestion-stock>* ,#projets>* ,#parcours>* ,#contact>*{position:relative;z-index:1}
+/* Full-bleed backgrounds for .wrap sections via a viewport-wide pseudo-element */
+#developpement,#parcours{background:transparent!important}
+#developpement:before,#parcours:before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);pointer-events:none}
+#apropos.about-digital{background:radial-gradient(ellipse at 12% 45%,rgba(0,203,220,.13),transparent 53%),linear-gradient(115deg,#0a2a40 0%,#0b2c43 52%,#09253b 100%)!important;border-top:1px solid var(--section-edge)!important;border-bottom:1px solid var(--section-edge)!important}
+#developpement:before{background:radial-gradient(ellipse at 85% 25%,rgba(14,112,173,.1),transparent 50%),linear-gradient(125deg,#071a30,#071b32 55%,#081e36)}
+#gestion-stock{background:radial-gradient(ellipse at 82% 20%,rgba(239,184,40,.065),transparent 47%),linear-gradient(125deg,#102d3f,#123345 53%,#0c293d)!important;border-top:1px solid rgba(220,173,48,.14);border-bottom:1px solid rgba(220,173,48,.14)}
+#projets{background:radial-gradient(ellipse at 15% 10%,rgba(0,201,222,.09),transparent 43%),linear-gradient(125deg,#071a2e,#081b31 60%,#092138)!important;border-top:1px solid var(--section-edge);border-bottom:1px solid var(--section-edge)}
+#parcours:before{background:radial-gradient(ellipse at 90% 25%,rgba(71,139,205,.11),transparent 50%),linear-gradient(125deg,#102a42,#122d45 55%,#10263c)}
+#contact{background:radial-gradient(ellipse at 80% 25%,rgba(0,210,224,.11),transparent 53%),linear-gradient(120deg,#06182c,#09243b 55%,#06182c)!important;border-top:1px solid var(--section-edge)}
+/* Preserve legibility and original card treatments */
+#gestion-stock .stock-skills article,#projets .project-card,#developpement .expertise-card,#parcours .education-card{box-shadow:0 10px 30px rgba(0,0,0,.07)}
+/* Light palette, consistent alternating rhythm */
+body.light #apropos.about-digital{background:radial-gradient(ellipse at 12% 40%,rgba(4,167,191,.1),transparent 53%),linear-gradient(115deg,#eaf7fc,#e1f2f8 55%,#edf9fc)!important;border-color:#cde5ed!important}
+body.light #developpement:before{background:radial-gradient(ellipse at 85% 25%,rgba(42,144,199,.08),transparent 50%),linear-gradient(125deg,#f8fbff,#f2f8fd 55%,#edf5fc)!important}
+body.light #gestion-stock{background:radial-gradient(ellipse at 85% 20%,rgba(213,160,35,.09),transparent 48%),linear-gradient(125deg,#f8f8f3,#f5f2e9 55%,#faf8f0)!important;border-color:#e8e0c7!important}
+body.light #projets{background:radial-gradient(ellipse at 15% 10%,rgba(0,176,201,.07),transparent 43%),linear-gradient(125deg,#edf7fc,#e8f4fa 60%,#f0f9fd)!important;border-color:#d5e8ef!important}
+body.light #parcours:before{background:radial-gradient(ellipse at 90% 25%,rgba(71,139,205,.08),transparent 50%),linear-gradient(125deg,#f9fbfe,#eff5fc 55%,#f4f9fe)!important}
+body.light #contact{background:radial-gradient(ellipse at 80% 25%,rgba(0,185,201,.08),transparent 53%),linear-gradient(120deg,#eaf6fc,#f7fbff 55%,#eaf6fc)!important;border-color:#d4e7ee!important}
+body.light #apropos:after,body.light #developpement:after,body.light #gestion-stock:after,body.light #projets:after,body.light #parcours:after{background:linear-gradient(to bottom,transparent,rgba(63,128,162,.045))}
+@media(max-width:700px){#apropos:after,#developpement:after,#gestion-stock:after,#projets:after,#parcours:after{height:35px}}
