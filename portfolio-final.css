@@ -1,0 +1,11 @@
+/* Accessibility and mobile audit refinements, no changes to Accueil layout or color palette */
+.lang-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:43px;height:35px;padding:0 9px;border-radius:10px;border:1px solid rgba(28,215,224,.6);background:rgba(11,61,83,.45);color:#b8faff;font:700 12px/1 inherit;letter-spacing:.5px;cursor:pointer}
+.lang-toggle:hover,.lang-toggle:focus-visible{background:rgba(11,166,191,.23);outline:2px solid #09dfe3;outline-offset:2px}
+body.light .lang-toggle{background:#e5f7fb;color:#07687c;border-color:#69bbca}
+.contact-form input:invalid:not(:placeholder-shown),.contact-form textarea:invalid:not(:placeholder-shown){border-color:#ee9d81}
+.contact-form button{cursor:pointer}
+.project-card .project-preview img{max-width:100%}
+.project-card .institution-logo img{object-fit:contain}
+@media(max-width:900px){.nav-actions{gap:8px}.lang-toggle{height:34px;min-width:40px}.section-services .services-grid{gap:14px}}
+@media(max-width:600px){.lang-toggle{height:32px;min-width:37px;font-size:11px}.contact-form input,.contact-form textarea,.contact-form select{font-size:16px}.section-demo .demo-actions .btn{max-width:100%;white-space:normal}.project-card .case-study-trigger{min-height:40px}.case-dialog{max-height:calc(100dvh - 30px)}}
+@media(prefers-reduced-motion:reduce){.service-item,.project-card{transition:none!important}}
