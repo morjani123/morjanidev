@@ -54,3 +54,14 @@ img,video,svg,iframe{max-width:100%}
   .hero-v3 .hero-float{max-width:42%}
   .gsp-aside h3,.cv-summary h3{overflow-wrap:anywhere}
 }
+
+/* Horizontal overflow root fix: isolate decorative layers from page scroll width. */
+html{width:100%;overflow-x:clip}
+body{width:100%;overflow-x:clip;position:relative}
+.ambient{max-width:none;pointer-events:none}
+@media(max-width:850px){
+  .ambient-a,.ambient-b{position:fixed!important;width:0!important;height:0!important;opacity:0!important;filter:none!important}
+  #developpement:before,#parcours:before{left:0!important;right:0!important;transform:none!important;width:100%!important;max-width:100%!important}
+  .wrap,.nav,.hero-v3,.section-heading,.section-heading p,.hero-copy,.hero-art,.project-card,.contact-panel{min-width:0;max-width:100%;box-sizing:border-box}
+  .hero-v3 .hero-stats,.hero-v3 .hero-service-grid{min-width:0;max-width:100%}
+}
