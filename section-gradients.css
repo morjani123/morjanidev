@@ -23,3 +23,18 @@ body.light #parcours:before{background:radial-gradient(ellipse at 90% 25%,rgba(7
 body.light #contact{background:radial-gradient(ellipse at 80% 25%,rgba(0,185,201,.08),transparent 53%),linear-gradient(120deg,#eaf6fc,#f7fbff 55%,#eaf6fc)!important;border-color:#d4e7ee!important}
 body.light #apropos:after,body.light #developpement:after,body.light #gestion-stock:after,body.light #projets:after,body.light #parcours:after{background:linear-gradient(to bottom,transparent,rgba(63,128,162,.045))}
 @media(max-width:700px){#apropos:after,#developpement:after,#gestion-stock:after,#projets:after,#parcours:after{height:35px}}
+
+/* V2: stronger section separation, preserving Accueil */
+#apropos.about-digital{background:radial-gradient(ellipse at 12% 42%,rgba(0,225,229,.18),transparent 50%),linear-gradient(120deg,#0b3850 0%,#0e4056 54%,#0b314a 100%)!important}
+#developpement:before{background:radial-gradient(ellipse at 86% 24%,rgba(20,137,205,.13),transparent 48%),linear-gradient(120deg,#06182c,#071b32 58%,#08223b)!important}
+#gestion-stock{background:radial-gradient(ellipse at 85% 20%,rgba(242,188,45,.11),transparent 50%),linear-gradient(120deg,#174352,#1b4b58 55%,#123949)!important}
+#projets{background:radial-gradient(ellipse at 13% 10%,rgba(0,180,215,.12),transparent 44%),linear-gradient(120deg,#071b30,#09243b 55%,#071b31)!important}
+#parcours:before{background:radial-gradient(ellipse at 85% 25%,rgba(80,155,230,.15),transparent 52%),linear-gradient(120deg,#183d59,#1b435f 55%,#153750)!important}
+#contact{background:radial-gradient(ellipse at 82% 22%,rgba(0,224,229,.14),transparent 55%),linear-gradient(120deg,#061a30,#0b2b42 55%,#06182c)!important}
+#apropos,#gestion-stock,#projets,#contact{border-top:1px solid rgba(95,180,210,.24)!important}
+body.light #apropos.about-digital{background:radial-gradient(ellipse at 12% 42%,rgba(0,171,199,.16),transparent 50%),linear-gradient(120deg,#d5f0f7,#dff4f8 55%,#d6ecf6)!important}
+body.light #developpement:before{background:linear-gradient(120deg,#fff,#f5f9fe 55%,#edf5fc)!important}
+body.light #gestion-stock{background:radial-gradient(ellipse at 82% 20%,rgba(221,170,40,.12),transparent 50%),linear-gradient(120deg,#f5eedc,#f9f1dd 55%,#f4e9d1)!important}
+body.light #projets{background:linear-gradient(120deg,#e1f2fb,#e8f6fc 55%,#dbedf7)!important}
+body.light #parcours:before{background:linear-gradient(120deg,#e8f0fb,#e1ecf9 55%,#eaf2fc)!important}
+body.light #contact{background:linear-gradient(120deg,#e1f4f8,#edf9fb 55%,#dff1f8)!important}
