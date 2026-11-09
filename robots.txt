@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://morjani123.github.io/morjanidev/sitemap.xml
