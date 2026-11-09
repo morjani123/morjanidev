@@ -85,7 +85,11 @@ document.querySelectorAll('.case-study-trigger').forEach(button => button.addEve
   caseLink.textContent = !stock && publicLink ? 'Visiter le site ↗' : 'Discuter du projet ↗';
   caseLink.target = !stock && publicLink ? '_blank' : '_self';
   if (!stock && publicLink) caseLink.rel = 'noopener noreferrer'; else caseLink.removeAttribute('rel');
-  if (document.documentElement.lang === "en") {\n    const nodes = document.createTreeWalker(caseDialog, NodeFilter.SHOW_TEXT);\n    let node; while ((node=nodes.nextNode())) {const raw=node.nodeValue;const trimmed=raw.trim();if(translations.has(trimmed)) node.nodeValue=raw.replace(trimmed,translations.get(trimmed));}\n  }\n  caseDialog.showModal();
+  if (document.documentElement.lang === "en") {
+    const nodes = document.createTreeWalker(caseDialog, NodeFilter.SHOW_TEXT);
+    let node; while ((node=nodes.nextNode())) {const raw=node.nodeValue;const trimmed=raw.trim();if(translations.has(trimmed)) node.nodeValue=raw.replace(trimmed,translations.get(trimmed));}
+  }
+  caseDialog.showModal();
 }));
 document.querySelector('#caseClose')?.addEventListener('click', () => caseDialog?.close());
 caseDialog?.addEventListener('click', event => { if (event.target === caseDialog) caseDialog.close(); });
