@@ -65,3 +65,10 @@ body{width:100%;overflow-x:clip;position:relative}
   .wrap,.nav,.hero-v3,.section-heading,.section-heading p,.hero-copy,.hero-art,.project-card,.contact-panel{min-width:0;max-width:100%;box-sizing:border-box}
   .hero-v3 .hero-stats,.hero-v3 .hero-service-grid{min-width:0;max-width:100%}
 }
+
+/* Shared specialty-page introduction; original Accueil hero is unchanged. */
+.specialty-intro{padding:72px 0 46px;position:relative;max-width:1160px}
+.specialty-intro h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4.6vw,58px);line-height:1.12;letter-spacing:-.035em;margin:15px 0}
+.specialty-intro p{max-width:670px;color:var(--muted);font-size:clamp(15px,1.7vw,19px);line-height:1.7;margin:0 0 23px}
+.specialty-intro .btn{display:inline-flex}
+@media(max-width:600px){.specialty-intro{padding:50px 0 24px}.specialty-intro h1{font-size:clamp(30px,9vw,42px)}}
