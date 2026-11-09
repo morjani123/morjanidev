@@ -243,13 +243,6 @@ translations.set('& Applications','& Applications');translations.set('& Magasini
 for (const [fr,en] of Object.entries({"WordPress, Drupal et développement d’applications":"WordPress, Drupal and application development","SGTM — Projet WAVE II à Safi":"SGTM — WAVE II Project in Safi","ISMOTICA · Fès":"ISMOTICA · Fez","ISTA Gestion · Fès":"ISTA Gestion · Fez","Lycée Al Adarissa · Fès":"Al Adarissa High School · Fez","Omar Morjani. Tous droits réservés.":"Omar Morjani. All rights reserved.","LINKEDIN":"LINKEDIN","WhatsApp ↗":"WhatsApp ↗","Solutions Digitales sur Mesure":"Custom Digital Solutions","Développement Web & Applications":"Web Development & Applications","Gestion de Stock & Magasinier":"Inventory Management & Storekeeping","Professionnel polyvalent, alliant le":"Versatile professional combining","de solutions web et logicielles à une solide expérience en":"of web and software solutions with solid experience in",". J’apporte des solutions concrètes, digitales et opérationnelles pour optimiser l’organisation et la performance des entreprises.":". I deliver practical digital and operational solutions to improve business organization and performance.","Visiter le site ↗":"Visit website ↗","Projet web":"Web project","Mode sombre":"Dark mode","Mode clair":"Light mode","Activer le mode sombre":"Enable dark mode","Activer le mode clair":"Enable light mode","Changer le thème":"Change theme","Demander une démonstration ↗":"Request a demo ↗","Expérience chez TWINS":"Experience at TWINS"})) translations.set(fr,en);
 const langToggle = document.querySelector('#langToggle');
 const cvDownloadLink = document.querySelector('a[href="assets/CV_Omar_Morjani.pdf"]');
-let englishCvAvailable = false;
-if (cvDownloadLink) {
-  fetch('assets/CV_Omar_Morjani_EN.pdf', {method:'HEAD'}).then(response => {
-    englishCvAvailable = response.ok;
-    if (document.documentElement.lang === 'en' && englishCvAvailable) cvDownloadLink.href='assets/CV_Omar_Morjani_EN.pdf';
-  }).catch(()=>{});
-}
 
 const translatedNodes = [];
 const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -295,7 +288,7 @@ function applyLanguage(language) {
   attributes.forEach(({el,attr,original,translated})=>el.setAttribute(attr,language==='en'?translated:original));
   placeholders.forEach(([selector,fr,en])=>{const el=document.querySelector(selector);if(el)el.placeholder=language==='en'?en:fr;});
   document.title=language==='en'?englishTitle:originalTitle;
-  if(cvDownloadLink) cvDownloadLink.href=language==='en' && englishCvAvailable?'assets/CV_Omar_Morjani_EN.pdf':'assets/CV_Omar_Morjani.pdf';
+  if(cvDownloadLink) cvDownloadLink.href=language==='en'?'assets/CV_Omar_Morjani_EN.pdf':'assets/CV_Omar_Morjani.pdf';
   const description=document.querySelector('meta[name="description"]');
   if(description) description.content=language==='en'?englishDescription:originalDescription;
   if(langToggle){langToggle.textContent=language==='en'?'FR':'EN';langToggle.setAttribute('aria-label',language==='en'?'Passer en français':'Switch to English');}
