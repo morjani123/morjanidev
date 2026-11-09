@@ -1,0 +1,40 @@
+/* Professional refinements only below Accueil. The hero is intentionally untouched. */
+html{scroll-behavior:smooth;scroll-padding-top:94px}
+#apropos,#developpement,#gestion-stock,#projets,#parcours,#contact{scroll-margin-top:94px}
+:focus-visible{outline:3px solid #0fd7df;outline-offset:4px}
+.section-development,.stock-section,.section-projects,.section-parcours,.contact-section{position:relative}
+.section-development .section-heading,.stock-section .section-heading,.section-projects .section-heading,.section-parcours .section-heading{margin-bottom:32px}
+.section-development .expertise-grid{gap:20px}
+.section-development .expertise-card{display:flex;flex-direction:column;min-height:245px;padding:26px;border:1px solid rgba(104,160,205,.23);border-radius:18px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.section-development .expertise-card:hover,.stock-section .stock-skills article:hover,.section-projects .project-card:hover{transform:translateY(-3px);border-color:rgba(12,207,224,.5);box-shadow:0 15px 38px rgba(0,0,0,.12)}
+.section-development .expertise-card .chips{margin-top:auto;padding-top:20px}
+.stock-section .stock-skills{gap:18px}
+.stock-section .stock-skills article{border:1px solid rgba(104,160,205,.2);border-radius:16px;transition:transform .2s ease,border-color .2s ease}
+.stock-section .systems-offer{margin-top:32px}
+.stock-section .systems-grid{gap:13px}
+.stock-section .systems-grid>div{border-radius:12px}
+.stock-section .systems-disclaimer{font-size:12px;opacity:.8}
+.section-projects .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:23px}
+.section-projects .filter{cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.section-projects .project-grid{gap:18px}
+.section-projects .project-card{overflow:hidden;border-radius:17px;border:1px solid rgba(104,160,205,.22);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.section-projects .project-card[hidden]{display:none!important}
+.section-projects .project-preview{overflow:hidden}
+.section-projects .project-preview .institution-logo{transition:transform .25s ease}
+.section-projects .project-preview:hover .institution-logo{transform:scale(1.025)}
+.section-projects .project-card a:focus-visible,.section-projects .project-card button:focus-visible{outline-offset:2px}
+.section-parcours .journey-grid{gap:35px}
+.section-parcours .timeline-item{padding-bottom:22px}
+.section-parcours .education-card{border-radius:15px}
+.contact-section .contact-panel{border-radius:22px}
+.contact-section .contact-info a{overflow-wrap:anywhere}
+.footer .footer-inner{gap:20px}
+body.light .section-development .expertise-card,body.light .stock-section .stock-skills article,body.light .section-projects .project-card,body.light .section-parcours .education-card{background:#fff!important;border-color:#d7e5ee!important;color:#18334b!important;box-shadow:0 8px 22px rgba(26,70,101,.045)}
+body.light .section-development .expertise-card p,body.light .stock-section .stock-skills article p,body.light .section-projects .project-card p{color:#52697e!important}
+body.light .section-projects .project-card h3,body.light .section-parcours h3{color:#18344e!important}
+body.light .contact-section .contact-panel{background:linear-gradient(130deg,#fff,#eaf5fc)!important;color:#18344e!important;border:1px solid #cbdfea!important}
+body.light .contact-section .contact-panel p,body.light .contact-section .contact-info span{color:#546b7f!important}
+body.light .contact-section .contact-panel h2,body.light .contact-section .contact-info strong{color:#16344d!important}
+@media(max-width:850px){.section-development .expertise-card{min-height:0}.section-development .expertise-card .chips{margin-top:10px;padding-top:0}.section-parcours .journey-grid{gap:22px}}
+@media(max-width:550px){.section-development .expertise-card{padding:20px}.section-development .section-heading,.stock-section .section-heading,.section-projects .section-heading,.section-parcours .section-heading{margin-bottom:22px}.section-projects .filters{gap:7px}.section-projects .filter{font-size:12px}.contact-section .contact-panel{border-radius:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
