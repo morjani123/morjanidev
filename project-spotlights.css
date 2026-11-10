@@ -1,0 +1,22 @@
+/* Portfolio featured project photography */
+.project-grid>.portfolio-spotlight{grid-column:span 1;padding:0;overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(116,158,202,.35);box-shadow:0 18px 40px rgba(0,0,0,.14);min-height:0}
+.portfolio-spotlight .spotlight-preview{position:relative;aspect-ratio:16/10;display:block;overflow:hidden;background:#16263b}
+.portfolio-spotlight .spotlight-preview img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease,filter .3s ease}
+.portfolio-spotlight:hover .spotlight-preview img{transform:scale(1.065)}
+.portfolio-spotlight .spotlight-preview:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,13,26,.05) 15%,rgba(4,12,25,.84) 100%);pointer-events:none}
+.spotlight-overlay{position:absolute;z-index:1;bottom:22px;left:24px;right:20px;display:flex;flex-direction:column;gap:7px;color:#fff}
+.spotlight-overlay strong{font:700 clamp(22px,2.1vw,30px)/1.15 'Space Grotesk',sans-serif;letter-spacing:-.4px;color:#fff}
+.spotlight-overlay>span:last-child{font-size:13px;color:#e7eef8}
+.spotlight-category{align-self:flex-start;padding:7px 10px;border-radius:6px;background:#f5b544;color:#172033;font-size:10px;font-weight:850;letter-spacing:.7px}
+.health-spotlight .spotlight-category{background:#8fe0dc}
+.portfolio-spotlight .spotlight-content{padding:22px 24px 26px;display:flex;flex-direction:column;gap:11px;flex:1}
+.portfolio-spotlight .spotlight-content .project-overline,.portfolio-spotlight .spotlight-content h3,.portfolio-spotlight .spotlight-content p,.portfolio-spotlight .spotlight-content .project-link{margin:0}
+.portfolio-spotlight .spotlight-content h3{font-size:22px}
+.portfolio-spotlight .spotlight-content p{font-size:13px;line-height:1.7;color:var(--muted)}
+.portfolio-spotlight .chips{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0}
+.spotlight-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:9px}
+.portfolio-spotlight .spotlight-actions .project-link{padding:10px 0;font-size:13px}
+.spotlight-github{color:var(--muted);font-size:12px;text-decoration:none;font-weight:700}
+.spotlight-github:hover{color:var(--cyan)}
+@media(min-width:900px){.project-grid:has(.portfolio-spotlight){grid-template-columns:repeat(2,minmax(0,1fr))}.project-grid>.portfolio-spotlight{grid-column:span 1}}
+@media(max-width:650px){.project-grid>.portfolio-spotlight{grid-column:1/-1}.spotlight-overlay{left:18px;bottom:18px}.portfolio-spotlight .spotlight-content{padding:20px}}
