@@ -1,1 +1,25 @@
-(()=>{'use strict';const root=document.querySelector('.section-projects');if(!root)return;const track=root.querySelector('.project-grid');const prev=root.querySelector('[data-carousel-prev]');const next=root.querySelector('[data-carousel-next]');const count=root.querySelector('[data-carousel-count]');if(!track||!prev||!next||!count)return;const visible=()=>Array.from(track.querySelectorAll('.project-card')).filter(el=>!el.hidden);const activeIndex=()=>{const cards=visible();if(!cards.length)return 0;const left=track.getBoundingClientRect().left;let best=0,dist=Infinity;cards.forEach((el,i)=>{const d=Math.abs(el.getBoundingClientRect().left-left);if(d<dist){dist=d;best=i}});return best};const update=()=>{const cards=visible();const i=activeIndex();count.textContent=cards.length?String(i+1)+' / '+cards.length:'0 / 0';prev.disabled=!cards.length||i===0;next.disabled=!cards.length||i===cards.length-1};const go=delta=>{const cards=visible();const index=Math.max(0,Math.min(cards.length-1,activeIndex()+delta));cards[index]?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest',inline:'start'});setTimeout(update,380)};prev.addEventListener('click',()=>go(-1));next.addEventListener('click',()=>go(1));track.addEventListener('scroll',()=>requestAnimationFrame(update),{passive:true});track.addEventListener('keydown',e=>{if(e.target!==track)return;if(e.key==='ArrowRight'){e.preventDefault();go(1)}if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}});root.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{track.scrollTo({left:0,behavior:'instant'});setTimeout(update,20)}));window.addEventListener('resize',update,{passive:true});update()})();
+(()=>{'use strict';
+const root=document.querySelector('.section-projects');if(!root)return;
+const track=root.querySelector('.project-grid'),prev=root.querySelector('[data-carousel-prev]'),next=root.querySelector('[data-carousel-next]'),count=root.querySelector('[data-carousel-count]'),toggle=root.querySelector('[data-carousel-toggle]'),progress=root.querySelector('[data-carousel-progress]');
+if(!track||!prev||!next||!count)return;
+const DELAY=4200,reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+let timer=null,pausedByUser=reduce.matches,hovered=false,focused=false,inView=false,started=Date.now();
+const visible=()=>Array.from(track.querySelectorAll('.project-card')).filter(el=>!el.hidden);
+const index=()=>{const cards=visible();if(!cards.length)return 0;const left=track.getBoundingClientRect().left;let best=0,dist=Infinity;cards.forEach((el,i)=>{const d=Math.abs(el.getBoundingClientRect().left-left);if(d<dist){dist=d;best=i}});return best};
+const update=()=>{const cards=visible(),i=index();count.textContent=cards.length?String(i+1).padStart(2,'0')+' / '+String(cards.length).padStart(2,'0'):'00 / 00';prev.disabled=cards.length<2;next.disabled=cards.length<2;};
+const slideTo=(i)=>{const cards=visible();if(!cards.length)return;const target=cards[(i+cards.length)%cards.length];track.scrollTo({left:target.offsetLeft-track.offsetLeft,behavior:reduce.matches?'instant':'smooth'});setTimeout(update,550)};
+const go=(delta)=>slideTo(index()+delta);
+const shouldRun=()=>!pausedByUser&&!hovered&&!focused&&inView&&!document.hidden&&visible().length>1;
+const stop=()=>{if(timer){clearInterval(timer);timer=null}root.classList.remove('carousel-playing')};
+const sync=()=>{stop();if(toggle){toggle.textContent=pausedByUser?'▶':'Ⅱ';toggle.setAttribute('aria-label',pausedByUser?'Lancer le défilement automatique':'Mettre le défilement automatique en pause');toggle.setAttribute('aria-pressed',String(pausedByUser))}if(shouldRun()){started=Date.now();root.classList.add('carousel-playing');if(progress){progress.style.animation='none';void progress.offsetWidth;progress.style.animation='carousel-progress '+DELAY+'ms linear infinite'}timer=setInterval(()=>{go(1)},DELAY)}};
+prev.addEventListener('click',()=>{go(-1);sync()});next.addEventListener('click',()=>{go(1);sync()});
+toggle?.addEventListener('click',()=>{pausedByUser=!pausedByUser;sync()});
+track.addEventListener('scroll',()=>requestAnimationFrame(update),{passive:true});
+track.addEventListener('keydown',e=>{if(e.target!==track)return;if(e.key==='ArrowRight'){e.preventDefault();go(1)}if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}});
+root.addEventListener('mouseenter',()=>{hovered=true;sync()});root.addEventListener('mouseleave',()=>{hovered=false;sync()});
+root.addEventListener('focusin',()=>{focused=true;sync()});root.addEventListener('focusout',()=>{setTimeout(()=>{focused=root.contains(document.activeElement);sync()},0)});
+root.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{track.scrollTo({left:0,behavior:'instant'});setTimeout(()=>{update();sync()},80)}));
+document.addEventListener('visibilitychange',sync);window.addEventListener('resize',update,{passive:true});reduce.addEventListener?.('change',()=>{if(reduce.matches)pausedByUser=true;sync()});
+if('IntersectionObserver'in window){const obs=new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;sync()},{threshold:.2});obs.observe(track)}else{inView=true;sync()}
+update();
+})();
