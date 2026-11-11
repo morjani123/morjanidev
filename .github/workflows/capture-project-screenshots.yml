@@ -27,17 +27,24 @@ jobs:
               ['chantier-manager-pro','https://morjani123.github.io/chantier-manager-pro/'],
               ['health-service','https://morjani123.github.io/health-service/'],
               ['gestion-commerciale-pro','https://morjani123.github.io/gestion-commerciale-pro/'],
-              ['react-optisis','https://morjani123.github.io/react-optisis/']
+              ['react-optisis','https://morjani123.github.io/react-optisis/'],
+              ['onssa','https://www.onssa.gov.ma/'],
+              ['cri-fes-meknes','https://fesmeknesinvest.ma/'],
+              ['laayoune-invest','https://laayouneinvest.ma/'],
+              ['amee','https://amee.ma/'],
+              ['map','https://www.map.ma/']
             ];
             for(const [slug,url] of apps){
               const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
               try{
                 const response=await page.goto(url,{waitUntil:'domcontentloaded',timeout:45000});
                 if(!response || !response.ok())throw Error('HTTP '+response?.status());
+                const title=(await page.title()).toLowerCase();
+                if(/access denied|just a moment|captcha|403 forbidden/.test(title))throw Error('Site blocked automated access');
                 await page.waitForTimeout(2500);
                 await page.screenshot({path:'assets/screenshots/'+slug+'.png',animations:'disabled'});
                 console.log('Captured '+slug);
-              }catch(e){console.error('Failed '+slug+': '+e.message);process.exitCode=1}
+              }catch(e){console.warn('Screenshot unavailable '+slug+': '+e.message)}
               await page.close();
             }
             await browser.close();
