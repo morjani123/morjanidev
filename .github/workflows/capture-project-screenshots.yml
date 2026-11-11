@@ -51,5 +51,16 @@ jobs:
           git add assets/screenshots/*.png
           if ! git diff --cached --quiet; then
             git commit -m "assets: real screenshots from published application demos"
-            git push
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                echo "Screenshots published successfully"
+                exit 0
+              fi
+              echo "Concurrent push detected; retrying ($attempt/5)"
+              sleep 3
+            done
+            echo "Could not publish screenshots after five attempts"
+            exit 1
           fi
