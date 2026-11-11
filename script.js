@@ -45,15 +45,16 @@ filters.forEach(button => button.addEventListener('click', () => {
 
 const dialog = $('#videoDialog');
 const video = $('#demoVideo');
-const openVideo = $('#openVideo');
 const closeVideo = $('#closeVideo');
-if (dialog && video && openVideo && closeVideo) {
-  openVideo.addEventListener('click', () => {
-    if (typeof dialog.showModal === 'function') dialog.showModal();
-    else dialog.setAttribute('open', '');
+if (dialog && video) {
+  document.querySelectorAll('[data-open-demo], #openVideo').forEach(button => button.addEventListener('click', () => {
+    if (!dialog.open) {
+      if (typeof dialog.showModal === 'function') dialog.showModal();
+      else dialog.setAttribute('open', '');
+    }
     video.play().catch(() => {});
-  });
-  closeVideo.addEventListener('click', () => dialog.close());
+  }));
+  closeVideo?.addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => video.pause());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 }
