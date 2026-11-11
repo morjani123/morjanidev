@@ -40,3 +40,12 @@ body{min-width:0;overflow-x:clip}
  .site-header>.nav.wrap>.nav-links.open{left:0!important;right:0!important}
 }
 
+
+/* Identical desktop header dimensions across ALL pages (same as Home). */
+@media (min-width:1051px){
+ body .site-header .nav.wrap{
+  max-width:1510px!important;
+  width:calc(100% - 130px)!important;
+  height:78px!important;
+ }
+}
