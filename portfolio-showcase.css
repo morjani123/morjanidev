@@ -1,0 +1,30 @@
+/* Portfolio showcase redesign — scoped to Développement / #projets */
+#projets.section-projects{position:relative;isolation:isolate;overflow:hidden;padding-block:100px 110px;background:radial-gradient(ellipse 65% 45% at 85% 4%,rgba(0,196,230,.11),transparent 75%),linear-gradient(160deg,#071a30 0%,#0b2441 55%,#08192f 100%)}
+#projets.section-projects:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.23;background-image:linear-gradient(rgba(110,205,239,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(110,205,239,.08) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,#000,transparent 70%);z-index:-1}
+#projets>.wrap{position:relative}
+#projets .section-kicker{display:inline-flex;align-items:center;gap:11px;padding:9px 15px;border:1px solid rgba(52,215,238,.35);border-radius:100px;background:rgba(8,139,174,.13);color:#63e4ef;font-size:12px;font-weight:800;letter-spacing:.16em}
+#projets .section-kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:#2ee4da;box-shadow:0 0 0 5px rgba(46,228,218,.13)}
+#projets .section-heading{display:block;max-width:840px;margin:20px 0 30px;text-align:left}
+#projets .section-heading h2{font-size:clamp(38px,5.6vw,74px);line-height:1.06;letter-spacing:-.055em;font-weight:850;margin:0 0 19px;color:#f6fbff}
+#projets .section-heading h2 .gradient-text{background:linear-gradient(110deg,#3dd7f4,#8bd4ff 60%,#a4b6ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+#projets .section-heading p{max-width:670px;font-size:clamp(15px,1.5vw,18px);line-height:1.8;color:#b2c6d9;margin:0}
+#projets .filters{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:10px;margin:0 0 26px;padding:8px;width:fit-content;max-width:100%;border:1px solid rgba(121,186,221,.17);border-radius:18px;background:rgba(5,20,39,.6);box-shadow:0 12px 32px rgba(0,0,0,.12)}
+#projets .filters .filter{border:1px solid transparent;border-radius:12px;padding:11px 17px;background:transparent;color:#c5d6e6;font-weight:700;transition:background .2s,border-color .2s,transform .2s}
+#projets .filters .filter:hover{background:rgba(78,172,211,.13);border-color:rgba(90,190,222,.28);transform:translateY(-1px)}
+#projets .filters .filter.active,#projets .filters .filter[aria-pressed=true]{background:linear-gradient(125deg,#1bcee5,#53aef4);color:#05213a;border-color:transparent;box-shadow:0 5px 16px rgba(23,191,226,.2)}
+#projets .project-carousel-shell{padding:16px 20px 12px;margin-bottom:22px;border:1px solid rgba(113,183,220,.16);border-radius:18px;background:rgba(8,29,53,.72)}
+#projets .project-carousel-head{gap:14px}
+#projets .project-carousel-hint{color:#aec5d7}
+#projets .project-carousel-arrow{border-radius:11px}
+#projets .project-card{border:1px solid rgba(118,185,219,.2);border-radius:21px;overflow:hidden;box-shadow:0 20px 45px rgba(0,0,0,.14);transition:transform .25s,border-color .25s,box-shadow .25s}
+#projets .project-card:hover{transform:translateY(-5px);border-color:rgba(54,210,239,.55);box-shadow:0 24px 55px rgba(0,0,0,.23)}
+body.light #projets.section-projects{background:radial-gradient(ellipse 65% 45% at 85% 4%,rgba(11,168,213,.09),transparent 75%),linear-gradient(160deg,#f1f8ff,#eaf4fc)}
+body.light #projets .section-heading h2{color:#0a2743}
+body.light #projets .section-heading p{color:#536e84}
+body.light #projets .section-kicker{color:#087e9c;background:#e2f7fc}
+body.light #projets .filters{background:rgba(255,255,255,.83);border-color:#d4e3ef}
+body.light #projets .filters .filter{color:#31506b}
+body.light #projets .filters .filter.active{color:#05213a}
+body.light #projets .project-carousel-shell{background:rgba(255,255,255,.8);border-color:#d6e6f0}
+body.light #projets .project-carousel-hint{color:#52718a}
+@media(max-width:700px){#projets.section-projects{padding-block:65px 75px}#projets .section-heading{margin:18px 0 26px}#projets .section-heading h2{font-size:clamp(35px,9vw,54px)}#projets .filters{width:100%;box-sizing:border-box;gap:6px;padding:6px}#projets .filters .filter{flex:1 1 auto;padding:10px 11px;font-size:12px}#projets .project-carousel-shell{padding:12px;border-radius:14px}#projets .project-carousel-head{flex-wrap:wrap}}
