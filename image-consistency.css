@@ -17,3 +17,6 @@
 
 /* v5: preserve brand colors, make the CRI Fes-Meknes bilingual mark legible */
 .premium-tech-grid .premium-tech-icon img{filter:none!important;opacity:1!important;mix-blend-mode:normal!important;object-fit:contain!important}.home-institutional-grid .institution-cri-fes-meknes .institution-feature-art>img{width:100%!important;max-width:365px!important;height:166px!important;padding:9px 14px!important;object-fit:contain!important}.home-institutional-grid .institution-cri-fes-meknes .institution-feature-art{padding:27px 14px 24px}.home-institutional-grid .institution-cri-fes-meknes .institution-feature-art>img{background:#fff!important}@media(max-width:850px){.home-institutional-grid .institution-cri-fes-meknes .institution-feature-art>img{max-width:285px!important;height:133px!important}}@media(max-width:540px){.home-institutional-grid .institution-cri-fes-meknes .institution-feature-art>img{max-width:290px!important;height:126px!important}}
+
+/* Fix: hidden tech cards must override the flex card layout */
+.premium-tech-grid .premium-tech[hidden]{display:none!important}
