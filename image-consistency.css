@@ -20,3 +20,12 @@
 
 /* Fix: hidden tech cards must override the flex card layout */
 .premium-tech-grid .premium-tech[hidden]{display:none!important}
+
+/* Header navigation: prevent language/theme controls overlapping at laptop and mobile widths */
+.site-header .nav.wrap{display:flex;align-items:center;box-sizing:border-box;min-width:0;max-width:100%;gap:clamp(8px,1.3vw,20px)}
+.site-header .nav .brand{min-width:0;flex:0 1 auto}
+.site-header .nav .nav-actions{display:flex;flex:0 0 auto;align-items:center;justify-content:flex-end;gap:8px;margin-left:auto;min-width:max-content}
+.site-header .nav .lang-toggle,.site-header .nav .theme-toggle,.site-header .nav .menu-toggle{flex:0 0 auto;box-sizing:border-box;position:static;transform:none}
+.site-header .nav .nav-links{min-width:0}
+@media(max-width:1220px){.site-header .nav.wrap{width:calc(100% - 36px)!important;max-width:100%;height:70px;gap:12px}.site-header .nav .nav-links{display:none!important}.site-header .nav .nav-links.open{display:flex!important;position:absolute;top:100%;left:0;right:0;width:100%;box-sizing:border-box;z-index:1100;flex-direction:column;align-items:stretch;gap:6px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:0 0 16px 16px;box-shadow:0 16px 35px rgba(0,0,0,.16)}.site-header .nav .nav-links.open a{display:flex!important;justify-content:flex-start;width:100%;box-sizing:border-box}.site-header .nav .menu-toggle{display:inline-flex!important;align-items:center;justify-content:center;width:38px;height:38px}.site-header .nav .nav-actions{margin-left:auto;gap:9px}.site-header .nav .desktop-cta{display:none!important}.site-header .nav .brand{flex:0 1 auto}.site-header{overflow:visible!important}}
+@media(max-width:420px){.site-header .nav.wrap{width:calc(100% - 22px)!important;gap:6px}.site-header .nav .nav-actions{gap:5px}.site-header .nav .brand-mark{font-size:29px;margin-right:3px;letter-spacing:-4px}.site-header .nav .brand-name{font-size:12px;line-height:1.15}.site-header .nav .brand-name small{font-size:8px}.site-header .nav .lang-toggle{min-width:34px;height:32px;padding:0 5px;font-size:10px}.site-header .nav .theme-toggle,.site-header .nav .menu-toggle{width:33px;height:33px;border-radius:9px}}
