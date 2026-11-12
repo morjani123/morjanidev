@@ -25,6 +25,7 @@ jobs:
             const browser=await chromium.launch({headless:true});
             const apps=[
               ['chantier-manager-pro','https://morjani123.github.io/chantier-manager-pro/'],
+              ['fleet-manager-pro','https://morjani123.github.io/fleet-manager-pro/'],
               ['health-service','https://morjani123.github.io/health-service/'],
               ['gestion-commerciale-pro','https://morjani123.github.io/gestion-commerciale-pro/'],
               ['react-optisis','https://morjani123.github.io/react-optisis/'],
