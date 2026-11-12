@@ -1,0 +1,71 @@
+/* Portfolio 2026 — dedicated project gallery redesign */
+#projets.section-projects{padding:78px 0 100px;background:#081524;overflow:visible;isolation:isolate}
+#projets.section-projects:before{opacity:.12}
+#projets>.wrap{max-width:1330px}
+#projets .projects-intro{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:32px}
+#projets .projects-intro>div{max-width:880px}
+#projets .projects-eyebrow{display:block;font-size:11px;letter-spacing:2px;font-weight:800;color:#65d8db;margin-bottom:15px}
+#projets .projects-intro h2{font-size:clamp(36px,5.5vw,70px);letter-spacing:-.055em;line-height:1.07;font-weight:800;color:#f6fbff;margin:0 0 19px}
+#projets .projects-intro h2 span{color:#70d7dd}
+#projets .projects-intro p{font-size:16px;line-height:1.75;color:#a8c0d0;max-width:760px;margin:0}
+#projets .projects-highlights{display:flex;gap:11px;flex-wrap:wrap;margin-top:25px}
+#projets .projects-highlights>span{display:flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid #254155;border-radius:10px;color:#b6cbd9;font-size:12px;background:#10263a}
+#projets .projects-highlights strong{font-size:15px;color:#fff}
+#projets .projects-intro-cta{white-space:nowrap;padding:14px 18px;border:1px solid #3b6472;border-radius:11px;color:#e5faff;text-decoration:none;font-weight:750;font-size:13px;transition:background .2s}
+#projets .projects-intro-cta:hover{background:#15384c}
+#projets .projects-feature{display:grid;grid-template-columns:0.95fr 1.05fr;align-items:stretch;min-height:350px;background:linear-gradient(125deg,#10352d,#123b3e 70%,#154857);border:1px solid #35665e;border-radius:22px;overflow:hidden;margin-bottom:55px;box-shadow:0 20px 45px #0002}
+#projets .projects-feature-copy{padding:clamp(26px,4vw,53px);display:flex;flex-direction:column;align-items:start;justify-content:center}
+#projets .projects-feature-label{font-size:11px;letter-spacing:1.3px;color:#a0f3bd;font-weight:850}
+#projets .projects-feature h3{font-size:clamp(30px,4vw,50px);line-height:1.1;letter-spacing:-.04em;color:#fff;margin:14px 0}
+#projets .projects-feature p{font-size:15px;line-height:1.7;color:#d3e8e1;max-width:480px;margin:0}
+#projets .projects-feature-tags{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 25px}
+#projets .projects-feature-tags span{border:1px solid #588878;background:#ffffff10;border-radius:7px;color:#e8fff2;padding:6px 10px;font-size:11px}
+#projets .projects-feature-actions{display:flex;gap:10px;flex-wrap:wrap}
+#projets .projects-feature-actions a{padding:12px 15px;border-radius:9px;background:#2cbb66;color:#052b19;font-size:12px;font-weight:800;text-decoration:none}
+#projets .projects-feature-actions a+ a{background:transparent;border:1px solid #7eb69f;color:#f3fff6}
+#projets .projects-feature-visual{display:flex;align-items:center;padding:32px 0 32px 20px;min-width:0}
+#projets .projects-feature-visual img{width:110%;max-width:none;display:block;aspect-ratio:1200/760;object-fit:cover;object-position:left top;border:8px solid #ffffff20;border-radius:17px;box-shadow:0 20px 45px #001e1d80}
+#projets .projects-list-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:21px}
+#projets .projects-list-heading h3{color:#fff;font-size:clamp(27px,3.5vw,40px);letter-spacing:-.035em;margin:0}
+#projets .projects-list-heading .projects-eyebrow{margin-bottom:8px}
+#projets .projects-list-note{color:#9db7c9;font-size:12px}
+#projets .filters{background:transparent;border:0;padding:0;box-shadow:none;gap:9px;margin-bottom:23px}
+#projets .filters .filter{background:#10253a;border:1px solid #2b445a;color:#c7d9e5;border-radius:9px;padding:11px 16px;font-size:12px}
+#projets .filters .filter.active,#projets .filters .filter[aria-pressed=true]{background:#dff6f2;border-color:#dff6f2;color:#103a3c;box-shadow:none}
+#projets .project-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:20px!important;overflow:visible!important;scroll-snap-type:none!important;max-height:none!important;transform:none!important;padding:0!important}
+#projets .project-grid>.project-card{grid-column:auto!important;grid-row:auto!important;width:auto!important;min-width:0!important;max-width:none!important;flex:none!important;min-height:0!important;scroll-snap-align:none!important;border-radius:16px!important;border:1px solid #2d455a;background:#11283d;box-shadow:0 12px 25px #0002;overflow:hidden;display:flex;flex-direction:column}
+#projets .project-grid>.project-card[hidden]{display:none!important}
+#projets .project-grid>.project-card:hover{transform:translateY(-4px);border-color:#64b7bd;box-shadow:0 20px 36px #0004}
+#projets .project-card .project-preview,#projets .project-card .featured-image{width:100%;aspect-ratio:16/10;overflow:hidden;display:block}
+#projets .project-card .project-preview img,#projets .project-card .featured-image img{width:100%;height:100%;object-fit:cover}
+#projets .project-card .laptop-mockup{width:100%;height:100%;max-width:none;margin:0}
+#projets .project-card .laptop-mockup img{object-fit:cover}
+#projets .project-card .project-content,#projets .project-card .spotlight-content{padding:22px!important}
+#projets .project-card .project-overline{font-size:10px;letter-spacing:.7px;color:#6cd6d7}
+#projets .project-card h3{font-size:20px;line-height:1.2;color:#f7fbff;margin:9px 0}
+#projets .project-card p{font-size:13px;line-height:1.7;color:#b4c7d5}
+#projets .project-card .chips{display:flex;flex-wrap:wrap;gap:6px}
+#projets .project-card .chips span{font-size:10px}
+#projets .project-card .premium-detail-link{margin-top:auto;padding:13px 21px!important;border-top:1px solid #284459;color:#8fe2df;font-size:12px;font-weight:800;text-decoration:none}
+#projets .portfolio-spotlight .spotlight-preview{aspect-ratio:16/10}
+#projets .portfolio-spotlight .spotlight-preview:after{background:linear-gradient(180deg,transparent 35%,#061526bf)}
+#projets .portfolio-spotlight .spotlight-overlay{bottom:13px;left:15px;right:12px}
+#projets .portfolio-spotlight .spotlight-overlay strong{font-size:20px}
+#projets .portfolio-spotlight .spotlight-overlay>span:last-child{font-size:11px}
+#projets .portfolio-spotlight .spotlight-content{flex:1}
+#projets .fleet-spotlight .spotlight-category{background:#a4efb4}
+body.light #projets.section-projects{background:#f1f6f9}
+body.light #projets .projects-intro h2,body.light #projets .projects-list-heading h3{color:#11283c}
+body.light #projets .projects-intro h2 span{color:#168e8d}
+body.light #projets .projects-intro p,body.light #projets .projects-list-note{color:#5c7488}
+body.light #projets .projects-highlights>span{background:#fff;color:#53697a;border-color:#d9e5ec}
+body.light #projets .projects-highlights strong{color:#18344b}
+body.light #projets .projects-intro-cta{color:#174457;border-color:#b8d0dc}
+body.light #projets .filters .filter{background:#fff;color:#405c6f;border-color:#d7e5ec}
+body.light #projets .filters .filter.active{background:#164f55;color:#fff}
+body.light #projets .project-grid>.project-card{background:#fff;border-color:#d9e5ed;box-shadow:0 8px 25px #102d4610}
+body.light #projets .project-card h3{color:#173249}
+body.light #projets .project-card p{color:#597185}
+body.light #projets .project-card .premium-detail-link{border-color:#e1e9ef;color:#168b8d}
+@media(max-width:1100px){#projets .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#projets .projects-intro{align-items:start;flex-direction:column}#projets .projects-feature{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){#projets.section-projects{padding:54px 0 70px}#projets .projects-intro h2{font-size:38px}#projets .projects-feature{grid-template-columns:1fr}#projets .projects-feature-copy{padding:25px}#projets .projects-feature-visual{padding:0 20px 24px}#projets .projects-feature-visual img{width:100%}#projets .projects-list-heading{align-items:start;flex-direction:column;gap:8px}#projets .project-grid{grid-template-columns:1fr!important;gap:16px!important}#projets .projects-highlights{gap:7px}#projets .projects-highlights>span{font-size:11px;padding:8px}#projets .filters{width:100%}#projets .filters .filter{flex:1 1 auto;padding:10px 11px}#projets .projects-intro-cta{width:100%;text-align:center}}
