@@ -22,3 +22,17 @@ body .site-header .desktop-cta{display:none!important}
 /* Final override: keep desktop nav visible regardless of older header styles */
 @media(min-width:769px){html body header.site-header nav.nav.wrap #navLinks{display:flex!important;position:static!important;visibility:visible!important;opacity:1!important;transform:none!important;flex-direction:row!important;flex-wrap:nowrap!important;overflow:visible!important}html body header.site-header nav.nav.wrap #menuToggle{display:none!important;visibility:hidden!important}html body header.site-header nav.nav.wrap .nav-links a{font-size:clamp(9px,.78vw,12px)!important;padding:8px 5px!important}html body header.site-header nav.nav.wrap .brand-name{font-size:12px!important}}
 @media(max-width:768px){html body header.site-header nav.nav.wrap #menuToggle{display:inline-flex!important;visibility:visible!important}html body header.site-header nav.nav.wrap #navLinks:not(.open){display:none!important}html body header.site-header nav.nav.wrap #navLinks.open{display:flex!important}}
+
+/* v3: legible desktop navigation with breathing room */
+@media(min-width:1101px){
+html body header.site-header nav.nav.wrap{max-width:1560px!important;padding-left:20px!important;padding-right:20px!important;gap:16px!important}
+html body header.site-header nav.nav.wrap #navLinks{gap:5px!important}
+html body header.site-header nav.nav.wrap #navLinks a{font-size:14px!important;font-weight:650!important;padding:12px 10px!important;letter-spacing:0!important}
+html body header.site-header nav.nav.wrap .brand-name{font-size:15px!important}
+}
+@media(min-width:769px) and (max-width:1100px){
+html body header.site-header nav.nav.wrap{flex-wrap:wrap!important;justify-content:space-between!important;padding-top:9px!important;padding-bottom:9px!important}
+html body header.site-header nav.nav.wrap #navLinks{order:3!important;flex:1 0 100%!important;justify-content:center!important;gap:7px!important}
+html body header.site-header nav.nav.wrap #navLinks a{font-size:13px!important;font-weight:650!important;padding:9px 10px!important}
+html body header.site-header nav.nav.wrap .brand-name{font-size:14px!important}
+}
