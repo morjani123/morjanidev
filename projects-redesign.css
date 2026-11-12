@@ -69,3 +69,28 @@ body.light #projets .project-card p{color:#597185}
 body.light #projets .project-card .premium-detail-link{border-color:#e1e9ef;color:#168b8d}
 @media(max-width:1100px){#projets .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#projets .projects-intro{align-items:start;flex-direction:column}#projets .projects-feature{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){#projets.section-projects{padding:54px 0 70px}#projets .projects-intro h2{font-size:38px}#projets .projects-feature{grid-template-columns:1fr}#projets .projects-feature-copy{padding:25px}#projets .projects-feature-visual{padding:0 20px 24px}#projets .projects-feature-visual img{width:100%}#projets .projects-list-heading{align-items:start;flex-direction:column;gap:8px}#projets .project-grid{grid-template-columns:1fr!important;gap:16px!important}#projets .projects-highlights{gap:7px}#projets .projects-highlights>span{font-size:11px;padding:8px}#projets .filters{width:100%}#projets .filters .filter{flex:1 1 auto;padding:10px 11px}#projets .projects-intro-cta{width:100%;text-align:center}}
+
+/* v2 visual QA: neutralize conflicting legacy carousel / card styling */
+#projets .project-grid{position:static!important;display:grid!important;grid-auto-flow:row!important;grid-auto-columns:auto!important;grid-template-rows:auto!important;align-items:stretch!important;justify-content:stretch!important;white-space:normal!important;scroll-behavior:auto!important;overscroll-behavior:auto!important}
+#projets .project-grid>.project-card{position:relative!important;float:none!important;transform:none;opacity:1!important;visibility:visible!important;box-sizing:border-box!important;scroll-margin:0!important;height:auto!important}
+#projets .project-grid>.project-card:hover{transform:translateY(-5px)!important}
+#projets .project-grid>.project-card[hidden]{display:none!important}
+#projets .project-card .featured-image,#projets .project-card .project-preview,#projets .project-card .spotlight-preview{flex-shrink:0;position:relative;min-height:0;max-height:none;height:auto;aspect-ratio:16/10;box-sizing:border-box}
+#projets .project-card .featured-image img,#projets .project-card .project-preview img,#projets .project-card .spotlight-preview img{display:block;width:100%;height:100%;max-width:none;object-fit:cover}
+#projets .project-card .laptop-mockup{border:0;box-shadow:none;border-radius:0;transform:none;aspect-ratio:16/10;overflow:hidden}
+#projets .project-card .laptop-mockup:before,#projets .project-card .laptop-mockup:after{display:none}
+#projets .project-card .laptop-mockup img{position:static;transform:none;width:100%;height:100%;border:0;border-radius:0;object-fit:cover}
+#projets .project-card .project-content,#projets .project-card .spotlight-content{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
+#projets .project-card .project-content>*,#projets .project-card .spotlight-content>*{max-width:100%}
+#projets .project-card .project-content .chips,#projets .project-card .spotlight-content .chips{margin-top:auto;padding-top:8px}
+#projets .project-card .project-content .text-link,#projets .project-card .project-content .case-study-trigger{align-self:flex-start}
+#projets .project-card .spotlight-actions{margin-top:5px}
+#projets .project-card .premium-detail-link{display:block!important;position:static!important;width:auto!important;opacity:1!important;visibility:visible!important;transform:none!important}
+#projets .project-card .institution-logo{height:100%;min-height:0;aspect-ratio:16/10}
+#projets .project-card .institution-logo img{object-fit:contain;height:72px;width:100px}
+#projets .projects-feature-visual{overflow:hidden}
+#projets .projects-feature-visual img{transition:transform .3s}
+#projets .projects-feature-visual:hover img{transform:translateY(-4px)}
+#projets a:focus-visible,#projets button:focus-visible{outline:3px solid #8ce9e0;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){#projets *{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:680px){#projets .project-grid>.project-card{width:100%!important}#projets .project-card .project-content,#projets .project-card .spotlight-content{padding:19px!important}#projets .projects-intro p{font-size:14px}#projets .projects-feature-visual img{max-width:100%}}
