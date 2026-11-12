@@ -1,0 +1,30 @@
+/* Revolution-style showcase, same footprint as previous featured project */
+#projets .revolution-slider{position:relative;isolation:isolate;width:100%;min-height:390px;border-radius:22px;overflow:hidden;background:linear-gradient(120deg,#083b43 0%,#0d6570 55%,#103a58 100%);box-shadow:0 20px 50px #062c3b2c;margin:0 0 42px}
+#projets .revolution-track{position:relative;height:390px}
+#projets .revolution-slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px;padding:38px 52px 65px;box-sizing:border-box;opacity:0;visibility:hidden;pointer-events:none;transform:scale(1.025);transition:opacity .85s ease,transform 1.1s cubic-bezier(.2,.75,.25,1),visibility .85s}
+#projets .revolution-slide.is-active{opacity:1;visibility:visible;pointer-events:auto;transform:scale(1);z-index:2}
+#projets .revolution-copy{min-width:0;color:#fff}
+#projets .revolution-label{display:block;color:#a3f6e7;font-size:11px;font-weight:800;letter-spacing:.13em;margin-bottom:16px}
+#projets .revolution-copy h3{font-size:clamp(28px,3.6vw,46px);line-height:1.12;letter-spacing:-.04em;color:#fff;margin:0 0 16px;max-width:100%;transform:translateY(18px);opacity:0;transition:transform .75s .15s,opacity .75s .15s}
+#projets .revolution-copy p{color:#d8f2f2;font-size:14px;line-height:1.7;margin:0 0 17px;max-width:510px;transform:translateY(16px);opacity:0;transition:transform .75s .28s,opacity .75s .28s}
+#projets .revolution-slide.is-active h3,#projets .revolution-slide.is-active p{transform:translateY(0);opacity:1}
+#projets .revolution-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+#projets .revolution-tags span{font-size:10px;color:#e9ffff;background:#ffffff20;border:1px solid #ffffff32;padding:7px 10px;border-radius:7px}
+#projets .revolution-actions{display:flex;gap:10px;flex-wrap:wrap}
+#projets .revolution-actions a{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:9px;font-size:12px;font-weight:750;text-decoration:none;background:#e4fff8;color:#075663}
+#projets .revolution-actions a+a{background:#ffffff18;color:#fff;border:1px solid #ffffff5c}
+#projets .revolution-visual{display:flex;align-items:center;justify-content:center;min-width:0;max-width:100%;height:260px;transform:translateX(42px) rotate(2deg) scale(.96);opacity:0;transition:transform 1s .15s cubic-bezier(.2,.75,.25,1),opacity 1s .15s}
+#projets .revolution-slide.is-active .revolution-visual{transform:translateX(0) rotate(0) scale(1);opacity:1}
+#projets .revolution-visual img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 20px #001f2a6b);border-radius:10px}
+#projets .revolution-controls{position:absolute;z-index:5;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px}
+#projets .revolution-arrow,#projets .revolution-pause{display:grid;place-items:center;border:1px solid #ffffff55;background:#ffffff18;color:#fff;border-radius:50%;height:34px;width:34px;cursor:pointer;font-size:23px;line-height:1}
+#projets .revolution-pause{font-size:13px}
+#projets .revolution-dots{display:flex;gap:8px;align-items:center}
+#projets .revolution-dot{width:8px;height:8px;border:0;border-radius:99px;background:#ffffff70;cursor:pointer;padding:0;transition:width .3s,background .3s}
+#projets .revolution-dot.is-active{width:27px;background:#b3ffeb}
+#projets .revolution-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:#ffffff24;z-index:5}
+#projets .revolution-progress span{display:block;height:100%;width:0;background:#a3ffeb}
+#projets .revolution-slider.is-playing .revolution-progress span{animation:revolution-fill 6s linear forwards}
+@keyframes revolution-fill{from{width:0}to{width:100%}}
+@media(max-width:760px){#projets .revolution-slider{min-height:570px;border-radius:16px}#projets .revolution-track{height:570px}#projets .revolution-slide{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:12px;padding:30px 23px 66px;align-content:start}#projets .revolution-copy h3{font-size:30px;margin-bottom:10px}#projets .revolution-copy p{font-size:13px;margin-bottom:12px}#projets .revolution-tags{margin-bottom:15px}#projets .revolution-visual{height:205px}#projets .revolution-controls{bottom:17px}}
+@media(prefers-reduced-motion:reduce){#projets .revolution-slide,#projets .revolution-visual,#projets .revolution-copy h3,#projets .revolution-copy p{transition:none!important;transform:none!important}#projets .revolution-progress span{animation:none!important}}
