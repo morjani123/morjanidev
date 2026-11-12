@@ -21,17 +21,6 @@ themeToggle?.addEventListener('click', () => {
   refreshTheme();
 });
 
-const menuToggle = $('#menuToggle');
-const navLinks = $('#navLinks');
-menuToggle?.addEventListener('click', () => {
-  const open = navLinks?.classList.toggle('open') ?? false;
-  menuToggle.setAttribute('aria-expanded', String(open));
-});
-navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  navLinks.classList.remove('open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-}));
-
 const filters = [...document.querySelectorAll('.filter')];
 const projectCards = [...document.querySelectorAll('.project-card')];
 filters.forEach(button => button.addEventListener('click', () => {
