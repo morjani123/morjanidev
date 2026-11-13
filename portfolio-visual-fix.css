@@ -104,3 +104,6 @@ body .np-browser-screen iframe{pointer-events:auto}
  body .portfolio-hero-showcase .portfolio-home-card>span{padding:46px 14px 14px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body .portfolio-home-card,body .institution-feature-card{transition:none!important}}
+
+/* Transparent project filters in light mode */
+body.light #projets .filters{background:transparent!important;border-color:transparent!important;box-shadow:none!important}
