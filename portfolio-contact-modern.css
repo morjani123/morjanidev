@@ -1,0 +1,36 @@
+/* 2026 portfolio refresh: clear project metrics + contemporary contact experience */
+body .contact-section{padding:90px 0;background:linear-gradient(155deg,#eaf5fb 0%,#f7fbff 55%,#eaf2fa 100%)}
+body .contact-section .contact-panel{position:relative;display:grid;grid-template-columns:minmax(0,1.38fr) minmax(270px,.62fr);gap:28px;padding:clamp(20px,3.4vw,45px);background:#fff;border:1px solid #d8e7f2;border-radius:28px;box-shadow:0 25px 65px rgba(25,72,105,.09);overflow:hidden}
+body .contact-section .contact-panel::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#1187bd,#25c4cf,#a4ddeb)}
+body .contact-section .contact-panel>div:first-child{min-width:0}
+body .contact-section .contact-panel h2{font-size:clamp(32px,3.3vw,48px);line-height:1.13;letter-spacing:-1.3px;margin:12px 0}
+body .contact-section .contact-panel>div:first-child>p{color:#567089;font-size:15px;line-height:1.75;max-width:660px}
+body .contact-section .quote-intro{padding:18px 22px;margin:24px 0 20px;background:#edf8ff;border:1px solid #d1eafa;border-radius:16px}
+body .contact-section .quote-intro span{color:#1677ad}
+body .contact-section .quote-intro h3{color:#12395c;font-size:21px;margin:6px 0}
+body .contact-section .quote-intro p{color:#55738a}
+body .contact-section .contact-buttons{margin:18px 0 23px;display:flex;gap:10px}
+body .contact-section .contact-buttons .btn{border-radius:11px;min-height:46px;display:inline-flex;align-items:center;justify-content:center}
+body .contact-section .contact-form{padding:25px;border-radius:18px;border:1px solid #e0eaf2;background:#f8fbfe;display:grid;gap:6px}
+body .contact-section .contact-form label{display:block;margin:12px 0 4px;color:#264761;font-weight:750;font-size:12px}
+body .contact-section .contact-form input,body .contact-section .contact-form select,body .contact-section .contact-form textarea{width:100%;background:#fff;color:#1b3852;border:1px solid #d4e2ec;border-radius:10px;min-height:45px;padding:11px 13px;outline:none;transition:border-color .2s,box-shadow .2s;font-size:14px}
+body .contact-section .contact-form textarea{min-height:110px;resize:vertical}
+body .contact-section .contact-form :is(input,select,textarea):focus{border-color:#1189c6;box-shadow:0 0 0 3px rgba(17,137,198,.13)}
+body .contact-section .premium-contact-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+body .contact-section .quote-actions{margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+body .contact-section .quote-actions button{width:100%;border-radius:11px;padding:12px 14px;line-height:1.35;white-space:normal}
+body .contact-section .quote-actions #quoteWhatsApp{background:#eafaf1;border:1px solid #a8e4c6;color:#127b4b}
+body .contact-section .quote-actions #quoteWhatsApp:hover{background:#d3f5e3}
+body .contact-section .contact-form small{display:block;color:#6e8293;font-size:11px;line-height:1.6;margin-top:8px}
+body .contact-section .contact-info{display:flex;flex-direction:column;align-self:start;gap:12px;padding:0;background:transparent}
+body .contact-section .contact-info>a,body .contact-section .contact-info>div{display:block;border:1px solid #dbe8f0;background:#f5faff;border-radius:15px;padding:20px;transition:transform .2s,border-color .2s}
+body .contact-section .contact-info>a:hover{transform:translateY(-2px);border-color:#6db9db}
+body .contact-section .contact-info span{color:#1684bb;font-size:10px;letter-spacing:1.2px;font-weight:800;margin-bottom:8px}
+body .contact-section .contact-info strong{display:block;font-size:clamp(13px,1.2vw,16px);color:#1b3c59;overflow-wrap:anywhere}
+body .contact-section .contact-info .contact-availability{background:linear-gradient(135deg,#123a58,#145b76);border-color:#205d7e}
+body .contact-section .contact-info .contact-availability span{color:#91e7f0}
+body .contact-section .contact-info .contact-availability strong{color:#fff}
+body .contact-section .contact-info .contact-availability p{color:#d2e9f0;font-size:12px;line-height:1.6;margin:8px 0 0}
+body .premium-stats .premium-stat strong,body .hero-stats strong{font-variant-numeric:tabular-nums}
+@media(max-width:950px){body .contact-section .contact-panel{grid-template-columns:1fr}body .contact-section .contact-info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){body .contact-section{padding:48px 0}body .contact-section .contact-panel{padding:20px 15px;border-radius:20px}body .contact-section .contact-form{padding:17px 13px}body .contact-section .premium-contact-fields,body .contact-section .quote-actions,body .contact-section .contact-info{grid-template-columns:1fr}body .contact-section .contact-buttons{flex-direction:column}body .contact-section .contact-buttons .btn{width:100%}}
