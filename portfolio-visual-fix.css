@@ -1,0 +1,106 @@
+/* Portfolio visual system v2026.11 — consistent neutral/blue palette and real responsive layouts */
+:root{--portfolio-ink:#173451;--portfolio-blue:#137fb5;--portfolio-soft:#f5f9fc;--portfolio-border:#dce8f0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+*,*::before,*::after{box-sizing:border-box}
+body{overflow-x:hidden}
+body .wrap{width:min(1180px,calc(100% - 48px));max-width:1180px;margin-inline:auto}
+body .section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
+body .section-heading h2{font-size:clamp(29px,3vw,44px);line-height:1.15;letter-spacing:-.9px}
+body .section-heading p{font-size:15px;line-height:1.7}
+body .portfolio-hero-showcase{background:#f4f8fc;border-block:1px solid #e2ebf2;padding:78px 0}
+body .home-institutional{background:#fff;padding:78px 0}
+body .about-digital{background:#f3f8fb}
+body .premium-section{padding-block:72px}
+body .premium-section.section-muted{background:#f3f7fb}
+body .contact-section{background:#f1f7fa;padding:75px 0}
+body .portfolio-hero-showcase .portfolio-home-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+body .portfolio-hero-showcase .portfolio-home-card,
+body .portfolio-hero-showcase .portfolio-home-card:nth-child(1),
+body .portfolio-hero-showcase .portfolio-home-card:nth-child(2){grid-column:auto;min-width:0;min-height:265px;border:1px solid #d8e5ed;border-radius:17px;background:#10253a;box-shadow:0 8px 25px #18314b18}
+body .portfolio-hero-showcase .portfolio-home-card:hover{transform:translateY(-3px);box-shadow:0 15px 30px #17365322}
+body .portfolio-hero-showcase .portfolio-home-card .laptop-mockup{position:relative;width:100%;height:100%;min-height:265px;overflow:hidden;border:0!important;border-radius:0!important;background:#0c2239}
+body .portfolio-hero-showcase .portfolio-home-card .laptop-mockup>img{width:100%;height:100%;object-fit:cover;object-position:top}
+body .portfolio-hero-showcase .portfolio-home-card .live-preview{position:absolute;inset:0;width:100%;height:100%;min-height:100%}
+body .portfolio-hero-showcase .portfolio-home-card>span{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:52px 18px 19px;background:linear-gradient(180deg,transparent,#0a2039 80%);color:white}
+body .portfolio-hero-showcase .portfolio-home-card>span em{font-size:10px;letter-spacing:.8px;color:#9ce2fa;font-style:normal}
+body .portfolio-hero-showcase .portfolio-home-card>span strong{display:block;font-size:clamp(18px,1.7vw,23px);line-height:1.2;color:white;margin:6px 0}
+body .portfolio-hero-showcase .portfolio-home-card>span small{display:block;color:#d6e4ef;font-size:12px;line-height:1.5}
+body .portfolio-hero-showcase .portfolio-home-card .screen-label{position:absolute;top:12px;left:12px;bottom:auto;z-index:4}
+body .portfolio-hero-showcase .portfolio-home-card:after{pointer-events:none}
+body .portfolio-hero-showcase .portfolio-home-card .live-preview-tag{bottom:auto;top:43px;left:12px}
+body .home-institutional-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+body .home-institutional-grid>a{min-width:0;box-shadow:0 6px 18px #193f5910}
+body .home-institutional .institution-feature-card{border:1px solid #dfebf1;border-radius:17px;overflow:hidden}
+body .home-institutional .institution-feature-art{min-height:145px}
+body .home-institutional .institution-feature-copy{padding:13px 17px}
+body .premium-stats{gap:16px}
+body .premium-stat{background:#fff;border:1px solid #e0eaf1;border-radius:15px}
+body .premium-tech-grid{gap:14px}
+body .premium-tech{background:#fff;border-color:#e0e9f0}
+body .contact-panel{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(240px,.75fr);gap:40px;padding:clamp(24px,4vw,50px);border:1px solid #e0e9f0;background:#fff;border-radius:20px;box-shadow:0 12px 32px #18364b10}
+body .contact-panel>*{min-width:0}
+body .contact-form input,body .contact-form textarea,body .contact-form select{width:100%;min-width:0}
+body .contact-info strong{overflow-wrap:anywhere}
+body .hero-v3{width:min(1180px,calc(100% - 48px));grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:35px;min-height:0}
+body .hero-v3 .hero-copy,body .hero-v3 .hero-art{min-width:0}
+body .hero-v3 h1{font-size:clamp(46px,5vw,74px)}
+body .hero-v3 .hero-role{font-size:clamp(20px,2vw,30px)}
+body .hero-v3 .hero-desc{font-size:15px;line-height:1.75}
+body .hero-v3 .hero-float{max-width:180px}
+body .section-heading .gradient-text,body .premium-title .gradient-text{background:linear-gradient(110deg,#137bb5,#178fba);-webkit-background-clip:text;background-clip:text}
+body .quote-intro{background:#143a57;border-color:#2d6889}
+body .btn-primary{background:#137fb5;border-color:#137fb5}
+body .btn-primary:hover{background:#0c6394}
+body .np-hero{background:#f0f7fc}
+body .np-hero.np-immo{background:#f1f4f9}
+body .np-browser-screen iframe{pointer-events:auto}
+@media(max-width:1100px){
+ body .portfolio-hero-showcase .portfolio-home-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body .hero-v3{grid-template-columns:minmax(0,1fr) minmax(0,.8fr)}
+ body .hero-v3 .hero-float{display:none}
+ body .home-institutional-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:800px){
+ body .wrap,body .hero-v3{width:calc(100% - 36px)}
+ body .hero-v3{display:grid;grid-template-columns:minmax(0,1fr);padding:40px 0;gap:25px}
+ body .hero-v3 .hero-copy{text-align:left}
+ body .hero-v3 .hero-art{width:min(100%,430px);margin-inline:auto}
+ body .hero-v3 h1{font-size:clamp(42px,8vw,60px);letter-spacing:-1.7px}
+ body .section-heading{display:block}
+ body .section-heading p{max-width:650px;margin-top:12px}
+ body .contact-panel{grid-template-columns:1fr;gap:25px}
+ body .contact-info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+ body .premium-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+ body .premium-tech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body .about-grid{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:600px){
+ body .wrap,body .hero-v3{width:calc(100% - 32px)}
+ body .portfolio-hero-showcase,body .home-institutional,body .premium-section,body .contact-section{padding-block:46px}
+ body .portfolio-hero-showcase .portfolio-home-cards{grid-template-columns:1fr;gap:16px}
+ body .portfolio-hero-showcase .portfolio-home-card,body .portfolio-hero-showcase .portfolio-home-card:nth-child(1),body .portfolio-hero-showcase .portfolio-home-card:nth-child(2){min-height:280px;grid-column:auto}
+ body .portfolio-hero-showcase .portfolio-home-card .laptop-mockup{min-height:280px}
+ body .home-institutional-grid{grid-template-columns:1fr;gap:14px}
+ body .home-institutional .institution-feature-art{min-height:135px}
+ body .hero-v3 .hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+ body .hero-v3 .hero-actions .btn{min-height:45px;justify-content:center}
+ body .hero-v3 .hero-desc{font-size:14px}
+ body .section-heading h2{font-size:clamp(27px,7vw,36px)}
+ body .premium-stats{grid-template-columns:1fr}
+ body .premium-tech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body .premium-contact-fields{grid-template-columns:1fr}
+ body .contact-panel{padding:22px 17px}
+ body .contact-info{grid-template-columns:1fr}
+ body .quote-intro{padding:18px}
+ body .quote-actions .btn{width:100%}
+ body .footer-inner{display:flex;flex-wrap:wrap;justify-content:center;text-align:center}
+ body .np-hero-inner{grid-template-columns:1fr}
+ body .np-art{max-width:100%;min-width:0}
+}
+@media(max-width:390px){
+ body .wrap,body .hero-v3{width:calc(100% - 24px)}
+ body .premium-tech-grid{grid-template-columns:1fr}
+ body .hero-v3 h1{font-size:40px}
+ body .portfolio-hero-showcase .portfolio-home-card>span{padding:46px 14px 14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body .portfolio-home-card,body .institution-feature-card{transition:none!important}}
