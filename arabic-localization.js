@@ -204,33 +204,35 @@ const select=document.createElement('select');select.id='omLanguageSelect';selec
 select.setAttribute('aria-label','Language / اللغة / Langue');
 select.innerHTML='<option value="fr">🇫🇷 FR</option><option value="en">🇬🇧 EN</option><option value="ar">🇲🇦 AR</option>';
 toggle.hidden=true;toggle.style.setProperty('display','none','important');toggle.setAttribute('aria-hidden','true');toggle.setAttribute('tabindex','-1');toggle.parentNode.insertBefore(select,toggle);
-const flagSwitcher=document.createElement('div');
+const flagSwitcher=document.createElement('details');
 flagSwitcher.id='omFlagSwitcher';
-flagSwitcher.setAttribute('role','group');
 flagSwitcher.setAttribute('aria-label','Choose language / اختيار اللغة');
-flagSwitcher.innerHTML='<button type="button" data-om-lang="fr" aria-label="Français">🇫🇷 <span>FR</span></button><button type="button" data-om-lang="en" aria-label="English">🇬🇧 <span>EN</span></button><button type="button" data-om-lang="ar" aria-label="العربية">🇲🇦 <span>AR</span></button>';
+flagSwitcher.innerHTML='<summary aria-label="Change language"><span id="omCurrentFlag">🇫🇷</span><span id="omCurrentLang">FR</span><span class="om-flag-chevron">⌄</span></summary><div class="om-flag-menu" role="group" aria-label="Languages"><button type="button" data-om-lang="fr">🇫🇷 FR</button><button type="button" data-om-lang="en">🇬🇧 EN</button><button type="button" data-om-lang="ar">🇲🇦 AR</button></div>';
 select.insertAdjacentElement('afterend',flagSwitcher);
 flagSwitcher.addEventListener('click',event=>{
  const button=event.target.closest('[data-om-lang]');
  if(!button)return;
  const lang=button.dataset.omLang;
+ flagSwitcher.open=false;
  if(lang===root.lang)return;
  try{localStorage.setItem(key,lang);localStorage.setItem('om-language',lang==='en'?'en':'fr');}catch(_){}
  location.assign(routeFor(lang,fileName)+location.hash);
 });
-
+document.addEventListener('click',event=>{if(!flagSwitcher.contains(event.target))flagSwitcher.open=false;});
 const style=document.createElement('style');style.textContent=`
 #langToggle,#omLanguageSelect{display:none!important}
-#omFlagSwitcher{display:inline-flex!important;align-items:center;gap:3px;padding:3px;border-radius:12px;border:1px solid rgba(60,186,215,.45);background:#102b43;direction:ltr!important;flex-shrink:0}
-#omFlagSwitcher button{display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:6px 7px;min-height:32px;border:0;border-radius:8px;background:transparent;color:#d6eaf5;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;line-height:1}
-#omFlagSwitcher button:hover{background:#234e69;color:white}
-#omFlagSwitcher button[aria-pressed='true']{background:#28738d;color:#fff;box-shadow:0 1px 5px rgba(0,0,0,.18)}
-#omFlagSwitcher button:focus-visible{outline:2px solid #35d8e9;outline-offset:2px}
-body.light #omFlagSwitcher{background:#e8f5fc;border-color:#9bcbdc}
-body.light #omFlagSwitcher button{color:#204b61}
-body.light #omFlagSwitcher button:hover{background:#d1eaf5}
-body.light #omFlagSwitcher button[aria-pressed='true']{background:#b9e1f2;color:#123b52}
-@media(max-width:520px){#omFlagSwitcher{gap:1px;padding:2px}#omFlagSwitcher button{padding:5px 4px;min-height:30px;font-size:10px;gap:2px}}
+#omFlagSwitcher{position:relative!important;display:inline-block!important;width:88px!important;min-width:88px!important;max-width:88px!important;flex:0 0 88px!important;direction:ltr!important;font-size:12px;z-index:100}
+#omFlagSwitcher summary{box-sizing:border-box;list-style:none;display:flex!important;align-items:center;justify-content:center;gap:5px;width:88px;height:36px;padding:0 7px;border:1px solid #4187a2;border-radius:10px;background:#102b43;color:#fff;cursor:pointer;font-weight:800;white-space:nowrap}
+#omFlagSwitcher summary::-webkit-details-marker{display:none}
+#omFlagSwitcher .om-flag-chevron{margin-left:auto;color:#68e0ef}
+#omFlagSwitcher .om-flag-menu{position:absolute;top:calc(100% + 5px);right:0;min-width:95px;padding:4px;border-radius:10px;border:1px solid #4187a2;background:#04182a;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:9999}
+#omFlagSwitcher .om-flag-menu button{display:block;width:100%;padding:9px 10px;border:0;border-radius:7px;background:transparent;color:#fff;text-align:left;font-size:12px;font-weight:750;cursor:pointer;white-space:nowrap}
+#omFlagSwitcher .om-flag-menu button:hover,#omFlagSwitcher .om-flag-menu button[aria-pressed='true']{background:#235a78}
+body.light #omFlagSwitcher summary{background:#e8f5fc;border-color:#9bcbdc;color:#163d56}
+body.light #omFlagSwitcher .om-flag-menu{background:#fff;border-color:#9bcbdc}
+body.light #omFlagSwitcher .om-flag-menu button{color:#163d56}
+body.light #omFlagSwitcher .om-flag-menu button:hover,body.light #omFlagSwitcher .om-flag-menu button[aria-pressed='true']{background:#d1eaf5}
+@media(max-width:520px){#omFlagSwitcher,#omFlagSwitcher summary{width:76px!important;min-width:76px!important;max-width:76px!important}#omFlagSwitcher{flex-basis:76px!important}#omFlagSwitcher summary{height:34px}}
 #omLanguageSelect{appearance:none!important;-webkit-appearance:none!important;display:block!important;min-width:104px;max-width:120px;height:38px;padding:0 32px 0 12px!important;border:1px solid rgba(60,186,215,.5)!important;border-radius:12px!important;background-color:#122c45!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2368e0ef' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 11px center!important;color:#f2fbff!important;font-size:12px!important;font-weight:800!important;letter-spacing:.035em!important;line-height:1!important;cursor:pointer!important;box-shadow:0 3px 12px rgba(0,0,0,.13)!important;transition:border-color .2s,box-shadow .2s,background-color .2s!important;direction:ltr!important;text-align:left!important;color-scheme:dark}
 #omLanguageSelect:hover{border-color:#46dce9!important;box-shadow:0 0 0 3px rgba(46,205,222,.13)!important}
 #omLanguageSelect:focus-visible{outline:2px solid #26d4e3!important;outline-offset:3px}
@@ -296,6 +298,10 @@ function setLanguage(lang){
  const techLabels={fr:['Tout','Web','CMS','Desktop & automatisation','Gestion de stock'],en:['All','Web','CMS','Desktop & Automation','Inventory Management'],ar:['الكل','الويب','أنظمة إدارة المحتوى','تطبيقات سطح المكتب والأتمتة','إدارة المخزون']};
  document.querySelectorAll('.premium-stack [data-tech-filter]').forEach((button,i)=>{if(techLabels[lang]?.[i])button.textContent=techLabels[lang][i];});
  flagSwitcher.querySelectorAll('[data-om-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.omLang===lang)));
+ const currentFlag=flagSwitcher.querySelector('#omCurrentFlag');
+ const currentLang=flagSwitcher.querySelector('#omCurrentLang');
+ if(currentFlag)currentFlag.textContent={fr:'🇫🇷',en:'🇬🇧',ar:'🇲🇦'}[lang];
+ if(currentLang)currentLang.textContent=lang.toUpperCase();
  select.value=lang;
  try{localStorage.setItem(key,lang);}catch(_){}
  window.dispatchEvent(new Event('om-language-changed'));
