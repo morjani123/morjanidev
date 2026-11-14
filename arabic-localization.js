@@ -201,10 +201,22 @@ const toggle=document.getElementById('langToggle');
 if(!toggle)return;
 const select=document.createElement('select');select.id='omLanguageSelect';select.className='lang-toggle';
 select.setAttribute('aria-label','Language / اللغة / Langue');
-select.innerHTML='<option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>';
+select.innerHTML='<option value="fr">🇫🇷 FR</option><option value="en">🇬🇧 EN</option><option value="ar">🇲🇦 AR</option>';
 toggle.hidden=true;toggle.style.setProperty('display','none','important');toggle.setAttribute('aria-hidden','true');toggle.setAttribute('tabindex','-1');toggle.parentNode.insertBefore(select,toggle);
 const style=document.createElement('style');style.textContent=`
-#langToggle{display:none!important}#omLanguageSelect{display:inline-block!important;min-width:64px;max-width:90px;cursor:pointer;padding:8px 5px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:8px}
+#langToggle{display:none!important}
+#omLanguageSelect{appearance:none!important;-webkit-appearance:none!important;display:block!important;min-width:104px;max-width:120px;height:38px;padding:0 32px 0 12px!important;border:1px solid rgba(60,186,215,.5)!important;border-radius:12px!important;background-color:#122c45!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2368e0ef' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 11px center!important;color:#f2fbff!important;font-size:12px!important;font-weight:800!important;letter-spacing:.035em!important;line-height:1!important;cursor:pointer!important;box-shadow:0 3px 12px rgba(0,0,0,.13)!important;transition:border-color .2s,box-shadow .2s,background-color .2s!important;direction:ltr!important;text-align:left!important;color-scheme:dark}
+#omLanguageSelect:hover{border-color:#46dce9!important;box-shadow:0 0 0 3px rgba(46,205,222,.13)!important}
+#omLanguageSelect:focus-visible{outline:2px solid #26d4e3!important;outline-offset:3px}
+#omLanguageSelect option{background:#122c45!important;color:#fff!important}
+body.light #omLanguageSelect{background-color:#e8f5fc!important;border-color:#9bcbdc!important;color:#163d56!important;color-scheme:light;box-shadow:0 2px 10px rgba(19,75,108,.07)!important}
+body.light #omLanguageSelect option{background:#fff!important;color:#163d56!important}
+.nav-actions #themeToggle,.nav-actions .theme-toggle{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex-shrink:0!important;background:#163650!important;border:1px solid #4187a2!important;color:#f3faff!important;opacity:1!important;box-shadow:0 2px 10px rgba(0,0,0,.15)!important}
+.nav-actions #themeToggle:hover{background:#215779!important;border-color:#65e3ee!important}
+body.light .nav-actions #themeToggle,body.light .nav-actions .theme-toggle{background:#e4f2fb!important;border:1px solid #a7ccdf!important;color:#124a6a!important}
+body.light .nav-actions #themeToggle:hover{background:#c9eaf6!important}
+html[dir="rtl"] #omLanguageSelect{direction:ltr!important;text-align:left!important}
+@media(max-width:520px){#omLanguageSelect{min-width:80px;max-width:90px;height:34px;padding-left:9px!important;padding-right:25px!important;background-position:right 7px center!important}.nav-actions{gap:7px!important}}
 html[dir="rtl"]{direction:rtl}
 html[dir="rtl"] .nav,html[dir="rtl"] .nav-links,html[dir="rtl"] .nav-actions{direction:rtl}
 html[dir="rtl"] .hero-copy,html[dir="rtl"] .section-heading,html[dir="rtl"] .hero-service,html[dir="rtl"] .portfolio-home-card,html[dir="rtl"] .footer{text-align:right}
