@@ -379,6 +379,9 @@ function applyLanguage(language) {
   const description=document.querySelector('meta[name="description"]');
   if(description) description.content=language==='en'?englishDescription:originalDescription;
   if(langToggle){langToggle.textContent=language==='en'?'FR':'EN';langToggle.setAttribute('aria-label',language==='en'?'Passer en français':'Switch to English');}
+  // Filter labels are controlled by the active language, independent of initial HTML.
+  const techLabels={fr:['Tout','Web','CMS','Desktop & automatisation','Gestion de stock'],en:['All','Web','CMS','Desktop & Automation','Inventory Management']};
+  document.querySelectorAll('.premium-stack [data-tech-filter]').forEach((button,i)=>{if(techLabels[language]?.[i])button.textContent=techLabels[language][i];});
   refreshTheme();
   try{localStorage.setItem('om-language',language);}catch(_){}
 }
