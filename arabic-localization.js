@@ -268,6 +268,8 @@ function setLanguage(lang){
   root.dir='ltr';
   if(root.lang!==lang)toggle.click();
  }
+ const techLabels={fr:['Tout','Web','CMS','Desktop & automatisation','Gestion de stock'],en:['All','Web','CMS','Desktop & Automation','Inventory Management'],ar:['الكل','الويب','أنظمة إدارة المحتوى','تطبيقات سطح المكتب والأتمتة','إدارة المخزون']};
+ document.querySelectorAll('.premium-stack [data-tech-filter]').forEach((button,i)=>{if(techLabels[lang]?.[i])button.textContent=techLabels[lang][i];});
  select.value=lang;
  try{localStorage.setItem(key,lang);}catch(_){}
  window.dispatchEvent(new Event('om-language-changed'));
