@@ -12,9 +12,6 @@ const launcher=document.createElement('button');launcher.id='om-chat-launcher';l
 const panel=document.createElement('section');panel.id='om-chat-panel';panel.className='om-chat-panel';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','false');panel.setAttribute('aria-label','Portfolio assistant');panel.hidden=true;
 panel.innerHTML='<header class="om-chat-header"><span class="om-chat-avatar">'+icon+'</span><span class="om-chat-head-text"><strong id="om-chat-title"></strong><small id="om-chat-status"></small></span><button class="om-chat-close" type="button" aria-label="Close">×</button></header><div class="om-chat-log" id="om-chat-log" role="log" aria-live="polite" aria-relevant="additions text"></div><div class="om-chat-options" id="om-chat-options"></div><form class="om-chat-form" id="om-chat-form"><input id="om-chat-input" type="text" maxlength="500" autocomplete="off"><button type="submit" id="om-chat-send" aria-label="Send">➤</button></form><small class="om-chat-privacy" id="om-chat-privacy"></small>';
 document.body.append(launcher,panel);
-/* Inline position safeguards against cached stylesheet versions. */
-launcher.style.bottom=window.matchMedia('(max-width:600px)').matches?'90px':'100px';
-panel.style.bottom=window.matchMedia('(max-width:600px)').matches?'153px':'167px';
 const log=panel.querySelector('#om-chat-log'),opts=panel.querySelector('#om-chat-options'),form=panel.querySelector('#om-chat-form'),input=panel.querySelector('#om-chat-input'),close=panel.querySelector('.om-chat-close');
 let step='menu',draft={},lastFocus=null;
 const msg=(value,who='bot')=>{const el=document.createElement('p');el.className='om-chat-bubble '+who;el.textContent=value;log.append(el);log.scrollTop=log.scrollHeight};
