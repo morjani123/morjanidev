@@ -198,7 +198,7 @@ const pageTitles={
 const toggle=document.getElementById('langToggle');
 if(!toggle)return;
 const select=document.createElement('select');select.id='omLanguageSelect';select.className='lang-toggle';
-select.setAttribute('aria-label','Choisir la langue / اختر اللغة');
+select.setAttribute('aria-label','Language / اللغة / Langue');
 select.innerHTML='<option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>';
 toggle.hidden=true;toggle.style.setProperty('display','none','important');toggle.setAttribute('aria-hidden','true');toggle.setAttribute('tabindex','-1');toggle.parentNode.insertBefore(select,toggle);
 const style=document.createElement('style');style.textContent=`
@@ -213,6 +213,17 @@ html[dir="rtl"] .hero,html[dir="rtl"] .container,html[dir="rtl"] .section{unicod
 html[dir="rtl"] a,html[dir="rtl"] button{unicode-bidi:plaintext}
 html[dir="rtl"] [dir="ltr"],html[dir="rtl"] code{direction:ltr}
 html[dir="rtl"] .laptop-mockup,html[dir="rtl"] .live-preview{direction:ltr}
+html[lang="ar"] body{font-family:"Tajawal","Noto Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif}
+html[lang="ar"] .nav-links a,html[lang="ar"] .nav-actions,html[lang="ar"] .hero-copy,html[lang="ar"] .section-heading,html[lang="ar"] .portfolio-home-card{line-height:1.65}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{line-height:1.45;overflow-wrap:break-word}
+html[lang="ar"] p,html[lang="ar"] li,html[lang="ar"] label{line-height:1.8}
+html[lang="ar"] .portfolio-home-card,html[lang="ar"] .service-card,html[lang="ar"] .project-card{min-width:0}
+html[lang="ar"] .hero-copy,html[lang="ar"] .section-heading,html[lang="ar"] .section-header,html[lang="ar"] .contact-copy{text-align:right}
+html[lang="ar"] input[type="email"],html[lang="ar"] input[type="tel"],html[lang="ar"] input[type="url"]{direction:ltr;text-align:left}
+html[lang="ar"] .tech-card,html[lang="ar"] .skill-card{min-width:0}
+html[lang="ar"] .project-card img,html[lang="ar"] .portfolio-home-card img{direction:ltr}
+@media(max-width:768px){html[lang="ar"] .nav-links{max-width:100%;overflow-wrap:anywhere}html[lang="ar"] .hero-copy,html[lang="ar"] .section-heading{max-width:100%}html[lang="ar"] h1{font-size:clamp(1.75rem,7vw,3.25rem)}}
+
 `;document.head.append(style);
 function restoreArabic(){
  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
@@ -235,6 +246,7 @@ function setLanguage(lang){
  if(lang==='ar'){
   if(previous==='en')toggle.click();
   root.lang='ar';root.dir='rtl';paint();document.title=pageTitles[location.pathname.split('/').pop()]||originalTitle;
+  const desc=document.querySelector('meta[name="description"]');if(desc)desc.content='عمر مرجاني: مطور مواقع وتطبيقات وإدارة المخزون. اكتشف المشاريع والخدمات والخبرة المهنية.';
  }else{
   if(previous==='ar'){restoreArabic();root.lang='fr';document.title=originalTitle;}
   root.dir='ltr';
