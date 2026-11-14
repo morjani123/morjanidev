@@ -1,7 +1,7 @@
 /* Arabic localization layer - isolated from the existing FR/EN translator. */
 (() => {
 'use strict';
-const key='om-language', root=document.documentElement;
+const key='om-preferred-language', root=document.documentElement;
 const dictionary={
 'Accueil':'الرئيسية','Développement':'التطوير','Gestion de Stock':'إدارة المخزون','Projets':'المشاريع','Contact':'تواصل معي',
 'Portfolio Professionnel':'الملف المهني','Parlons projet':'لنتحدث عن مشروعك',
@@ -237,7 +237,7 @@ function setLanguage(lang){
  window.dispatchEvent(new Event('om-language-changed'));
 }
 select.addEventListener('change',()=>setLanguage(select.value));
-let saved='fr';try{saved=localStorage.getItem(key)||'fr';}catch(_){}
+let saved='fr';try{saved=localStorage.getItem(key)||localStorage.getItem('om-language')||'fr';}catch(_){}
 setLanguage(saved);
 document.addEventListener('click',e=>{if(root.lang==='ar'&&e.target.closest('[data-open-demo],.case-study-trigger,[data-gsp]'))setTimeout(paint,0);});
 let scheduled=false;
