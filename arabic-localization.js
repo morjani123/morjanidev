@@ -207,7 +207,12 @@ toggle.hidden=true;toggle.style.setProperty('display','none','important');toggle
 const flagSwitcher=document.createElement('details');
 flagSwitcher.id='omFlagSwitcher';
 flagSwitcher.setAttribute('aria-label','Choose language / اختيار اللغة');
-flagSwitcher.innerHTML='<summary aria-label="Change language"><span id="omCurrentFlag">🇫🇷</span><span id="omCurrentLang">FR</span><span class="om-flag-chevron">⌄</span></summary><div class="om-flag-menu" role="group" aria-label="Languages"><button type="button" data-om-lang="fr">🇫🇷 FR</button><button type="button" data-om-lang="en">🇬🇧 EN</button><button type="button" data-om-lang="ar">🇲🇦 AR</button></div>';
+const flags={
+ fr:'<svg viewBox="0 0 24 16" aria-hidden="true"><path fill="#002395" d="M0 0h8v16H0z"/><path fill="#fff" d="M8 0h8v16H8z"/><path fill="#ED2939" d="M16 0h8v16h-8z"/></svg>',
+ en:'<svg viewBox="0 0 60 30" aria-hidden="true"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="2.5" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></svg>',
+ ar:'<svg viewBox="0 0 24 16" aria-hidden="true"><path fill="#C1272D" d="M0 0h24v16H0z"/><path d="M12 3l-3 9 7.6-5.6H7.4L15 12z" fill="none" stroke="#006233" stroke-width="1.2" stroke-linejoin="round"/></svg>'
+};
+flagSwitcher.innerHTML='<summary aria-label="Change language"><span id="omCurrentFlag">'+flags.fr+'</span><span id="omCurrentLang">FR</span><span class="om-flag-chevron">⌄</span></summary><div class="om-flag-menu" role="group" aria-label="Languages"><button type="button" data-om-lang="fr">'+flags.fr+' FR</button><button type="button" data-om-lang="en">'+flags.en+' EN</button><button type="button" data-om-lang="ar">'+flags.ar+' AR</button></div>';
 select.insertAdjacentElement('afterend',flagSwitcher);
 flagSwitcher.addEventListener('click',event=>{
  const button=event.target.closest('[data-om-lang]');
@@ -224,6 +229,8 @@ const style=document.createElement('style');style.textContent=`
 #omFlagSwitcher{position:relative!important;display:inline-block!important;width:88px!important;min-width:88px!important;max-width:88px!important;flex:0 0 88px!important;direction:ltr!important;font-size:12px;z-index:100}
 #omFlagSwitcher summary{box-sizing:border-box;list-style:none;display:flex!important;align-items:center;justify-content:center;gap:5px;width:88px;height:36px;padding:0 7px;border:1px solid #4187a2;border-radius:10px;background:#102b43;color:#fff;cursor:pointer;font-weight:800;white-space:nowrap}
 #omFlagSwitcher summary::-webkit-details-marker{display:none}
+#omFlagSwitcher svg{display:inline-block!important;width:19px!important;height:13px!important;min-width:19px!important;flex-shrink:0;vertical-align:middle;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.1)}
+#omFlagSwitcher .om-flag-menu button{display:flex!important;align-items:center;gap:8px}
 #omFlagSwitcher .om-flag-chevron{margin-left:auto;color:#68e0ef}
 #omFlagSwitcher .om-flag-menu{position:absolute;top:calc(100% + 5px);right:0;min-width:95px;padding:4px;border-radius:10px;border:1px solid #4187a2;background:#04182a;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:9999}
 #omFlagSwitcher .om-flag-menu button{display:block;width:100%;padding:9px 10px;border:0;border-radius:7px;background:transparent;color:#fff;text-align:left;font-size:12px;font-weight:750;cursor:pointer;white-space:nowrap}
@@ -245,6 +252,8 @@ body.light .nav-actions #themeToggle,body.light .nav-actions .theme-toggle{backg
 body.light .nav-actions #themeToggle:hover{background:#c9eaf6!important}
 html[dir="rtl"] #omLanguageSelect{direction:ltr!important;text-align:left!important}
 @media(max-width:520px){#omLanguageSelect{min-width:112px;max-width:132px;height:34px;padding-left:9px!important;padding-right:25px!important;background-position:right 7px center!important}.nav-actions{gap:7px!important}}
+/* Keep the legacy select fully hidden; its older display:block rule must not win. */
+select#omLanguageSelect,html body select#omLanguageSelect{display:none!important;visibility:hidden!important;position:absolute!important;width:0!important;height:0!important;pointer-events:none!important}
 html[dir="rtl"]{direction:rtl}
 html[dir="rtl"] .nav,html[dir="rtl"] .nav-links,html[dir="rtl"] .nav-actions{direction:rtl}
 html[dir="rtl"] .hero-copy,html[dir="rtl"] .section-heading,html[dir="rtl"] .hero-service,html[dir="rtl"] .portfolio-home-card,html[dir="rtl"] .footer{text-align:right}
@@ -300,7 +309,7 @@ function setLanguage(lang){
  flagSwitcher.querySelectorAll('[data-om-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.omLang===lang)));
  const currentFlag=flagSwitcher.querySelector('#omCurrentFlag');
  const currentLang=flagSwitcher.querySelector('#omCurrentLang');
- if(currentFlag)currentFlag.textContent={fr:'🇫🇷',en:'🇬🇧',ar:'🇲🇦'}[lang];
+ if(currentFlag)currentFlag.innerHTML=flags[lang];
  if(currentLang)currentLang.textContent=lang.toUpperCase();
  select.value=lang;
  try{localStorage.setItem(key,lang);}catch(_){}
