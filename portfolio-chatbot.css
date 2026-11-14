@@ -21,3 +21,8 @@
 .om-chat-panel[dir=rtl] .om-chat-bubble.user{align-self:flex-start}
 @media(max-width:600px){.om-chat-launcher{right:15px;bottom:16px;padding:13px 16px}.om-chat-panel{right:10px;bottom:78px;width:calc(100vw - 20px);height:min(620px,calc(100dvh - 95px));border-radius:17px}}
 @media(prefers-reduced-motion:reduce){.om-chat-launcher{transition:none}}
+
+/* Keep the assistant visibly above the existing WhatsApp floating shortcut. */
+.om-chat-launcher{bottom:100px!important;right:24px!important}
+.om-chat-panel{bottom:167px!important}
+@media(max-width:600px){.om-chat-launcher{bottom:90px!important;right:15px!important}.om-chat-panel{bottom:153px!important;height:min(620px,calc(100dvh - 165px))!important}}
