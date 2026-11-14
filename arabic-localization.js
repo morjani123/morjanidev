@@ -73,7 +73,7 @@ function paint(){
  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
  let node;while((node=walker.nextNode())){if(node.parentElement?.closest('[data-translate-skip],script,style,noscript,code,pre,svg,iframe,#om-chat-panel'))continue;
  if(!original.has(node))original.set(node,node.nodeValue);
- const base=original.get(node);node.nodeValue=root.lang==='ar'?translate(base):base;
+ const base=original.get(node);if(root.lang==='ar')node.nodeValue=translate(base);
  }
  document.querySelectorAll('[placeholder],[aria-label],[title]').forEach(el=>{
  if(el.closest('#om-chat-panel'))return;
@@ -81,7 +81,7 @@ function paint(){
  const record=attrOriginal.get(el);
  for(const attr of ['placeholder','aria-label','title']){if(!el.hasAttribute(attr))continue;
  if(!(attr in record))record[attr]=el.getAttribute(attr);
- el.setAttribute(attr,root.lang==='ar'?translate(record[attr]):record[attr]);}
+ if(root.lang==='ar')el.setAttribute(attr,translate(record[attr]));}
  });
 }
 const toggle=document.getElementById('langToggle');
@@ -99,14 +99,24 @@ html[dir="rtl"] .hero-service-grid,html[dir="rtl"] .portfolio-home-cards{directi
 html[dir="rtl"] input,html[dir="rtl"] textarea{text-align:right}
 html[dir="rtl"] .laptop-mockup,html[dir="rtl"] .live-preview{direction:ltr}
 `;document.head.append(style);
+function restoreArabic(){
+ const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+ let node;while((node=walker.nextNode()))if(original.has(node))node.nodeValue=original.get(node);
+ document.querySelectorAll('[placeholder],[aria-label],[title]').forEach(el=>{
+  const record=attrOriginal.get(el);if(!record)return;
+  for(const [attr,value] of Object.entries(record))el.setAttribute(attr,value);
+ });
+}
 function setLanguage(lang){
  if(!['fr','en','ar'].includes(lang))lang='fr';
+ const previous=root.lang;
  if(lang==='ar'){
- root.lang='ar';root.dir='rtl';paint();
+  if(previous==='en')toggle.click();
+  root.lang='ar';root.dir='rtl';paint();
  }else{
- root.dir='ltr';toggle.click();
- if(root.lang!==lang)toggle.click();
- paint();
+  if(previous==='ar'){restoreArabic();root.lang='fr';}
+  root.dir='ltr';
+  if(root.lang!==lang)toggle.click();
  }
  select.value=lang;
  try{localStorage.setItem(key,lang);}catch(_){}
