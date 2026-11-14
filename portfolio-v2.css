@@ -1,0 +1,27 @@
+/* Portfolio V2 — final shared polish without replacing the existing visual identity */
+:root{--v2-blue:#167fb4;--v2-ink:#193952;--v2-muted:#5d7589;--v2-line:#dce7ef}
+html{scroll-padding-top:92px}
+body{overflow-wrap:break-word}
+body img{max-width:100%}
+body .site-header .nav-links a{transition:color .18s,background .18s}
+body .site-header .nav-links a:is(:hover,:focus-visible){color:#1688bf}
+body .site-header .nav-links a.active{font-weight:800}
+body :is(a,button,input,textarea,select):focus-visible{outline:3px solid #1a9cda;outline-offset:3px}
+body .premium-case-hero,body .portfolio-hero-showcase .portfolio-home-cards,body .contact-v3-layout{min-width:0}
+body .premium-case-hero>*{min-width:0}
+body .premium-case-hero .laptop-mockup{max-width:100%;overflow:hidden}
+body .premium-case-hero .case-cover-svg{width:100%;height:auto;display:block}
+body .portfolio-home-card img,body .project-card img{object-position:top center}
+body .portfolio-home-card,body .project-card{min-width:0}
+body .premium-title,body .section-heading h2{max-width:100%;overflow-wrap:normal}
+body .premium-subtitle,body .section-heading p{max-width:68ch}
+body .contact-v3 .contact-v3-links strong{overflow-wrap:anywhere}
+body .contact-v3 .contact-form{min-width:0}
+body .contact-v3 .contact-form>*{max-width:100%}
+body .contact-v3 .contact-form :is(input,textarea,select){font:inherit;font-size:14px!important}
+body .contact-v3 .contact-form button{min-height:48px}
+body .portfolio-hero-showcase .portfolio-home-card .live-preview iframe{pointer-events:none}
+@media(max-width:1050px){body .site-header .nav-links.open{max-height:min(75vh,560px);overflow-y:auto}}
+@media(max-width:760px){body .premium-case-hero{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}body .premium-case-hero .laptop-mockup{width:100%;margin:0 auto}body .premium-case-actions{display:flex;flex-wrap:wrap;gap:10px}body .premium-case-actions a{max-width:100%}}
+@media(max-width:480px){body .contact-v3 .contact-v3-form-card{padding:22px 16px}body .premium-case-hero h1{font-size:clamp(32px,9vw,44px)}body .premium-case-actions a{width:100%;text-align:center}body .portfolio-home-card>span strong{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
