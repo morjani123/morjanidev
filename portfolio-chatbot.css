@@ -22,7 +22,11 @@
 @media(max-width:600px){.om-chat-launcher{right:15px;bottom:16px;padding:13px 16px}.om-chat-panel{right:10px;bottom:78px;width:calc(100vw - 20px);height:min(620px,calc(100dvh - 95px));border-radius:17px}}
 @media(prefers-reduced-motion:reduce){.om-chat-launcher{transition:none}}
 
-/* Keep the assistant visibly above the existing WhatsApp floating shortcut. */
-.om-chat-launcher{bottom:100px!important;right:24px!important}
-.om-chat-panel{bottom:167px!important}
-@media(max-width:600px){.om-chat-launcher{bottom:90px!important;right:15px!important}.om-chat-panel{bottom:153px!important;height:min(620px,calc(100dvh - 165px))!important}}
+
+/* Floating action dock: WhatsApp above, assistant below */
+.om-chat-launcher{bottom:20px!important;right:20px!important;min-height:54px;border:1px solid #ffffff60;box-shadow:0 10px 28px #052d5960,0 0 0 4px #ffffff14!important;letter-spacing:.1px}
+.om-chat-launcher::before{content:"";width:7px;height:7px;border-radius:50%;background:#7cf4bc;box-shadow:0 0 0 3px #ffffff30}
+.om-chat-panel{bottom:89px!important;right:20px!important}
+body .whatsapp-float{position:fixed!important;bottom:88px!important;right:20px!important;z-index:2147483000!important;box-shadow:0 9px 28px #075b3055!important;border:1px solid #ffffff66!important;transition:transform .2s,box-shadow .2s!important}
+body .whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 13px 32px #075b3066!important}
+@media(max-width:600px){.om-chat-launcher{bottom:14px!important;right:14px!important}.om-chat-panel{bottom:80px!important;right:10px!important;height:min(620px,calc(100dvh - 95px))!important}body .whatsapp-float{bottom:80px!important;right:14px!important}}
