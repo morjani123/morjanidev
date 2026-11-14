@@ -199,9 +199,9 @@ if(!toggle)return;
 const select=document.createElement('select');select.id='omLanguageSelect';select.className='lang-toggle';
 select.setAttribute('aria-label','Choisir la langue / اختر اللغة');
 select.innerHTML='<option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>';
-toggle.hidden=true;toggle.setAttribute('aria-hidden','true');toggle.parentNode.insertBefore(select,toggle);
+toggle.hidden=true;toggle.style.setProperty('display','none','important');toggle.setAttribute('aria-hidden','true');toggle.setAttribute('tabindex','-1');toggle.parentNode.insertBefore(select,toggle);
 const style=document.createElement('style');style.textContent=`
-#omLanguageSelect{min-width:64px;max-width:90px;cursor:pointer;padding:8px 5px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:8px}
+#langToggle{display:none!important}#omLanguageSelect{display:inline-block!important;min-width:64px;max-width:90px;cursor:pointer;padding:8px 5px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:8px}
 html[dir="rtl"]{direction:rtl}
 html[dir="rtl"] .nav,html[dir="rtl"] .nav-links,html[dir="rtl"] .nav-actions{direction:rtl}
 html[dir="rtl"] .hero-copy,html[dir="rtl"] .section-heading,html[dir="rtl"] .hero-service,html[dir="rtl"] .portfolio-home-card,html[dir="rtl"] .footer{text-align:right}
@@ -221,6 +221,13 @@ function restoreArabic(){
   for(const [attr,value] of Object.entries(record))el.setAttribute(attr,value);
  });
 }
+const basePath='/morjanidev/';
+const fileName=location.pathname.split('/').pop()||'index.html';
+const routeLanguage=location.pathname.match(/\/morjanidev\/(ar|en)(?:\/|$)/)?.[1]||'fr';
+function routeFor(lang,file){
+ const suffix=file==='index.html'?'':file;
+ return basePath+(lang==='fr'?'':lang+'/')+suffix;
+}
 function setLanguage(lang){
  if(!['fr','en','ar'].includes(lang))lang='fr';
  const previous=root.lang;
@@ -236,9 +243,22 @@ function setLanguage(lang){
  try{localStorage.setItem(key,lang);}catch(_){}
  window.dispatchEvent(new Event('om-language-changed'));
 }
-select.addEventListener('change',()=>setLanguage(select.value));
-let saved='fr';try{saved=localStorage.getItem(key)||localStorage.getItem('om-language')||'fr';}catch(_){}
-setLanguage(saved);
+select.addEventListener('change',()=>{
+ const lang=select.value;
+ try{localStorage.setItem(key,lang);localStorage.setItem('om-language',lang==='en'?'en':'fr');}catch(_){}
+ location.assign(routeFor(lang,fileName)+location.hash);
+});
+setLanguage(routeLanguage);
+document.addEventListener('click',event=>{
+ const link=event.target.closest('a[href]');
+ if(!link||event.defaultPrevented||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||link.target&&link.target!=='_self'||link.hasAttribute('download'))return;
+ const url=new URL(link.href,location.href);
+ if(url.origin!==location.origin||!url.pathname.startsWith(basePath))return;
+ const relative=url.pathname.slice(basePath.length).replace(/^(ar|en)\//,'');
+ if(relative&&!/^[\w-]+\.html$/.test(relative))return;
+ const target=routeFor(root.lang,relative||'index.html')+url.search+url.hash;
+ if(target!==url.pathname+url.search+url.hash){event.preventDefault();location.assign(target);}
+});
 document.addEventListener('click',e=>{if(root.lang==='ar'&&e.target.closest('[data-open-demo],.case-study-trigger,[data-gsp]'))setTimeout(paint,0);});
 let scheduled=false;
 const observer=new MutationObserver(records=>{
