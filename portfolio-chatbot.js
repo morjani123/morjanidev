@@ -27,5 +27,5 @@ form.addEventListener('submit',e=>{e.preventDefault();const v=input.value.trim()
 const labels=()=>{panel.querySelector('#om-chat-title').textContent=t().title;panel.querySelector('#om-chat-status').textContent=t().status;panel.querySelector('#om-chat-privacy').textContent=t().privacy;input.placeholder=t().placeholder;launcher.setAttribute('aria-label',t().open);close.setAttribute('aria-label',t().close);panel.querySelector('#om-chat-send').setAttribute('aria-label',t().send);panel.dir=lang()==='ar'?'rtl':'ltr'};
 const open=()=>{lastFocus=document.activeElement;labels();panel.hidden=false;launcher.setAttribute('aria-expanded','true');if(!log.children.length){msg(t().hello);menu()}input.focus()};
 const shut=()=>{panel.hidden=true;launcher.setAttribute('aria-expanded','false');(lastFocus||launcher).focus()};
-launcher.setAttribute('aria-expanded','false');launcher.addEventListener('click',()=>panel.hidden?open():shut());close.addEventListener('click',shut);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)shut()});labels();
+window.addEventListener('om-language-changed',labels);launcher.setAttribute('aria-expanded','false');launcher.addEventListener('click',()=>panel.hidden?open():shut());close.addEventListener('click',shut);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)shut()});labels();
 })();
