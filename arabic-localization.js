@@ -174,6 +174,20 @@ function paint(){
  if(root.lang==='ar')el.setAttribute(attr,translate(record[attr]));}
  });
 }
+const originalTitle=document.title;
+const pageTitles={
+'index.html':'عمر مرجاني — تطوير المواقع وإدارة المخزون',
+'developpement.html':'عمر مرجاني — تطوير المواقع والتطبيقات',
+'gestion-stock.html':'عمر مرجاني — إدارة المخزون',
+'projet-md-voyage.html':'MD Voyage 2.0 — تفاصيل المشروع',
+'projet-immovision.html':'ImmoVision — تفاصيل المشروع',
+'projet-fleet-manager-pro.html':'Fleet Manager Pro — تفاصيل المشروع',
+'projet-chantier-manager-pro.html':'Chantier Manager Pro — تفاصيل المشروع',
+'projet-health-service.html':'Health Service — تفاصيل المشروع',
+'projet-gestion-commerciale-pro.html':'Gestion Commerciale Pro — تفاصيل المشروع',
+'projet-react-optisis.html':'React Optisis — تفاصيل المشروع',
+'projet-gestion-stock-pro.html':'Gestion Stock Pro — تفاصيل المشروع'
+};
 const toggle=document.getElementById('langToggle');
 if(!toggle)return;
 const select=document.createElement('select');select.id='omLanguageSelect';select.className='lang-toggle';
@@ -202,9 +216,9 @@ function setLanguage(lang){
  const previous=root.lang;
  if(lang==='ar'){
   if(previous==='en')toggle.click();
-  root.lang='ar';root.dir='rtl';paint();
+  root.lang='ar';root.dir='rtl';paint();document.title=pageTitles[location.pathname.split('/').pop()]||originalTitle;
  }else{
-  if(previous==='ar'){restoreArabic();root.lang='fr';}
+  if(previous==='ar'){restoreArabic();root.lang='fr';document.title=originalTitle;}
   root.dir='ltr';
   if(root.lang!==lang)toggle.click();
  }
@@ -216,4 +230,12 @@ select.addEventListener('change',()=>setLanguage(select.value));
 let saved='fr';try{saved=localStorage.getItem(key)||'fr';}catch(_){}
 setLanguage(saved);
 document.addEventListener('click',e=>{if(root.lang==='ar'&&e.target.closest('[data-open-demo],.case-study-trigger,[data-gsp]'))setTimeout(paint,0);});
+let scheduled=false;
+const observer=new MutationObserver(records=>{
+ if(root.lang!=='ar'||scheduled)return;
+ if(!records.some(r=>r.type==='childList'&&r.addedNodes.length))return;
+ scheduled=true;
+ requestAnimationFrame(()=>{scheduled=false;paint();});
+});
+observer.observe(document.body,{childList:true,subtree:true});
 })();
