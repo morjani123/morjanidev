@@ -224,6 +224,16 @@ flagSwitcher.addEventListener('click',event=>{
  location.assign(routeFor(lang,fileName)+location.hash);
 });
 document.addEventListener('click',event=>{if(!flagSwitcher.contains(event.target))flagSwitcher.open=false;});
+flagSwitcher.addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&flagSwitcher.open){
+  event.preventDefault();
+  flagSwitcher.open=false;
+  flagSwitcher.querySelector('summary')?.focus();
+ }
+});
+flagSwitcher.querySelectorAll('[data-om-lang]').forEach(button=>{
+ button.setAttribute('aria-label',({fr:'Français',en:'English',ar:'العربية'})[button.dataset.omLang]);
+});
 const style=document.createElement('style');style.textContent=`
 #langToggle,#omLanguageSelect{display:none!important}
 #omFlagSwitcher{position:relative!important;display:inline-block!important;width:88px!important;min-width:88px!important;max-width:88px!important;flex:0 0 88px!important;direction:ltr!important;font-size:12px;z-index:100}
