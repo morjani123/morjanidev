@@ -1,0 +1,28 @@
+/* Final section contrast and alternating gradients */
+#projets-recents .section-heading h2{color:#f3faff!important;text-shadow:none!important}
+#projets-recents .section-heading h2 .gradient-text{background:linear-gradient(100deg,#7fe9ff,#b9b5ff)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+#projets-recents .section-heading p{color:#d2e6f4!important;opacity:1!important}
+body.light #projets-recents .section-heading h2{color:#0a2b47!important}
+body.light #projets-recents .section-heading h2 .gradient-text{background:linear-gradient(100deg,#075d9f,#594ab3)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+body.light #projets-recents .section-heading p{color:#34536c!important;opacity:1!important}
+#contact .contact-v3-intro h3,#contact .contact-v3-intro h3 span{color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 1px 4px #0002!important}
+#contact .contact-v3-eyebrow{color:#a7efff!important}
+#contact .contact-v3-intro>p{color:#e0eff9!important}
+body.light #contact .contact-v3-intro h3,body.light #contact .contact-v3-intro h3 span{color:#fff!important;-webkit-text-fill-color:#fff!important}
+body.light #contact .contact-v3-eyebrow{color:#bdf4ff!important}
+#projets-recents{background:linear-gradient(125deg,#0c2c47 0%,#123d5b 55%,#0b2d4d 100%)!important}
+#references{background:linear-gradient(125deg,#142d49 0%,#213f61 55%,#143452 100%)!important}
+#chiffres{background:linear-gradient(130deg,#0b2640 0%,#19415b 100%)!important}
+#technologies{background:linear-gradient(135deg,#0c3446 0%,#144c59 55%,#0b3347 100%)!important}
+#parcours-rapide{background:linear-gradient(130deg,#142c4b 0%,#203c60 100%)!important}
+#cv{background:linear-gradient(130deg,#0e2e48 0%,#16455a 100%)!important}
+#contact{background:linear-gradient(125deg,#0a2942 0%,#143d54 55%,#0d2d49 100%)!important}
+body.light #projets-recents{background:linear-gradient(125deg,#eaf6ff 0%,#f9fcff 52%,#dcefff 100%)!important}
+body.light #references{background:linear-gradient(125deg,#f9fbff 0%,#eaf0ff 52%,#e2efff 100%)!important}
+body.light #chiffres{background:linear-gradient(130deg,#eaf9ff 0%,#f7fcff 55%,#e0f1fa 100%)!important}
+body.light #technologies{background:linear-gradient(125deg,#f1f8ff 0%,#e4f2fb 55%,#f7fbff 100%)!important}
+body.light #parcours-rapide{background:linear-gradient(130deg,#edf1ff 0%,#fafbff 55%,#e6efff 100%)!important}
+body.light #cv{background:linear-gradient(125deg,#f6fcff 0%,#e8f6f9 55%,#e9f3ff 100%)!important}
+body.light #contact{background:linear-gradient(130deg,#eaf5ff 0%,#f9fcff 55%,#e1f0fb 100%)!important}
+#projets-recents .section-heading,#contact .contact-v3-intro{min-width:0}
+#projets-recents .section-heading h2,#projets-recents .section-heading p,#contact .contact-v3-intro h3{overflow-wrap:break-word}
