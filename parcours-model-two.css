@@ -1,0 +1,37 @@
+/* MON PARCOURS — Model 2 chronological cards */
+#parcours-rapide.parcours-model-two{padding:clamp(64px,7vw,105px) 0!important;overflow:hidden}
+#parcours-rapide .parcours-m2-heading{display:grid;grid-template-columns:minmax(230px,.85fr) minmax(0,2.25fr);align-items:center;gap:clamp(24px,3vw,50px)}
+#parcours-rapide .parcours-m2-intro{min-width:0}
+#parcours-rapide .parcours-m2-intro h2{font-size:clamp(30px,3vw,49px)!important;line-height:1.12!important;letter-spacing:-.035em;overflow-wrap:break-word}
+#parcours-rapide .parcours-m2-intro .parcours-lead{font-size:clamp(14px,1.1vw,17px)!important;line-height:1.7!important;margin:18px 0 26px!important}
+#parcours-rapide .parcours-m2-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;min-width:0}
+#parcours-rapide .parcours-m2-card{min-width:0;position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:24px 20px 20px;border:1px solid #4774c2;border-radius:20px;background:linear-gradient(150deg,rgba(26,65,115,.96),rgba(12,36,73,.97));box-shadow:0 16px 32px rgba(0,14,42,.19);color:#f7fbff;transition:transform .2s ease,box-shadow .2s ease}
+#parcours-rapide .parcours-m2-card:hover{transform:translateY(-5px);box-shadow:0 20px 38px rgba(0,14,42,.28)}
+#parcours-rapide .parcours-m2-stock{border-color:#2d9cdb;background:linear-gradient(145deg,#10496c,#0c294d)}
+#parcours-rapide .parcours-m2-dev{border-color:#9c79f2;background:linear-gradient(145deg,#403574,#1b295a)}
+#parcours-rapide .parcours-m2-icon{display:grid;place-items:center;width:54px;height:54px;flex:none;margin-bottom:20px;border-radius:14px;background:linear-gradient(135deg,#368ce9,#514bc3);color:#fff;box-shadow:0 8px 20px #0002}
+#parcours-rapide .parcours-m2-stock .parcours-m2-icon{background:linear-gradient(135deg,#1ebee4,#0b6dc5)}
+#parcours-rapide .parcours-m2-dev .parcours-m2-icon{background:linear-gradient(135deg,#a779e9,#6354c7)}
+#parcours-rapide .parcours-m2-icon svg{width:28px;height:28px}
+#parcours-rapide .parcours-m2-date{display:inline-block;border-radius:999px;background:#4b77cc;color:#fff;font-size:12px;font-weight:800;line-height:1.4;padding:6px 12px;overflow-wrap:anywhere}
+#parcours-rapide .parcours-m2-stock .parcours-m2-date{background:#0c85c5}
+#parcours-rapide .parcours-m2-dev .parcours-m2-date{background:#7753c6}
+#parcours-rapide .parcours-m2-card h3{color:#fff!important;font-size:clamp(17px,1.35vw,21px)!important;line-height:1.3;margin:15px 0 13px;overflow-wrap:anywhere}
+#parcours-rapide .parcours-m2-card ul{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:12px}
+#parcours-rapide .parcours-m2-card li{position:relative;padding-left:23px;color:#e2efff!important;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+#parcours-rapide .parcours-m2-card li:before{content:"✓";position:absolute;left:0;top:0;color:#7ee8ff;font-weight:900}
+#parcours-rapide .parcours-m2-foot{margin-top:auto;padding-top:14px;border-top:1px solid #ffffff30;color:#cfe6ff!important;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+#parcours-rapide .parcours-bottom{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:30px}
+#parcours-rapide .parcours-bottom a{color:#e9f7ff!important;border-color:#ffffff55!important}
+body.light #parcours-rapide .parcours-m2-intro h2{color:#123052!important}
+body.light #parcours-rapide .parcours-m2-intro .parcours-lead{color:#365778!important}
+body.light #parcours-rapide .parcours-m2-card{background:linear-gradient(145deg,#fff,#eaf2ff);border-color:#c3d6f4;box-shadow:0 12px 30px #204c871a}
+body.light #parcours-rapide .parcours-m2-stock{background:linear-gradient(145deg,#fff,#e5f8ff);border-color:#a6daed}
+body.light #parcours-rapide .parcours-m2-dev{background:linear-gradient(145deg,#fff,#f0ebff);border-color:#d0bff5}
+body.light #parcours-rapide .parcours-m2-card h3{color:#17365c!important}
+body.light #parcours-rapide .parcours-m2-card li{color:#3c5874!important}
+body.light #parcours-rapide .parcours-m2-card li:before{color:#0679b8}
+body.light #parcours-rapide .parcours-m2-foot{color:#48647e!important;border-top-color:#b8cee5}
+body.light #parcours-rapide .parcours-bottom a{color:#095f9e!important;border-color:#9bbfdd!important}
+@media(max-width:1120px){#parcours-rapide .parcours-m2-heading{grid-template-columns:1fr}#parcours-rapide .parcours-m2-cards{gap:12px}#parcours-rapide .parcours-m2-card{padding:20px 16px}}
+@media(max-width:740px){#parcours-rapide .parcours-m2-cards{grid-template-columns:1fr}#parcours-rapide .parcours-m2-card{padding:23px}#parcours-rapide .parcours-m2-icon{margin-bottom:13px}#parcours-rapide .parcours-m2-intro h2{font-size:clamp(30px,7vw,40px)!important}}
