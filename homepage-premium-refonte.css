@@ -1,0 +1,54 @@
+/* Home premium refonte: final overrides, loaded after legacy styles. */
+#accueil,#projets-recents,#apropos,#technologies,#references,#parcours-rapide,#cv,#contact{scroll-margin-top:86px}
+#accueil{padding-top:clamp(55px,7vw,105px)!important;padding-bottom:clamp(45px,5vw,80px)!important;row-gap:28px!important}
+#accueil .hero-copy h1{font-size:clamp(44px,5.7vw,84px)!important;line-height:1.05!important;letter-spacing:-.045em!important}
+#accueil .hero-role{font-size:clamp(19px,2vw,29px)!important;line-height:1.28!important;max-width:780px!important}
+#accueil .hero-desc{font-size:clamp(15px,1.14vw,18px)!important;line-height:1.75!important;max-width:720px!important}
+#accueil .hero-actions{display:flex!important;gap:13px!important;flex-wrap:wrap!important;margin-top:27px!important}
+#accueil .hero-actions .btn{min-height:48px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:12px 23px!important;border-radius:13px!important;font-weight:750!important}
+#accueil .hero-service-grid{gap:18px!important}
+#accueil .hero-service{padding:25px!important;border-radius:22px!important;box-shadow:0 14px 32px #0a345215!important}
+#accueil .hero-service strong{font-size:clamp(17px,1.5vw,22px)!important;line-height:1.35!important}
+#accueil .hero-service small{font-size:14px!important;line-height:1.6!important}
+#accueil .hero-stats{display:none!important}
+#projets-recents,#references,#apropos,#technologies,#parcours-rapide,#cv,#contact{padding-top:clamp(64px,7vw,108px)!important;padding-bottom:clamp(64px,7vw,108px)!important}
+#projets-recents .section-heading,#references .section-heading{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:14px!important;margin-bottom:34px!important}
+#projets-recents .section-heading h2,#references .section-heading h2{font-size:clamp(32px,3.6vw,53px)!important;line-height:1.13!important;letter-spacing:-.03em!important;max-width:950px!important;margin:0!important;text-wrap:balance}
+#projets-recents .section-heading p,#references .section-heading p{max-width:780px!important;font-size:clamp(15px,1.15vw,18px)!important;line-height:1.7!important;margin:0!important}
+#projets-recents .portfolio-home-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:23px!important}
+#projets-recents .portfolio-home-card:nth-child(n+5){display:none!important}
+#projets-recents .portfolio-home-card .laptop-mockup{height:clamp(205px,22vw,315px)!important;min-height:0!important}
+#projets-recents .portfolio-home-card>span{padding:22px 24px 25px!important}
+#projets-recents .portfolio-home-card>span strong{font-size:clamp(20px,1.75vw,26px)!important}
+#projets-recents .portfolio-home-card>span small{font-size:14px!important}
+#projets-recents .portfolio-home-more{display:inline-flex!important;align-items:center!important;justify-content:center!important;margin-top:30px!important;padding:14px 25px!important;border-radius:13px!important;background:#0c75bd!important;color:#fff!important;font-weight:750!important;text-decoration:none!important}
+#projets-recents .portfolio-home-more:hover{background:#095c96!important}
+#references .home-institutional-grid{gap:20px!important}
+#references .institution-feature-card{border-radius:20px!important;overflow:hidden!important}
+#references :is(.institution-feature-card,.institutional-card) img{object-fit:contain!important}
+#apropos .about-reference-grid{gap:clamp(24px,3vw,48px)!important}
+#apropos .about-reference-copy p{line-height:1.75!important}
+#technologies .premium-title{font-size:clamp(32px,3.2vw,49px)!important;line-height:1.15!important}
+#technologies .premium-subtitle{font-size:clamp(15px,1.15vw,18px)!important;line-height:1.65!important}
+#technologies .premium-tech{min-width:0!important;overflow:hidden!important;border-radius:17px!important;padding:18px!important}
+#technologies .premium-tech img{object-fit:contain!important}
+#parcours-rapide .parcours-m2-intro .parcours-lead{font-size:clamp(15px,1.18vw,18px)!important}
+#cv{min-height:0!important}
+#cv .wrap{display:grid!important;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)!important;gap:18px 38px!important;align-items:center!important}
+#cv .section-kicker{grid-column:1/-1!important}
+#cv .section-heading{margin:0!important}
+#cv .section-heading h2{font-size:clamp(30px,3vw,46px)!important;line-height:1.18!important}
+#cv .section-heading p{font-size:clamp(15px,1.1vw,17px)!important;line-height:1.7!important;max-width:630px!important}
+#cv .cv-actions{display:flex!important;flex-direction:column!important;gap:12px!important;align-items:stretch!important;justify-content:center!important}
+#cv .cv-actions .btn{width:100%!important;min-height:49px!important;display:flex!important;justify-content:center!important;align-items:center!important;text-align:center!important;padding:12px 18px!important}
+#contact .contact-v3-heading h2{font-size:clamp(33px,3.8vw,55px)!important;line-height:1.13!important;text-wrap:balance}
+#contact .contact-v3-heading p{font-size:clamp(15px,1.12vw,18px)!important;line-height:1.7!important}
+#contact :is(input,textarea,select){font-size:15px!important;line-height:1.5!important}
+#projets-recents :is(h2,p),#references :is(h2,p),#cv :is(h2,p),#contact :is(h2,p){overflow-wrap:break-word!important}
+body.light #projets-recents .section-heading h2,body.light #references .section-heading h2,body.light #cv .section-heading h2,body.light #contact .contact-v3-heading h2{color:#102c48!important}
+body.light #projets-recents .section-heading p,body.light #references .section-heading p,body.light #cv .section-heading p,body.light #contact .contact-v3-heading p{color:#3b5972!important}
+body:not(.light) #projets-recents .section-heading h2,body:not(.light) #references .section-heading h2,body:not(.light) #cv .section-heading h2,body:not(.light) #contact .contact-v3-heading h2{color:#f0f8ff!important}
+body:not(.light) #projets-recents .section-heading p,body:not(.light) #references .section-heading p,body:not(.light) #cv .section-heading p,body:not(.light) #contact .contact-v3-heading p{color:#c9dceb!important}
+body.light #contact .contact-v3-intro h3,body.light #contact .contact-v3-intro h3 span{color:#fff!important;-webkit-text-fill-color:#fff!important}
+@media(max-width:920px){#projets-recents .portfolio-home-card .laptop-mockup{height:220px!important}#cv .wrap{grid-template-columns:1fr!important}#cv .section-kicker{grid-column:auto!important}#cv .cv-actions{flex-direction:row!important;flex-wrap:wrap!important}#cv .cv-actions .btn{width:auto!important;flex:1 1 220px!important}}
+@media(max-width:680px){#accueil .hero-copy h1{font-size:clamp(42px,10vw,62px)!important}#accueil .hero-service{padding:19px!important}#projets-recents .portfolio-home-cards{grid-template-columns:1fr!important;gap:17px!important}#projets-recents .portfolio-home-card .laptop-mockup{height:230px!important}#projets-recents .portfolio-home-card>span{padding:17px 18px 20px!important}#projets-recents .section-heading h2,#references .section-heading h2{font-size:clamp(29px,7.7vw,39px)!important}#cv .cv-actions{flex-direction:column!important}#cv .cv-actions .btn{width:100%!important}#contact .contact-v3-heading h2{font-size:clamp(31px,8vw,43px)!important}}
