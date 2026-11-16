@@ -168,6 +168,7 @@ const translations = new Map(Object.entries({
 "Développement web, applications desktop et compréhension des processus métiers.":"Web development, desktop applications and business process understanding.",
 "Les technologies que j’utilise.":"Technologies I Use.",
 "Filtrez les compétences par domaine.":"Filter skills by category.",
+"Mon parcours en quelques étapes":"My Journey in Three Stages",
 "MON PARCOURS":"MY BACKGROUND",
 "Une expérience entre digital et terrain.":"Experience Across Digital and Field Operations.",
 "Du développement web à la gestion opérationnelle sur chantier, un parcours qui associe création de solutions digitales et compréhension concrète des besoins métiers.":"From web development to on-site operations, combining digital solutions with a practical understanding of business needs.",
