@@ -1,0 +1,26 @@
+/* Portfolio project cards: isolated surface/text treatment for both themes */
+#projets-recents .portfolio-home-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:20px!important}
+#projets-recents .portfolio-home-card{position:relative!important;display:flex!important;flex-direction:column!important;min-width:0!important;min-height:0!important;overflow:hidden!important;border-radius:18px!important;background:#fff!important;border:1px solid #cbdce9!important;box-shadow:0 12px 28px rgba(10,46,75,.12)!important;text-decoration:none!important}
+#projets-recents .portfolio-home-card .laptop-mockup{position:relative!important;width:100%!important;height:185px!important;min-height:185px!important;flex:none!important;overflow:hidden!important;border:0!important;border-radius:0!important;background:#e7f1f8!important}
+#projets-recents .portfolio-home-card .laptop-mockup>img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:top!important}
+#projets-recents .portfolio-home-card .live-preview{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important}
+#projets-recents .portfolio-home-card .live-preview iframe{pointer-events:none!important}
+#projets-recents .portfolio-home-card .laptop-mockup:after{content:none!important;display:none!important}
+#projets-recents .portfolio-home-card>span{position:relative!important;inset:auto!important;display:block!important;flex:1!important;z-index:2!important;padding:17px 18px 20px!important;background:#fff!important;color:#142d45!important;text-shadow:none!important;opacity:1!important}
+#projets-recents .portfolio-home-card>span em{display:block!important;color:#0b6c9f!important;font-size:11px!important;font-style:normal!important;font-weight:750!important;letter-spacing:.04em!important;opacity:1!important}
+#projets-recents .portfolio-home-card>span strong{display:block!important;color:#102b47!important;font-size:clamp(17px,1.55vw,21px)!important;font-weight:800!important;line-height:1.3!important;margin:7px 0!important;opacity:1!important}
+#projets-recents .portfolio-home-card>span small{display:block!important;color:#496276!important;font-size:13px!important;line-height:1.55!important;opacity:1!important}
+#projets-recents .portfolio-home-card .screen-label,#projets-recents .portfolio-home-card .live-preview-tag{color:#fff!important;background:#0c3b60ed!important;text-shadow:none!important}
+body:not(.light) #projets-recents .portfolio-home-card{background:#142d45!important;border-color:#315570!important}
+body:not(.light) #projets-recents .portfolio-home-card>span{background:#142d45!important;color:#eef8ff!important}
+body:not(.light) #projets-recents .portfolio-home-card>span strong{color:#f4fbff!important}
+body:not(.light) #projets-recents .portfolio-home-card>span em{color:#80e0fa!important}
+body:not(.light) #projets-recents .portfolio-home-card>span small{color:#cbddeb!important}
+body.light #projets-recents .portfolio-home-card,body.light #projets-recents .portfolio-home-card>span{background:#fff!important}
+body.light #projets-recents .portfolio-home-card>span strong{color:#102b47!important}
+body.light #projets-recents .portfolio-home-card>span em{color:#0b6c9f!important}
+body.light #projets-recents .portfolio-home-card>span small{color:#496276!important}
+#projets-recents .section-heading p{font-size:clamp(14px,1.05vw,17px)!important;line-height:1.65!important;opacity:1!important}
+#projets-recents .portfolio-home-card:hover{transform:translateY(-5px)!important;box-shadow:0 20px 38px rgba(10,46,75,.19)!important}
+@media(max-width:900px){#projets-recents .portfolio-home-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){#projets-recents .portfolio-home-cards{grid-template-columns:minmax(0,1fr)!important}#projets-recents .portfolio-home-card .laptop-mockup{height:210px!important;min-height:210px!important}}
