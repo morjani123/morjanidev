@@ -120,6 +120,7 @@ const translations = new Map(Object.entries({
 "6 applications métiers et 2 sites web à découvrir : tourisme, immobilier, gestion BTP, flotte automobile, recrutement médical, commerce, optique et stock.":"Explore six business applications and two websites covering travel, real estate, construction, fleet management, healthcare recruitment, commerce, optics and inventory.",
 "Explorer toutes les réalisations et le slider animé →":"Explore all projects and the animated slider →",
 "Des projets web auxquels j’ai contribué dans le cadre de mon expérience chez TWINS, pour des organismes publics marocains.":"Web projects I contributed to while working at TWINS for Moroccan public organizations.",
+"Mon portfolio réunit 13 réalisations présentées : 8 projets numériques (6 applications métiers et 2 sites web) et 5 références institutionnelles. À travers ces projets":"My portfolio showcases 13 featured works: 8 digital projects (6 business applications and 2 websites) and 5 institutional references. Through these projects",
 "Du code aux solutions concrètes.":"From Code to Real Solutions.",
 "Des outils qui font la différence.":"Tools That Make a Difference.",
 "Je transforme les besoins des entreprises en sites web, applications métiers et outils de gestion simples, fiables et adaptés au terrain.":"I turn business needs into websites, business applications and management tools that are simple, reliable and grounded in real workflows.",
