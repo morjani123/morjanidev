@@ -1,0 +1,35 @@
+/* Home-page contrast harmonization — both theme states, FR/EN/AR. */
+#accueil,#projets-recents,#references,#apropos,#chiffres,#technologies,#parcours-rapide,#cv,#contact{--home-text:#edf7ff;--home-muted:#c0d5e7;--home-surface:#12344e;--home-edge:#396784;--home-accent:#8be9ff;color:var(--home-text)}
+body.light #accueil,body.light #projets-recents,body.light #references,body.light #apropos,body.light #chiffres,body.light #technologies,body.light #parcours-rapide,body.light #cv,body.light #contact{--home-text:#102d48;--home-muted:#425f78;--home-surface:#fff;--home-edge:#c4dce9;--home-accent:#075f98}
+#projets-recents{background:linear-gradient(135deg,#0a253d,#11334d)!important}
+#references{background:linear-gradient(135deg,#102c44,#173b52)!important}
+body.light #projets-recents{background:linear-gradient(135deg,#eef8ff,#e3f1fb)!important}
+body.light #references{background:linear-gradient(135deg,#f7fbff,#e8f3fb)!important}
+#projets-recents .section-heading h2,#references :is(h2,h3),#chiffres .premium-title,#technologies .premium-title,#parcours-rapide :is(h2,h3),#cv :is(h2,h3),#contact .contact-v3-heading h2{color:var(--home-text)!important}
+#projets-recents .section-heading p,#references p,#chiffres .premium-subtitle,#technologies .premium-subtitle,#parcours-rapide p,#cv p,#contact .contact-v3-heading p{color:var(--home-muted)!important}
+#projets-recents .section-kicker,#references .section-kicker,#chiffres .premium-kicker,#technologies .premium-kicker,#parcours-rapide .section-kicker,#cv .section-kicker,#contact .section-kicker{color:var(--home-accent)!important}
+#projets-recents .portfolio-home-card,#references .home-institutional-card,#references .institutional-card{background:var(--home-surface)!important;border-color:var(--home-edge)!important;color:var(--home-text)!important}
+#projets-recents .portfolio-home-card :is(strong,h3),#references :is(.home-institutional-card,.institutional-card) :is(strong,h3){color:var(--home-text)!important}
+#projets-recents .portfolio-home-card :is(small,em),#references :is(.home-institutional-card,.institutional-card) :is(small,p){color:var(--home-muted)!important}
+#projets-recents .portfolio-home-card em{color:var(--home-accent)!important}
+#chiffres .premium-stat,#technologies .premium-tech{background:var(--home-surface)!important;border-color:var(--home-edge)!important;color:var(--home-text)!important}
+#chiffres .premium-stat span,#technologies .premium-tech :is(span,small){color:var(--home-muted)!important}
+#technologies .premium-stack button{background:var(--home-surface)!important;color:var(--home-text)!important;border-color:var(--home-edge)!important}
+#technologies .premium-stack button[aria-pressed="true"]{background:#075fa8!important;color:white!important}
+#parcours-rapide .parcours-card,#parcours-rapide .timeline-card,#cv .cv-card{background:var(--home-surface)!important;border-color:var(--home-edge)!important;color:var(--home-text)!important}
+#parcours-rapide :is(.parcours-card,.timeline-card) :is(h3,strong),#cv .cv-card :is(h3,strong){color:var(--home-text)!important}
+#parcours-rapide :is(.parcours-card,.timeline-card) :is(p,small,span),#cv .cv-card :is(p,small,span){color:var(--home-muted)!important}
+#accueil :is(h1,h2,h3),#accueil .hero-role{color:var(--home-text)!important}
+#accueil :is(.hero-description,.hero-subtitle,.hero-lead){color:var(--home-muted)!important}
+#accueil .hero-service :is(strong,h3){color:var(--home-text)!important}
+#accueil .hero-service :is(small,p){color:var(--home-muted)!important}
+#accueil .hero-service{background:var(--home-surface)!important;border-color:var(--home-edge)!important}
+#contact .contact-v3-heading>p{color:var(--home-muted)!important}
+#contact .contact-v3-side :is(p,small){color:inherit}
+#contact :is(input,textarea,select){background:#f9fcff;color:#142c43;border:1px solid #a8c7da}
+#contact :is(input,textarea)::placeholder{color:#60778a;opacity:1}
+body.light #contact :is(input,textarea,select){background:#fff;color:#18354b}
+#projets-recents .portfolio-home-card,#references .home-institutional-card,#chiffres .premium-stat,#technologies .premium-tech{transition:box-shadow .2s ease,transform .2s ease}
+#projets-recents .portfolio-home-card:hover,#references .home-institutional-card:hover{transform:translateY(-3px)}
+#accueil,#projets-recents,#references,#apropos,#chiffres,#technologies,#parcours-rapide,#cv,#contact{overflow-wrap:break-word}
+@media(max-width:720px){#projets-recents .portfolio-home-cards,#references .home-institutional-grid{min-width:0}#projets-recents .portfolio-home-card{min-width:0}}
