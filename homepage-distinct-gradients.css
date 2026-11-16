@@ -1,0 +1,18 @@
+/* Distinct alternating gradients for all homepage sections; preserve foreground contrast */
+#accueil{background:transparent!important}
+#projets-recents{background:linear-gradient(132deg,#0b2947 0%,#154565 48%,#092e4c 100%)!important}
+#references{background:linear-gradient(118deg,#1a284c 0%,#273e64 55%,#182f53 100%)!important}
+#apropos.about-reference{background:linear-gradient(125deg,#102f48 0%,#164c5a 53%,#0b3549 100%)!important}
+#chiffres{background:linear-gradient(130deg,#0b2844 0%,#175071 52%,#0d344f 100%)!important}
+#technologies{background:linear-gradient(122deg,#103b42 0%,#1c5a5b 55%,#123b4d 100%)!important}
+#parcours-rapide{background:linear-gradient(128deg,#172c4f 0%,#324775 55%,#1a3458 100%)!important}
+#cv{background:linear-gradient(125deg,#102d43 0%,#1c5265 54%,#0e3549 100%)!important}
+#contact{background:linear-gradient(132deg,#0a2846 0%,#17465f 48%,#112b50 100%)!important}
+body.light #projets-recents{background:linear-gradient(128deg,#edf8ff 0%,#d9ecff 52%,#f7fcff 100%)!important}
+body.light #references{background:linear-gradient(126deg,#fbfaff 0%,#e9e9ff 52%,#f0f5ff 100%)!important}
+body.light #apropos.about-reference{background:linear-gradient(128deg,#fff 0%,#e6f6f8 54%,#eaf3ff 100%)!important}
+body.light #chiffres{background:linear-gradient(130deg,#e5f7ff 0%,#f5fcff 52%,#dceffa 100%)!important}
+body.light #technologies{background:linear-gradient(124deg,#f2fffd 0%,#ddf3ee 53%,#eefbff 100%)!important}
+body.light #parcours-rapide{background:linear-gradient(130deg,#f3f0ff 0%,#e7ebff 54%,#f9faff 100%)!important}
+body.light #cv{background:linear-gradient(125deg,#e8f8ff 0%,#f9fdff 55%,#e3f2f5 100%)!important}
+body.light #contact{background:linear-gradient(128deg,#eaf2ff 0%,#f8fbff 52%,#e5f1fb 100%)!important}
