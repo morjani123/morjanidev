@@ -1,0 +1,18 @@
+/* Consistent project cards and featured slider imagery */
+#developpement .portfolio-tiles{gap:clamp(16px,2.2vw,28px)!important}
+#developpement .portfolio-tile{overflow:hidden!important;border-radius:20px!important;min-width:0!important}
+#developpement .portfolio-tile .tile-cover{position:relative!important;display:block!important;aspect-ratio:16/10!important;min-height:0!important;overflow:hidden!important;background:#112c49!important}
+#developpement .portfolio-tile .tile-cover>img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;transition:transform .35s ease!important;filter:none!important}
+#developpement .portfolio-tile:hover .tile-cover>img{transform:scale(1.035)!important}
+#developpement .portfolio-tile .tile-kind{z-index:3!important}
+#developpement .portfolio-tile .tile-body{padding:clamp(17px,2vw,25px)!important}
+#developpement .portfolio-tile h3{font-size:clamp(19px,1.7vw,24px)!important;line-height:1.25!important;overflow-wrap:break-word!important}
+#developpement .portfolio-tile p{line-height:1.6!important}
+#developpement .revolution-visual{position:relative!important;display:block!important;min-width:0!important;overflow:hidden!important;border-radius:18px!important;background:#112b45!important}
+#developpement .revolution-visual>img{display:block!important;width:100%!important;height:100%!important;max-height:480px!important;aspect-ratio:16/10!important;object-fit:contain!important;object-position:center!important;filter:none!important}
+#developpement .revolution-slide{min-width:0!important}
+#developpement .revolution-copy h3{overflow-wrap:break-word!important}
+#developpement .portfolio-tile .live-preview{height:100%!important;min-height:0!important}
+@media(max-width:760px){#developpement .portfolio-tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}#developpement .portfolio-tile .tile-cover{aspect-ratio:4/3!important}#developpement .revolution-visual>img{height:auto!important;aspect-ratio:16/10!important}}
+@media(max-width:540px){#developpement .portfolio-tiles{grid-template-columns:1fr!important}#developpement .portfolio-tile .tile-cover{aspect-ratio:16/10!important}#developpement .revolution-visual>img{max-height:none!important}}
+@media(prefers-reduced-motion:reduce){#developpement .portfolio-tile .tile-cover>img{transition:none!important}}
