@@ -85,3 +85,22 @@ body:has(#gestion-stock) main .stock-skills article{padding:22px}
 @media(min-width:900px){body:has(#gestion-stock) main .stock-intro-photo{height:300px}body:has(#gestion-stock) main .stock-method-photo{height:260px}}
 @media(max-width:800px){body:has(#gestion-stock) main .specialty-intro{grid-template-columns:1fr;min-height:unset}body:has(#gestion-stock) main .specialty-intro>.section-kicker,body:has(#gestion-stock) main .specialty-intro>h1,body:has(#gestion-stock) main .specialty-intro>p,body:has(#gestion-stock) main .specialty-intro>.btn{grid-column:1}body:has(#gestion-stock) main .stock-hero-photo{grid-column:1;grid-row:auto;min-height:270px;margin-top:22px}}
 @media(max-width:600px){body:has(#gestion-stock) main .stock-hero-photo{min-height:235px}body:has(#gestion-stock) main .stock-intro-photo,body:has(#gestion-stock) main .stock-method-photo{height:210px}}
+
+/* Construction-site focused editorial hero — replaces the previous generic profile card. */
+body:has(#gestion-stock) main .specialty-intro{grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr)!important;gap:13px 34px!important;align-items:center;min-height:480px;padding:clamp(28px,4.5vw,62px)!important;background:linear-gradient(105deg,#ffffff 0%,#f5fcfb 56%,#e6f7f3 100%)!important}
+body:has(#gestion-stock) main .specialty-intro>.section-kicker,body:has(#gestion-stock) main .specialty-intro>h1,body:has(#gestion-stock) main .specialty-intro>p,body:has(#gestion-stock) main .specialty-intro>.stock-hero-actions,body:has(#gestion-stock) main .specialty-intro>.stock-hero-tags{grid-column:1!important;margin:0}
+body:has(#gestion-stock) main .specialty-intro h1{font-size:clamp(36px,4.8vw,64px);max-width:650px;margin:8px 0}
+body:has(#gestion-stock) main .specialty-intro p{font-size:clamp(15px,1.3vw,18px);max-width:610px}
+body:has(#gestion-stock) main .stock-hero-photo{grid-column:2!important;grid-row:1/7!important;min-height:385px!important;height:100%;border-radius:21px;box-shadow:0 20px 45px #173e4825}
+body:has(#gestion-stock) main .stock-hero-photo img{object-position:center center}
+body:has(#gestion-stock) main .stock-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:12px!important}
+body:has(#gestion-stock) main .stock-hero-actions .btn{margin:0!important;align-self:auto}
+body:has(#gestion-stock) main .stock-hero-secondary{color:#086b70;font-weight:800;text-decoration:none;padding:12px 4px}
+body:has(#gestion-stock) main .stock-hero-secondary:hover{text-decoration:underline}
+body:has(#gestion-stock) main .stock-hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px!important}
+body:has(#gestion-stock) main .stock-hero-tags span{padding:8px 11px;border-radius:999px;border:1px solid #c7e6e1;background:#fff;color:#276370;font-size:11px;font-weight:750}
+body:has(#gestion-stock) main .stock-intro-photo img{object-position:center 48%}
+body:has(#gestion-stock) main .stock-method-photo img{object-position:center 50%}
+body:not(.light):has(#gestion-stock) main .stock-hero-tags span{background:#173a44;color:#c3eee9;border-color:#37737a}
+body:not(.light):has(#gestion-stock) main .stock-hero-secondary{color:#a6e8e2}
+@media(max-width:800px){body:has(#gestion-stock) main .specialty-intro{grid-template-columns:1fr!important;gap:13px!important}body:has(#gestion-stock) main .stock-hero-photo{grid-column:1!important;grid-row:auto!important;min-height:270px!important;margin-top:12px}body:has(#gestion-stock) main .specialty-intro>h1{font-size:clamp(35px,8vw,52px)}}
