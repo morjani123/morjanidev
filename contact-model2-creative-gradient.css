@@ -1,0 +1,58 @@
+/* Contact · Collaboration — Model 2 Creative Gradient. Scoped; keeps FormSubmit and WhatsApp functionality intact. */
+#contact.contact-v3{position:relative;isolation:isolate;overflow:hidden;padding:clamp(70px,8vw,130px) 0;background:linear-gradient(132deg,#e8f7ff 0%,#eff1ff 44%,#f5eaff 100%)!important;color:#142d4d!important}
+#contact.contact-v3::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse 55% 55% at 5% 5%,#45c7e536,transparent 80%),radial-gradient(ellipse 50% 60% at 95% 65%,#a586f13d,transparent 80%);pointer-events:none}
+#contact.contact-v3 .wrap{position:relative;max-width:1230px!important;width:min(100% - 36px,1230px)!important;margin-inline:auto!important}
+#contact.contact-v3 .contact-v3-heading{max-width:760px!important;margin:0 auto clamp(34px,5vw,64px)!important;text-align:center!important}
+#contact.contact-v3 .section-kicker{color:#167ca7!important;font-size:12px!important;font-weight:800!important;letter-spacing:.17em!important}
+#contact.contact-v3 .contact-v3-heading h2{font-size:clamp(35px,5vw,70px)!important;line-height:1.08!important;letter-spacing:-.045em!important;color:#142b4a!important;margin:15px 0 20px!important;text-wrap:balance!important}
+#contact.contact-v3 .contact-v3-heading h2 .gradient-text{background:linear-gradient(100deg,#028bb4 0%,#5365d7 55%,#8654c7 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+#contact.contact-v3 .contact-v3-heading p{color:#48617c!important;font-size:clamp(15px,1.5vw,19px)!important;line-height:1.75!important;max-width:670px!important;margin-inline:auto!important}
+#contact.contact-v3 .contact-v3-layout{display:grid!important;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)!important;gap:clamp(20px,3vw,40px)!important;align-items:stretch!important}
+#contact.contact-v3 .contact-v3-side{min-width:0!important;display:flex!important;flex-direction:column!important;gap:22px!important;padding:clamp(25px,3vw,42px)!important;border-radius:28px!important;background:linear-gradient(145deg,#102f54 0%,#203e78 53%,#533d94 100%)!important;box-shadow:0 26px 65px #24427b24!important;border:1px solid #ffffff30!important;color:#fff!important}
+#contact.contact-v3 .contact-v3-eyebrow{color:#7ce8f3!important;font-size:11px!important;font-weight:800!important;letter-spacing:.14em!important}
+#contact.contact-v3 .contact-v3-intro h3{font-size:clamp(30px,3vw,46px)!important;line-height:1.14!important;color:#fff!important;margin:15px 0!important;letter-spacing:-.035em!important}
+#contact.contact-v3 .contact-v3-intro h3 span{color:#8de9fa!important}
+#contact.contact-v3 .contact-v3-intro p{color:#e0eafa!important;font-size:15px!important;line-height:1.75!important}
+#contact.contact-v3 .contact-v3-services{display:flex!important;flex-wrap:wrap!important;gap:9px!important;margin-top:20px!important}
+#contact.contact-v3 .contact-v3-services span{color:#fff!important;background:#ffffff1c!important;border:1px solid #ffffff3b!important;border-radius:999px!important;padding:9px 13px!important;font-size:12px!important;font-weight:650!important}
+#contact.contact-v3 .contact-v3-links{display:grid!important;gap:11px!important;margin-top:auto!important}
+#contact.contact-v3 .contact-v3-links a{min-width:0!important;display:flex!important;align-items:center!important;gap:13px!important;padding:14px!important;border:1px solid #ffffff35!important;background:#ffffff12!important;border-radius:16px!important;color:#fff!important;text-decoration:none!important;transition:transform .2s ease,background .2s ease!important}
+#contact.contact-v3 .contact-v3-links a:hover{background:#ffffff24!important;transform:translateY(-2px)!important}
+#contact.contact-v3 .contact-v3-links a .contact-v3-link-icon{flex:0 0 42px!important;display:grid!important;place-items:center!important;width:42px!important;height:42px!important;border-radius:12px!important;background:#83e9f122!important;color:#9cf3ff!important}
+#contact.contact-v3 .contact-v3-links a span:nth-child(2){min-width:0!important;flex:1!important}
+#contact.contact-v3 .contact-v3-links a small{display:block!important;color:#c3d9f5!important;font-size:10px!important;letter-spacing:.07em!important}
+#contact.contact-v3 .contact-v3-links a strong{display:block!important;color:#fff!important;font-size:clamp(12px,1.15vw,15px)!important;overflow-wrap:anywhere!important}
+#contact.contact-v3 .contact-v3-links a b{color:#a5e8fb!important}
+#contact.contact-v3 .contact-v3-location{color:#dce7f9!important;font-size:12px!important;line-height:1.6!important}
+#contact.contact-v3 .contact-v3-form-card{min-width:0!important;padding:clamp(22px,3.3vw,46px)!important;border-radius:28px!important;background:#ffffffdc!important;border:1px solid #ffffff!important;box-shadow:0 28px 75px #36548920!important;backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important;color:#183653!important}
+#contact.contact-v3 .contact-v3-form-head{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:15px!important;margin-bottom:26px!important}
+#contact.contact-v3 .contact-v3-form-head .contact-v3-eyebrow{color:#087caa!important}
+#contact.contact-v3 .contact-v3-form-head h3{font-size:clamp(25px,2.5vw,35px)!important;color:#173653!important;margin:10px 0!important}
+#contact.contact-v3 .contact-v3-form-head p{color:#5c7189!important;line-height:1.65!important}
+#contact.contact-v3 .contact-v3-form-symbol{flex:none!important;display:grid!important;place-items:center!important;width:50px!important;height:50px!important;border-radius:15px!important;background:linear-gradient(135deg,#12bfd5,#7667df)!important;color:#fff!important;font-size:25px!important}
+#contact.contact-v3 .contact-form{display:grid!important;gap:11px!important}
+#contact.contact-v3 .contact-form label{display:block!important;color:#274765!important;font-size:13px!important;font-weight:750!important;margin:5px 0 0!important}
+#contact.contact-v3 .contact-form input:not([type=hidden]),#contact.contact-v3 .contact-form select,#contact.contact-v3 .contact-form textarea{box-sizing:border-box!important;width:100%!important;max-width:100%!important;min-width:0!important;min-height:49px!important;padding:12px 14px!important;background:#f6faff!important;color:#183653!important;border:1px solid #cbdcec!important;border-radius:12px!important;box-shadow:none!important;font-size:14px!important;line-height:1.5!important}
+#contact.contact-v3 .contact-form textarea{min-height:110px!important;resize:vertical!important}
+#contact.contact-v3 .contact-form input::placeholder,#contact.contact-v3 .contact-form textarea::placeholder{color:#698199!important;opacity:1!important}
+#contact.contact-v3 .contact-form :is(input,select,textarea):focus-visible{outline:3px solid #24b9d64d!important;outline-offset:1px!important;border-color:#168fb8!important}
+#contact.contact-v3 .premium-contact-fields{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+#contact.contact-v3 .premium-contact-fields>div{min-width:0!important}
+#contact.contact-v3 .quote-actions{display:flex!important;flex-wrap:wrap!important;gap:12px!important;margin-top:13px!important}
+#contact.contact-v3 .quote-actions button{min-width:0!important;flex:1 1 205px!important;min-height:51px!important;padding:12px 15px!important;border-radius:12px!important;font-weight:800!important;font-size:13px!important;white-space:normal!important;cursor:pointer!important}
+#contact.contact-v3 .quote-actions .btn-primary{background:linear-gradient(110deg,#0dbbd2,#328bdc)!important;color:#062b43!important;border:0!important}
+#contact.contact-v3 .quote-actions .btn-outline{background:#eef4ff!important;color:#24519a!important;border:1px solid #b9cdf0!important}
+#contact.contact-v3 .contact-form>small{color:#5b7188!important;line-height:1.6!important;font-size:11px!important}
+body.dark #contact.contact-v3,html[data-theme=dark] #contact.contact-v3,body[data-theme=dark] #contact.contact-v3{background:linear-gradient(135deg,#081a31 0%,#162b51 51%,#271c49 100%)!important;color:#f4f8ff!important}
+body.dark #contact.contact-v3 .contact-v3-heading h2,html[data-theme=dark] #contact.contact-v3 .contact-v3-heading h2,body[data-theme=dark] #contact.contact-v3 .contact-v3-heading h2{color:#f6f9ff!important}
+body.dark #contact.contact-v3 .contact-v3-heading p,html[data-theme=dark] #contact.contact-v3 .contact-v3-heading p,body[data-theme=dark] #contact.contact-v3 .contact-v3-heading p{color:#d1dff1!important}
+body.dark #contact.contact-v3 .section-kicker,html[data-theme=dark] #contact.contact-v3 .section-kicker,body[data-theme=dark] #contact.contact-v3 .section-kicker{color:#80e4f4!important}
+body.dark #contact.contact-v3 .contact-v3-form-card,html[data-theme=dark] #contact.contact-v3 .contact-v3-form-card,body[data-theme=dark] #contact.contact-v3 .contact-v3-form-card{background:#152943ed!important;border-color:#45617c!important;color:#f2f8ff!important}
+body.dark #contact.contact-v3 .contact-v3-form-head h3,body.dark #contact.contact-v3 .contact-form label,html[data-theme=dark] #contact.contact-v3 .contact-v3-form-head h3,html[data-theme=dark] #contact.contact-v3 .contact-form label,body[data-theme=dark] #contact.contact-v3 .contact-v3-form-head h3,body[data-theme=dark] #contact.contact-v3 .contact-form label{color:#f2f8ff!important}
+body.dark #contact.contact-v3 .contact-v3-form-head p,body.dark #contact.contact-v3 .contact-form>small,html[data-theme=dark] #contact.contact-v3 .contact-v3-form-head p,html[data-theme=dark] #contact.contact-v3 .contact-form>small,body[data-theme=dark] #contact.contact-v3 .contact-v3-form-head p,body[data-theme=dark] #contact.contact-v3 .contact-form>small{color:#c5d5e7!important}
+body.dark #contact.contact-v3 .contact-form :is(input:not([type=hidden]),select,textarea),html[data-theme=dark] #contact.contact-v3 .contact-form :is(input:not([type=hidden]),select,textarea),body[data-theme=dark] #contact.contact-v3 .contact-form :is(input:not([type=hidden]),select,textarea){background:#213c58!important;border-color:#496983!important;color:#fff!important}
+body.dark #contact.contact-v3 .contact-form :is(input,textarea)::placeholder,html[data-theme=dark] #contact.contact-v3 .contact-form :is(input,textarea)::placeholder,body[data-theme=dark] #contact.contact-v3 .contact-form :is(input,textarea)::placeholder{color:#b9cde0!important}
+body.dark #contact.contact-v3 .quote-actions .btn-outline,html[data-theme=dark] #contact.contact-v3 .quote-actions .btn-outline,body[data-theme=dark] #contact.contact-v3 .quote-actions .btn-outline{background:#294469!important;color:#eff8ff!important;border-color:#6788ad!important}
+@media(max-width:900px){#contact.contact-v3 .contact-v3-layout{grid-template-columns:1fr!important}#contact.contact-v3 .contact-v3-side{gap:24px!important}}
+@media(max-width:560px){#contact.contact-v3{padding:65px 0!important}#contact.contact-v3 .wrap{width:calc(100% - 28px)!important}#contact.contact-v3 .contact-v3-side,#contact.contact-v3 .contact-v3-form-card{padding:22px!important;border-radius:20px!important}#contact.contact-v3 .premium-contact-fields{grid-template-columns:1fr!important}#contact.contact-v3 .quote-actions{flex-direction:column!important}#contact.contact-v3 .quote-actions button{width:100%!important;flex-basis:auto!important}#contact.contact-v3 .contact-v3-heading h2{font-size:clamp(32px,9vw,45px)!important}#contact.contact-v3 .contact-v3-links a strong{font-size:12px!important}}
+@media(prefers-reduced-motion:reduce){#contact.contact-v3 .contact-v3-links a{transition:none!important}}
