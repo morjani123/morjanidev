@@ -17,5 +17,5 @@ const svg=name=>'<svg class="om-section-icon" viewBox="0 0 24 24" width="19" hei
 const guess=t=>{t=(t||"").toLowerCase();if(/référence|institution|organisme/.test(t))return "landmark";if(/projet|réalisation|portfolio/.test(t))return "folder";if(/technolog|stack|compétence|développement|logiciel/.test(t))return "code";if(/expérience|parcours|profession|terrain/.test(t))return "briefcase";if(/formation|curriculum|diplôme/.test(t))return "graduation";if(/chiffre|statistique/.test(t))return "chart";if(/contact|devis|collaboration/.test(t))return "send";if(/service/.test(t))return "layers";if(/voyage|tourisme/.test(t))return "globe";if(/immo/.test(t))return "building";return "sparkles"};
 document.querySelectorAll('.section-kicker,.premium-kicker,.projects-eyebrow,.contact-v3-eyebrow').forEach(el=>{if(el.querySelector('svg'))return;el.classList.add('om-kicker-with-icon');el.insertAdjacentHTML('afterbegin',svg(guess(el.textContent)))});
 document.querySelectorAll('.premium-title,.section-heading h2,.projects-intro h2,.contact-v3-heading h2,.premium-case .premium-section>h2').forEach(h=>{h.classList.add('om-clear-title')});
-document.querySelectorAll('.contact-v3-link-icon').forEach((el,i)=>{const name=i===0?'mail':i===1?'send':'briefcase';el.innerHTML=svg(name)});
+// Contact icons are authored in HTML; do not overwrite their official brand SVGs.
 })();
