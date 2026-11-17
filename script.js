@@ -443,15 +443,19 @@ const galleryContent = {
  dashboard:{fr:['Tableau de bord','Vue d’ensemble des articles, mouvements, entrées et indicateurs de stock.'],en:['Dashboard','Overview of items, movements, receipts and inventory indicators.']},
  sortie:{fr:['Bons de sortie','Création et suivi des bons de sortie et des retours, avec traçabilité des quantités.'],en:['Stock issue slips','Create and track issue and return slips with quantity traceability.']},
  reception:{fr:['Réceptions BL','Enregistrement des livraisons, quantités reçues et mouvements d’entrée en stock.'],en:['Delivery receipts','Record deliveries, received quantities and incoming stock movements.']},
- historique:{fr:['Historique','Consultation des opérations enregistrées et suivi chronologique des mouvements.'],en:['History','Review recorded operations and chronological stock movements.']}
+ historique:{fr:['Historique','Consultation des opérations enregistrées et suivi chronologique des mouvements.'],en:['History','Review recorded operations and chronological stock movements.']},
+ stock:{fr:['Liste Stock','Consultation des articles, quantités, états et seuils minimum.'],en:['Stock list','Review items, quantities, conditions and minimum thresholds.']},
+ mouvements:{fr:['Mouvements Stock','Entrées, sorties, retours et corrections avec filtres et historique.'],en:['Stock movements','Receipts, issues, returns and adjustments with filters.']},
+ alertes:{fr:['Alertes & Réapprovisionnement','Ruptures et articles au seuil minimum, avec export CSV.'],en:['Stock alerts','Out-of-stock items and minimum thresholds with CSV export.']}
 };
 document.querySelectorAll('[data-gsp]').forEach(button=>button.addEventListener('click',()=>{
  const key=button.dataset.gsp, data=galleryContent[key]; if(!data)return;
  document.querySelectorAll('[data-gsp]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
  const en=document.documentElement.lang==='en', lang=en?'en':'fr';
  const image=document.querySelector('#gspImage'),detail=document.querySelector('#gspDetail');
- if(image)image.hidden=key!=='dashboard';
- if(detail){detail.hidden=key==='dashboard';detail.replaceChildren();if(key!=='dashboard'){const icon=document.createElement('span');icon.className='gsp-detail-icon';icon.textContent={sortie:'▤',reception:'▣',historique:'◷'}[key];const heading=document.createElement('strong');heading.textContent=data[lang][0];const p=document.createElement('p');p.textContent=data[lang][1];detail.append(icon,heading,p);}}
+ const visuals={dashboard:'assets/gestion-dashboard.png',sortie:'assets/stock-gallery/bon-sortie.svg',reception:'assets/stock-gallery/receptions-bl.svg',historique:'assets/stock-gallery/historique.svg',stock:'assets/stock-gallery/liste-stock.svg',mouvements:'assets/stock-gallery/mouvements.svg',alertes:'assets/stock-gallery/alertes.svg'};
+ if(image){image.hidden=false;image.src=visuals[key];image.alt=data[lang][0]+' — illustration de l’interface';}
+ if(detail){detail.hidden=true;detail.replaceChildren();}
  const heading=document.querySelector('#gspHeading'),desc=document.querySelector('#gspDescription');
  if(heading)heading.textContent=data[lang][0];if(desc)desc.textContent=data[lang][1];
 }));
