@@ -176,3 +176,8 @@ body:not(.light) #contact.contact-v3 .contact-v3-location{color:#627b92!importan
 #contact.contact-v3 .contact-v3-links a .icon-whatsapp::after,
 #contact.contact-v3 .contact-v3-links a .icon-linkedin::after,
 #contact.contact-v3 .contact-v3-links a .icon-facebook::after{content:none!important;display:none!important}
+
+/* Final fix: show the real brand SVG images, never the typographic fallback. */
+#contact.contact-v3 .contact-v3-links a .icon-whatsapp > img,
+#contact.contact-v3 .contact-v3-links a .icon-linkedin > img,
+#contact.contact-v3 .contact-v3-links a .icon-facebook > img{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:2!important;width:26px!important;height:26px!important}
