@@ -120,3 +120,30 @@ body.light #contact.contact-v3 .contact-v3-side .contact-v3-intro h3 *,
 #contact.contact-v3 .contact-v3-side .contact-v3-intro h3 span{color:#216ba5!important;background:linear-gradient(95deg,#078da9,#7255c6)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important}
 body:not(.light) #contact.contact-v3 .contact-v3-side .contact-v3-intro h3{color:#f7faff!important}
 body:not(.light) #contact.contact-v3 .contact-v3-side .contact-v3-intro h3 span{background:linear-gradient(95deg,#80eaf8,#c1afff)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+
+
+/* Intentional inverse-theme left card: dark card in Light Mode, light card in Dark Mode. */
+body.light #contact.contact-v3 .contact-v3-side{background:linear-gradient(145deg,#172c47 0%,#202e51 100%)!important;border-color:#496582!important;color:#f7faff!important}
+body.light #contact.contact-v3 .contact-v3-intro{border-bottom-color:#48607a!important}
+body.light #contact.contact-v3 .contact-v3-intro h3,body.light #contact.contact-v3 .contact-v3-side .contact-v3-intro h3,body.light #contact.contact-v3 .contact-v3-side .contact-v3-intro h3 *{color:#f7faff!important;text-shadow:none!important}
+body.light #contact.contact-v3 .contact-v3-intro h3 span,body.light #contact.contact-v3 .contact-v3-side .contact-v3-intro h3 span{background:linear-gradient(95deg,#80eaf8,#c1afff)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+body.light #contact.contact-v3 .contact-v3-intro p{color:#c5d8ec!important}
+body.light #contact.contact-v3 .contact-v3-eyebrow{color:#8ee7f3!important}
+body.light #contact.contact-v3 .contact-v3-services span{color:#e0faff!important;background:#2a5067!important;border-color:#456e88!important}
+body.light #contact.contact-v3 .contact-v3-links a{background:#223d5a!important;border-color:#3d5d7c!important}
+body.light #contact.contact-v3 .contact-v3-links a:hover{background:#2c4d6c!important}
+body.light #contact.contact-v3 .contact-v3-links a small{color:#afc8df!important}
+body.light #contact.contact-v3 .contact-v3-links a strong{color:#f4faff!important}
+body.light #contact.contact-v3 .contact-v3-location{color:#c0d3e7!important;border-top-color:#45607a!important}
+body:not(.light) #contact.contact-v3 .contact-v3-side{background:linear-gradient(155deg,#fff 0%,#f4faff 62%,#f3f0ff 100%)!important;border:1px solid #d9e7f7!important;color:#183455!important}
+body:not(.light) #contact.contact-v3 .contact-v3-intro{border-bottom-color:#d8e5f4!important}
+body:not(.light) #contact.contact-v3 .contact-v3-intro h3{color:#17314f!important;text-shadow:none!important}
+body:not(.light) #contact.contact-v3 .contact-v3-intro h3 span{background:linear-gradient(95deg,#078da9,#7255c6)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+body:not(.light) #contact.contact-v3 .contact-v3-intro p{color:#536c85!important}
+body:not(.light) #contact.contact-v3 .contact-v3-eyebrow{color:#137eaa!important}
+body:not(.light) #contact.contact-v3 .contact-v3-services span{color:#225a80!important;background:#e9f5fc!important;border-color:#c9e4f3!important}
+body:not(.light) #contact.contact-v3 .contact-v3-links a{background:#fff!important;border-color:#e1e9f4!important}
+body:not(.light) #contact.contact-v3 .contact-v3-links a:hover{background:#edf9ff!important;border-color:#8ccfe8!important}
+body:not(.light) #contact.contact-v3 .contact-v3-links a small{color:#6a829a!important}
+body:not(.light) #contact.contact-v3 .contact-v3-links a strong{color:#173653!important}
+body:not(.light) #contact.contact-v3 .contact-v3-location{color:#627b92!important;border-top-color:#dce8f4!important}
