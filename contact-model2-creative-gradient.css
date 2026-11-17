@@ -157,3 +157,10 @@ body:not(.light) #contact.contact-v3 .contact-v3-location{color:#627b92!importan
 #contact.contact-v3 .contact-v3-links .icon-facebook{background:#1877f2!important;color:#fff!important}
 #contact.contact-v3 .contact-v3-links .icon-email{background:linear-gradient(135deg,#e9f3ff,#c9e8ff)!important;color:#2467b3!important}
 #contact.contact-v3 .contact-v3-links a:focus-visible{outline:3px solid #27c8de!important;outline-offset:3px!important}
+
+
+/* Icon visibility hardening against older global icon and SVG styles */
+#contact.contact-v3 .contact-v3-links a .contact-v3-link-icon{position:relative!important;opacity:1!important;visibility:visible!important;overflow:visible!important;isolation:isolate!important}
+#contact.contact-v3 .contact-v3-links a .contact-v3-link-icon svg{display:block!important;position:relative!important;z-index:2!important;opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important;fill:currentColor!important;stroke:none!important;min-width:25px!important;min-height:25px!important;flex-shrink:0!important}
+#contact.contact-v3 .contact-v3-links a .icon-email svg{fill:none!important;stroke:#2467b3!important;stroke-width:1.8!important}
+#contact.contact-v3 .contact-v3-links a .icon-whatsapp svg,#contact.contact-v3 .contact-v3-links a .icon-linkedin svg,#contact.contact-v3 .contact-v3-links a .icon-facebook svg{color:#fff!important;fill:#fff!important}
