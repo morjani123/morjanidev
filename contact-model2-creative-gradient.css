@@ -179,3 +179,7 @@ body:not(.light) #contact.contact-v3 .contact-v3-location{color:#627b92!importan
 #contact.contact-v3 .contact-v3-links a .icon-whatsapp svg,
 #contact.contact-v3 .contact-v3-links a .icon-linkedin svg,
 #contact.contact-v3 .contact-v3-links a .icon-facebook svg{display:block!important;fill:#fff!important;color:#fff!important;stroke:none!important;width:26px!important;height:26px!important}
+
+/* Facebook badge: white tile with Facebook-blue F (requested). */
+#contact.contact-v3 .contact-v3-links a .icon-facebook{background:#fff!important;color:#1877f2!important}
+#contact.contact-v3 .contact-v3-links a .icon-facebook svg{color:#1877f2!important;fill:#1877f2!important}
