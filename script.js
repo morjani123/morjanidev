@@ -453,7 +453,7 @@ document.querySelectorAll('[data-gsp]').forEach(button=>button.addEventListener(
  document.querySelectorAll('[data-gsp]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
  const en=document.documentElement.lang==='en', lang=en?'en':'fr';
  const image=document.querySelector('#gspImage'),detail=document.querySelector('#gspDetail');
- const visuals={dashboard:'assets/gestion-dashboard.png',sortie:'assets/stock-gallery/bon-sortie.svg',reception:'assets/stock-gallery/receptions-bl.svg',historique:'assets/stock-gallery/historique.svg',stock:'assets/stock-gallery/liste-stock.svg',mouvements:'assets/stock-gallery/mouvements.svg',alertes:'assets/stock-gallery/alertes.svg'};
+ const visuals={dashboard:'assets/stock-gallery/tableau-de-bord.svg',sortie:'assets/stock-gallery/bon-sortie.svg',reception:'assets/stock-gallery/receptions-bl.svg',historique:'assets/stock-gallery/historique.svg',stock:'assets/stock-gallery/liste-stock.svg',mouvements:'assets/stock-gallery/mouvements.svg',alertes:'assets/stock-gallery/alertes.svg'};
  if(image){image.hidden=false;image.src=visuals[key];image.alt=data[lang][0]+' — illustration de l’interface';}
  if(detail){detail.hidden=true;detail.replaceChildren();}
  const heading=document.querySelector('#gspHeading'),desc=document.querySelector('#gspDescription');
