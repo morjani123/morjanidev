@@ -68,3 +68,14 @@ body:not(.light) #contact.contact-v3 .contact-v3-form-head p,body:not(.light) #c
 body:not(.light) #contact.contact-v3 .contact-form :is(input:not([type=hidden]),select,textarea),body:not(.light) #contact.contact-v3 .contact-form :is(input:not([type=hidden]),select,textarea),body:not(.light) #contact.contact-v3 .contact-form :is(input:not([type=hidden]),select,textarea){background:#213c58!important;border-color:#496983!important;color:#fff!important}
 body:not(.light) #contact.contact-v3 .contact-form :is(input,textarea)::placeholder,body:not(.light) #contact.contact-v3 .contact-form :is(input,textarea)::placeholder,body:not(.light) #contact.contact-v3 .contact-form :is(input,textarea)::placeholder{color:#b9cde0!important}
 body:not(.light) #contact.contact-v3 .quote-actions .btn-outline,body:not(.light) #contact.contact-v3 .quote-actions .btn-outline,body:not(.light) #contact.contact-v3 .quote-actions .btn-outline{background:#294469!important;color:#eff8ff!important;border-color:#6788ad!important}
+
+/* Contact left card v2: eliminate oversized blank center and create coherent editorial flow */
+#contact.contact-v3 .contact-v3-side{justify-content:flex-start!important;gap:0!important;align-self:start!important;min-height:0!important;height:auto!important}
+#contact.contact-v3 .contact-v3-intro{position:relative!important;padding:0 0 26px!important;margin:0 0 24px!important;border-bottom:1px solid #ffffff35!important}
+#contact.contact-v3 .contact-v3-intro::after{content:"";position:absolute;bottom:-1px;left:0;width:70px;height:2px;background:linear-gradient(90deg,#74eaf6,#a998ff)}
+#contact.contact-v3 .contact-v3-links{margin-top:0!important;display:grid!important;gap:12px!important}
+#contact.contact-v3 .contact-v3-links a{min-height:68px!important;box-sizing:border-box!important}
+#contact.contact-v3 .contact-v3-location{margin-top:23px!important;padding-top:17px!important;border-top:1px solid #ffffff2e!important}
+#contact.contact-v3 .contact-v3-intro h3{max-width:420px!important}
+#contact.contact-v3 .contact-v3-intro p{max-width:460px!important}
+@media(min-width:901px){#contact.contact-v3 .contact-v3-side{position:relative!important;top:0!important}}
