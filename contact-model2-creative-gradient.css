@@ -164,3 +164,10 @@ body:not(.light) #contact.contact-v3 .contact-v3-location{color:#627b92!importan
 #contact.contact-v3 .contact-v3-links a .contact-v3-link-icon svg{display:block!important;position:relative!important;z-index:2!important;opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important;fill:currentColor!important;stroke:none!important;min-width:25px!important;min-height:25px!important;flex-shrink:0!important}
 #contact.contact-v3 .contact-v3-links a .icon-email svg{fill:none!important;stroke:#2467b3!important;stroke-width:1.8!important}
 #contact.contact-v3 .contact-v3-links a .icon-whatsapp svg,#contact.contact-v3 .contact-v3-links a .icon-linkedin svg,#contact.contact-v3 .contact-v3-links a .icon-facebook svg{color:#fff!important;fill:#fff!important}
+
+
+/* Isolated image-based brand marks; immune to inherited SVG path styles */
+#contact.contact-v3 .contact-v3-links a .contact-v3-link-icon img{display:block!important;width:26px!important;height:26px!important;max-width:26px!important;max-height:26px!important;object-fit:contain!important;opacity:1!important;visibility:visible!important;filter:none!important;mix-blend-mode:normal!important;transform:none!important}
+#contact.contact-v3 .contact-v3-links a .icon-whatsapp{background:#25d366!important}
+#contact.contact-v3 .contact-v3-links a .icon-linkedin{background:#0a66c2!important}
+#contact.contact-v3 .contact-v3-links a .icon-facebook{background:#1877f2!important}
