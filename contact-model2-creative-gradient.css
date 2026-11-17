@@ -110,3 +110,13 @@ body:not(.light) #contact.contact-v3 .contact-v3-links a:hover{background:#2c4d6
 body:not(.light) #contact.contact-v3 .contact-v3-links a small{color:#afc8df!important}
 body:not(.light) #contact.contact-v3 .contact-v3-links a strong{color:#f4faff!important}
 body:not(.light) #contact.contact-v3 .contact-v3-location{color:#c0d3e7!important;border-top-color:#45607a!important}
+
+
+/* Contrast fix: older contact CSS forces white text on the light editorial panel. */
+body.light #contact.contact-v3 .contact-v3-side .contact-v3-intro h3,
+body.light #contact.contact-v3 .contact-v3-side .contact-v3-intro h3:not(span),
+body.light #contact.contact-v3 .contact-v3-side .contact-v3-intro h3 *,
+#contact.contact-v3 .contact-v3-side .contact-v3-intro h3{color:#17314f!important;text-shadow:none!important}
+#contact.contact-v3 .contact-v3-side .contact-v3-intro h3 span{color:#216ba5!important;background:linear-gradient(95deg,#078da9,#7255c6)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important}
+body:not(.light) #contact.contact-v3 .contact-v3-side .contact-v3-intro h3{color:#f7faff!important}
+body:not(.light) #contact.contact-v3 .contact-v3-side .contact-v3-intro h3 span{background:linear-gradient(95deg,#80eaf8,#c1afff)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
