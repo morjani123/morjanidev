@@ -172,14 +172,7 @@ body:not(.light) #contact.contact-v3 .contact-v3-location{color:#627b92!importan
 #contact.contact-v3 .contact-v3-links a .icon-linkedin{background:#0a66c2!important}
 #contact.contact-v3 .contact-v3-links a .icon-facebook{background:#1877f2!important}
 
-
-/* Reliable visible fallback: use typographic brand marks instead of SVG rendering. */
-#contact.contact-v3 .contact-v3-links a .icon-whatsapp img,
-#contact.contact-v3 .contact-v3-links a .icon-linkedin img,
-#contact.contact-v3 .contact-v3-links a .icon-facebook img{display:none!important}
+/* Each social badge uses its single original SVG image; no generated duplicate marks. */
 #contact.contact-v3 .contact-v3-links a .icon-whatsapp::after,
 #contact.contact-v3 .contact-v3-links a .icon-linkedin::after,
-#contact.contact-v3 .contact-v3-links a .icon-facebook::after{display:block!important;position:relative!important;z-index:10!important;visibility:visible!important;opacity:1!important;color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:none!important;line-height:1!important;transform:none!important}
-#contact.contact-v3 .contact-v3-links a .icon-whatsapp::after{content:"☎"!important;font-family:Arial,sans-serif!important;font-size:28px!important;font-weight:700!important}
-#contact.contact-v3 .contact-v3-links a .icon-linkedin::after{content:"in"!important;font-family:Arial,sans-serif!important;font-size:22px!important;font-weight:900!important;letter-spacing:-2px!important}
-#contact.contact-v3 .contact-v3-links a .icon-facebook::after{content:"f"!important;font-family:Arial,sans-serif!important;font-size:30px!important;font-weight:900!important}
+#contact.contact-v3 .contact-v3-links a .icon-facebook::after{content:none!important;display:none!important}
