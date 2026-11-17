@@ -454,7 +454,7 @@ document.querySelectorAll('[data-gsp]').forEach(button=>button.addEventListener(
  const en=document.documentElement.lang==='en', lang=en?'en':'fr';
  const image=document.querySelector('#gspImage'),detail=document.querySelector('#gspDetail');
  const visuals={dashboard:'assets/stock-gallery/tableau-de-bord.svg',sortie:'assets/stock-gallery/bon-sortie.svg',reception:'assets/stock-gallery/receptions-bl.svg',historique:'assets/stock-gallery/historique.svg',stock:'assets/stock-gallery/liste-stock.svg',mouvements:'assets/stock-gallery/mouvements.svg',alertes:'assets/stock-gallery/alertes.svg'};
- if(image){image.hidden=false;image.src=visuals[key];image.alt=data[lang][0]+' — illustration de l’interface';}
+ if(image){const photos={sortie:'01-bon-de-sortie.webp',historique:'02-historique.webp',stock:'03-liste-stock.webp',reception:'04-receptions-bl.webp',mouvements:'05-mouvements-stock.webp',alertes:'06-alertes-stock.webp'};image.hidden=false;image.alt=data[lang][0]+' — capture réelle du logiciel';image.onerror=()=>{image.onerror=null;image.src=visuals[key];image.alt=data[lang][0]+' — illustration du module';};image.src=photos[key]?'assets/stock-gallery/'+photos[key]:visuals[key];}
  if(detail){detail.hidden=true;detail.replaceChildren();}
  const heading=document.querySelector('#gspHeading'),desc=document.querySelector('#gspDescription');
  if(heading)heading.textContent=data[lang][0];if(desc)desc.textContent=data[lang][1];
