@@ -16,3 +16,9 @@
 @media(max-width:760px){#developpement .portfolio-tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}#developpement .portfolio-tile .tile-cover{aspect-ratio:4/3!important}#developpement .revolution-visual>img{height:auto!important;aspect-ratio:16/10!important}}
 @media(max-width:540px){#developpement .portfolio-tiles{grid-template-columns:1fr!important}#developpement .portfolio-tile .tile-cover{aspect-ratio:16/10!important}#developpement .revolution-visual>img{max-height:none!important}}
 @media(prefers-reduced-motion:reduce){#developpement .portfolio-tile .tile-cover>img{transition:none!important}}
+
+/* Keep Morjani Shop Pro preview identical in dimensions to other project tiles. */
+#developpement .portfolio-tiles>.portfolio-tile .tile-cover{box-sizing:border-box!important;width:100%!important;height:auto!important;aspect-ratio:16/10!important;padding:0!important;margin:0!important;overflow:hidden!important}
+#developpement .portfolio-tiles>.portfolio-tile .tile-cover>img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;object-fit:cover!important;object-position:center!important}
+@media(min-width:541px) and (max-width:760px){#developpement .portfolio-tiles>.portfolio-tile .tile-cover{aspect-ratio:4/3!important}}
+@media(max-width:540px){#developpement .portfolio-tiles>.portfolio-tile .tile-cover{aspect-ratio:16/10!important}}
