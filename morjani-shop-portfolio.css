@@ -10,3 +10,12 @@
 #projets-recents .portfolio-home-card>span{position:relative!important;z-index:2!important}
 @media(max-width:920px){#projets-recents .portfolio-home-card .laptop-mockup{height:220px!important}}
 @media(max-width:680px){#projets-recents .portfolio-home-card .laptop-mockup{height:230px!important}}
+
+/* Dedicated image frame — exactly the four homepage featured cards */
+#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4){display:flex!important;flex-direction:column!important;overflow:hidden!important;padding:0!important}
+#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4)>.featured-project-cover{position:relative!important;inset:auto!important;display:block!important;flex:0 0 auto!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;height:clamp(205px,22vw,315px)!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;overflow:hidden!important;background:#0d2845!important;box-shadow:none!important}
+#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4)>.featured-project-cover:after{content:none!important;display:none!important}
+#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4)>.featured-project-cover>img{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-width:100%!important;min-height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center!important;aspect-ratio:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important}
+#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4)>.featured-project-cover>.screen-label{position:absolute!important;top:12px!important;left:12px!important;bottom:auto!important;right:auto!important;z-index:4!important;padding:7px 10px!important;border-radius:8px!important;background:#08243ce8!important;color:#fff!important;font-size:10px!important}
+#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4)>span{display:block!important;flex:1 1 auto!important;width:100%!important;box-sizing:border-box!important}
+@media(max-width:920px){#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4)>.featured-project-cover{height:220px!important}}@media(max-width:680px){#projets-recents .portfolio-home-cards>.portfolio-home-card:nth-child(-n+4)>.featured-project-cover{height:230px!important}}
