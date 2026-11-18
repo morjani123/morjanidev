@@ -104,3 +104,21 @@ body:has(#gestion-stock) main .stock-method-photo img{object-position:center 50%
 body:not(.light):has(#gestion-stock) main .stock-hero-tags span{background:#173a44;color:#c3eee9;border-color:#37737a}
 body:not(.light):has(#gestion-stock) main .stock-hero-secondary{color:#a6e8e2}
 @media(max-width:800px){body:has(#gestion-stock) main .specialty-intro{grid-template-columns:1fr!important;gap:13px!important}body:has(#gestion-stock) main .stock-hero-photo{grid-column:1!important;grid-row:auto!important;min-height:270px!important;margin-top:12px}body:has(#gestion-stock) main .specialty-intro>h1{font-size:clamp(35px,8vw,52px)}}
+
+/* SGTM missions + premium hero: added without changing existing corporate design */
+body:has(#gestion-stock) main .stock-hero-eyebrow{font-size:12px!important;font-weight:800;letter-spacing:.11em;color:#007e78!important;margin:0!important}
+body:has(#gestion-stock) main .stock-missions{padding-top:75px;padding-bottom:75px}
+body:has(#gestion-stock) main .stock-mission-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:26px}
+body:has(#gestion-stock) main .stock-mission-grid article{background:#fff;border:1px solid #d5e9e8;border-radius:19px;padding:25px;box-shadow:0 10px 26px #164e5d0b;transition:transform .2s}
+body:has(#gestion-stock) main .stock-mission-grid article:hover{transform:translateY(-4px)}
+body:has(#gestion-stock) main .stock-mission-grid article>span{display:inline-block;color:#008f83;font-weight:850;font-size:12px;letter-spacing:.07em;margin-bottom:12px}
+body:has(#gestion-stock) main .stock-mission-grid h3{color:#14394a;font-size:19px;margin:0 0 10px}
+body:has(#gestion-stock) main .stock-mission-grid p{color:#587485;font-size:14px;line-height:1.7;margin:0}
+body:has(#gestion-stock) main #galerie-stock .gsp-stage img{aspect-ratio:1000/580;object-fit:contain;max-height:540px}
+body:has(#gestion-stock) main .stock-hero-photo img{background:#dcefed}
+body:has(#gestion-stock) main .stock-intro-photo img,body:has(#gestion-stock) main .stock-method-photo img{background:#dcefed}
+body:not(.light):has(#gestion-stock) main .stock-mission-grid article{background:#142e3a;border-color:#315563}
+body:not(.light):has(#gestion-stock) main .stock-mission-grid h3{color:#edf8f9}
+body:not(.light):has(#gestion-stock) main .stock-mission-grid p{color:#b5cbd3}
+@media(max-width:900px){body:has(#gestion-stock) main .stock-mission-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){body:has(#gestion-stock) main .stock-missions{padding-top:45px;padding-bottom:45px}body:has(#gestion-stock) main .stock-mission-grid{grid-template-columns:1fr}}
