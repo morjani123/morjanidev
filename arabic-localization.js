@@ -1,6 +1,17 @@
 /* Arabic localization layer - isolated from the existing FR/EN translator. */
 (() => {
 'use strict';
+// Client-focused homepage copy added during the conversion update.
+const conversionCopy={
+'Sites Web, Applications & Logiciels de Gestion sur Mesure':'مواقع إلكترونية وتطبيقات وبرامج تسيير حسب الطلب',
+'Je crée des':'أقوم بإنشاء',
+'sites web professionnels':'مواقع إلكترونية احترافية',
+'applications sur mesure':'تطبيقات مخصصة',
+'logiciels de gestion de stock':'برامج إدارة المخزون',
+'pour aider les entreprises à gagner du temps et à mieux organiser leur activité. De l’idée à la mise en ligne, discutons de votre projet.':'لمساعدة الشركات على توفير الوقت وتنظيم أعمالها بشكل أفضل. من الفكرة إلى الإطلاق، لنتحدث عن مشروعك.',
+'Voir mes réalisations →':'شاهد أعمالي ←',
+'Demander un devis →':'اطلب عرض سعر ←'
+};
 const key='om-preferred-language', root=document.documentElement;
 const dictionary={
 'Accueil':'الرئيسية','Développement':'التطوير','Gestion de Stock':'إدارة المخزون','Projets':'المشاريع','Contact':'تواصل معي',
@@ -52,6 +63,7 @@ const dictionary={
 'Expérience':'الخبرة','Compétences':'المهارات','Services':'الخدمات','À propos':'نبذة عني',
 'Tableau de bord':'لوحة التحكم','Historique':'السجل','Bons de sortie':'سندات الإخراج','Réceptions BL':'استلامات التسليم'
 };
+Object.assign(dictionary,conversionCopy);
 Object.assign(dictionary,{
 "← Tous les projets":"← جميع المشاريع",
 "Site web · Tourisme":"موقع إلكتروني · السياحة",
