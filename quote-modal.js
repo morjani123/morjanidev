@@ -12,8 +12,31 @@ ar:{web:['تصميم متجاوب','لوحة تحكم','حسابات المست�
 const messages={fr:{success:'Votre demande a été envoyée avec succès !',successText:'Merci ! Nous vous répondrons dès que possible.',error:'Envoi non confirmé',errorText:'Veuillez réessayer. Si le problème persiste, contactez-nous par e-mail.',sending:'Envoi en cours…'},en:{success:'Your request was sent successfully!',successText:'Thank you! We will get back to you as soon as possible.',error:'Delivery not confirmed',errorText:'Please try again or contact us by email.',sending:'Sending…'},ar:{success:'تم إرسال طلبك بنجاح!',successText:'شكراً! غادي نجاوبوك في أقرب وقت.',error:'تعذر تأكيد الإرسال',errorText:'عاود المحاولة أو تواصل معنا بالإيميل.',sending:'جاري الإرسال…'}};
 function selectedCategory(){const i=[...form.querySelectorAll('[name="Type de projet"]')].findIndex(e=>e.checked);return i===3?'desktop':i===4?'inventory':i===1?'commerce':i===6?'other':'web'}
 function updateFeatures(){const container=dlg.querySelector('#mdq-feature-grid');if(!container)return;const options=UNIVERSAL_FEATURES[language];container.innerHTML=options.map(v=>`<label class="mdq-choice"><input type="checkbox" name="Fonctionnalites[]" value="${esc(v)}"><span>${esc(v)}</span></label>`).join('')}
-async function sendRequest(){const button=dlg.querySelector('#mdq-next');button.disabled=true;button.textContent=messages[language].sending;try{const payload=new FormData(form);payload.set('_captcha','false');const res=await fetch('https://formsubmit.co/ajax/morjaniomar@gmail.com',{method:'POST',body:payload,headers:{Accept:'application/json'}});if(!res.ok)throw Error('HTTP '+res.status);const data=await res.json();if(data.success!==true&&data.success!=='true')throw Error(data.message||'Unconfirmed');dlg.close();if(window.Swal){await Swal.fire({icon:'success',title:messages[language].success,text:messages[language].successText,confirmButtonColor:'#388af0',confirmButtonText:'OK',background:'#14233d',color:'#fff'})}else alert(messages[language].success+'\\n'+messages[language].successText)}catch(err){if(window.Swal){await Swal.fire({icon:'error',title:messages[language].error,text:messages[language].errorText,confirmButtonColor:'#388af0'})}else alert(messages[language].error+'\\n'+messages[language].errorText)}finally{button.disabled=false;button.textContent=t.send+' →'}}
-
+async function sendRequest(){
+const button=dlg.querySelector('#mdq-next');
+if(button.disabled)return;
+const original=button.textContent;
+button.disabled=true;
+button.textContent=messages[language].sending;
+const controller=new AbortController();
+const timeout=setTimeout(()=>controller.abort(),12000);
+try{
+const payload=new FormData(form);
+payload.set('_captcha','false');
+const res=await fetch('https://formsubmit.co/ajax/morjaniomar@gmail.com',{method:'POST',body:payload,headers:{Accept:'application/json'},signal:controller.signal});
+if(!res.ok)throw Error('HTTP '+res.status);
+const data=await res.json();
+if(data.success!==true&&data.success!=='true')throw Error(data.message||'Unconfirmed');
+dlg.close();
+if(window.Swal){await Swal.fire({icon:'success',title:messages[language].success,text:messages[language].successText,confirmButtonColor:'#388af0',confirmButtonText:'OK',background:document.body.classList.contains('light')?'#fff':'#14233d',color:document.body.classList.contains('light')?'#14233d':'#fff'})}
+else alert(messages[language].success+'\\n'+messages[language].successText);
+}catch(err){
+const timedOut=err.name==='AbortError';
+const extra=timedOut?{fr:'Le serveur met trop de temps à répondre. Vérifiez votre e-mail avant de réessayer pour éviter les doublons.',en:'The server is taking too long. Check your email before retrying to avoid duplicates.',ar:'السيرفر تأخر فالجواب. تأكد من الإيميل قبل ما تعاود باش ما يتكررش الطلب.'}[language]:messages[language].errorText;
+if(window.Swal){await Swal.fire({icon:'error',title:messages[language].error,text:extra,confirmButtonColor:'#388af0'})}
+else alert(messages[language].error+'\\n'+extra);
+}finally{clearTimeout(timeout);button.disabled=false;button.textContent=original||messages[language].sending}
+}
 const getLang=()=>{const l=document.documentElement.lang?.slice(0,2);return I18N[l]?l:'fr'};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const css=document.createElement('style');css.textContent=`
