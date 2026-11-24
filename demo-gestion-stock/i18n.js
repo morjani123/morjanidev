@@ -91,7 +91,7 @@ function setLanguage(lang){
  translate(document.body);syncButtons();
  const selected=document.querySelector('nav button.active');
  const heading=document.getElementById('heading');
- if(selected&&heading)heading.textContent=selected.textContent.trim();
+ if(selected&&heading)heading.textContent=selected.textContent.trim().replace(/^[^\p{L}\p{N}]+/u,'');
  translate(heading);
  document.title=language==='en'?'Gestion Stock Pro — English Demo':'Gestion Stock Pro — Démonstration';
  window.dispatchEvent(new Event('gsp-languagechange'));
