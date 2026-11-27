@@ -1,45 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://morjani123.github.io/morjanidev/</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/developpement.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/gestion-stock.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-health-service.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-react-optisis.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-md-voyage.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-immovision.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/services.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/contact.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/services.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/contact.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/services.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/contact.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/developpement.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/gestion-stock.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-morjani-shop-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-fleet-manager-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-chantier-manager-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-gestion-commerciale-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-gestion-stock-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-health-service.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-react-optisis.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-md-voyage.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/en/projet-immovision.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/developpement.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/gestion-stock.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-morjani-shop-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-fleet-manager-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-chantier-manager-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-gestion-commerciale-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-gestion-stock-pro.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-health-service.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-react-optisis.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-md-voyage.html</loc></url>
-  <url><loc>https://morjani123.github.io/morjanidev/ar/projet-immovision.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/contact.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/contact.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/contact.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/cv-magasinier.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/cv-magasinier.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/cv-magasinier.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/cv-magasinier.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/cv-magasinier.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/cv-magasinier.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/cv-magasinier.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/developpement.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/developpement.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/developpement.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/developpement.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/developpement.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/developpement.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/gestion-stock.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/gestion-stock.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/gestion-stock.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/gestion-stock.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/gestion-stock.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/gestion-stock.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/gestion-stock.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-chantier-manager-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-chantier-manager-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-chantier-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-chantier-manager-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-fleet-manager-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-fleet-manager-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-fleet-manager-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-fleet-manager-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-gestion-commerciale-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-gestion-commerciale-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-gestion-commerciale-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-gestion-commerciale-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-gestion-stock-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-gestion-stock-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-gestion-stock-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-gestion-stock-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-health-service.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-health-service.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-health-service.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-health-service.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-health-service.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-health-service.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-health-service.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-immovision.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-immovision.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-immovision.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-immovision.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-immovision.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-immovision.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-immovision.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-md-voyage.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-md-voyage.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-md-voyage.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-md-voyage.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-md-voyage.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-md-voyage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-md-voyage.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-morjani-shop-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-morjani-shop-pro.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-morjani-shop-pro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-morjani-shop-pro.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/projet-react-optisis.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-react-optisis.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/projet-react-optisis.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-react-optisis.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/projet-react-optisis.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/projet-react-optisis.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/projet-react-optisis.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/secteurs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/secteurs.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/secteurs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/secteurs.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/secteurs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/secteurs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/secteurs.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/services.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/services.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/services.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/tarifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/tarifs.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/en/tarifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/tarifs.html"/>
+  </url>
+  <url>
+    <loc>https://morjani123.github.io/morjanidev/ar/tarifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://morjani123.github.io/morjanidev/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morjani123.github.io/morjanidev/en/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://morjani123.github.io/morjanidev/ar/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://morjani123.github.io/morjanidev/tarifs.html"/>
+  </url>
+  <url><loc>https://morjani123.github.io/morjanidev/demo-gestion-stock/</loc></url>
 </urlset>
