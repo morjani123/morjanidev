@@ -5,9 +5,7 @@ if (year) year.textContent = String(new Date().getFullYear());
 const themeToggle = $('#themeToggle');
 let storedTheme = null;
 try { storedTheme = localStorage.getItem('om-theme'); } catch (_) {}
-if (storedTheme === 'light' || storedTheme === 'dark') {
-  document.body.classList.toggle('light', storedTheme === 'light');
-}
+if (storedTheme === 'light') document.body.classList.add('light');
 function refreshTheme() {
   if (!themeToggle) return;
   const light = document.body.classList.contains('light');
@@ -38,8 +36,7 @@ const dialog = $('#videoDialog');
 const video = $('#demoVideo');
 const closeVideo = $('#closeVideo');
 if (dialog && video) {
-  document.querySelectorAll('[data-open-demo], #openVideo').forEach(button => button.addEventListener('click', event => {
-    event.preventDefault();
+  document.querySelectorAll('[data-open-demo], #openVideo').forEach(button => button.addEventListener('click', () => {
     if (!dialog.open) {
       if (typeof dialog.showModal === 'function') dialog.showModal();
       else dialog.setAttribute('open', '');

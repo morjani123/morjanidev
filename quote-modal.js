@@ -92,6 +92,6 @@ dlg.querySelector('#mdq-back').addEventListener('click',()=>{if(step>0){step--;s
 dlg.querySelector('#mdq-next').addEventListener('click',()=>{if(!valid())return;if(step<steps-1){step++;showStep()}else{sendRequest()}});
 form.addEventListener('submit',e=>{e.preventDefault();if(step!==steps-1)return;if(!form.checkValidity()){e.preventDefault();step=6;showStep();form.reportValidity()}});
 showStep();dlg.showModal()}
-document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const label=(a.textContent||'').trim().toLowerCase();if(a.hasAttribute('data-open-quote')||(a.getAttribute('href')==='#contact'&&(/devis|quote|عرض سعر|السعر/.test(label)))){e.preventDefault();open()}});
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const label=(a.textContent||'').trim().toLowerCase();if(a.getAttribute('href')==='#contact'&&(/devis|quote|عرض سعر|السعر/.test(label))){e.preventDefault();open()}});
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 })();
